@@ -152,24 +152,27 @@ namespace E_document.UI
 
 		private void CalculatedDetails()
 		{
-			decimal subTotal = decimal.Parse(txtSubTotal.Text);
-			subTotal = 0;
+			_item.SubTotal = decimal.Parse(txtSubTotal.Text);
+			_item.SubTotal = 0;
 
-			decimal calculatedVAT = decimal.Parse(txtCalculatedVAT.Text);
-			calculatedVAT = 0;
+			_item.CalculatedVAT = decimal.Parse(txtCalculatedVAT.Text);
+			_item.CalculatedVAT = 0;
 
 			for (int i = 0; i < dgvAddedProducts.Rows.Count; i++)
 			{
-				subTotal += Convert.ToDecimal(dgvAddedProducts.Rows[i].Cells[8].Value);
-				calculatedVAT += Convert.ToDecimal(dgvAddedProducts.Rows[i].Cells[7].Value);
+				_item.SubTotal += Convert.ToDecimal(dgvAddedProducts.Rows[i].Cells[8].Value);
+				_item.CalculatedVAT += Convert.ToDecimal(dgvAddedProducts.Rows[i].Cells[7].Value);
 			}
+
+			decimal grandTotal = decimal.Parse(txtGrandTotal.Text);
+			grandTotal = _item.SubTotal + _item.CalculatedVAT;
 
 			//subTotal += _item.Total;
 			//calculatedVAT += _item.VatPrice;
 
-			txtSubTotal.Text = subTotal.ToString();
-			txtCalculatedVAT.Text = calculatedVAT.ToString();
-
+			txtSubTotal.Text = _item.SubTotal.ToString();
+			txtCalculatedVAT.Text = _item.CalculatedVAT.ToString();
+			txtGrandTotal.Text = grandTotal.ToString();
 		}
 
 		private void btnAdd_Click(object sender, EventArgs e)

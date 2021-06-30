@@ -124,9 +124,9 @@ namespace E_document.UI
 			this.columnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.lblGridTitle = new System.Windows.Forms.Label();
 			this.pnlCalculation = new System.Windows.Forms.Panel();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.txtGrandTotal = new System.Windows.Forms.TextBox();
 			this.lblGrandTotal = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.txtIncludingTaxes = new System.Windows.Forms.TextBox();
 			this.lblVat = new System.Windows.Forms.Label();
 			this.txtCalculatedVAT = new System.Windows.Forms.TextBox();
 			this.lblDiscount = new System.Windows.Forms.Label();
@@ -1087,9 +1087,9 @@ namespace E_document.UI
 			// pnlCalculation
 			// 
 			this.pnlCalculation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.pnlCalculation.Controls.Add(this.textBox2);
+			this.pnlCalculation.Controls.Add(this.txtGrandTotal);
 			this.pnlCalculation.Controls.Add(this.lblGrandTotal);
-			this.pnlCalculation.Controls.Add(this.textBox3);
+			this.pnlCalculation.Controls.Add(this.txtIncludingTaxes);
 			this.pnlCalculation.Controls.Add(this.lblVat);
 			this.pnlCalculation.Controls.Add(this.txtCalculatedVAT);
 			this.pnlCalculation.Controls.Add(this.lblDiscount);
@@ -1101,15 +1101,16 @@ namespace E_document.UI
 			this.pnlCalculation.Size = new System.Drawing.Size(766, 146);
 			this.pnlCalculation.TabIndex = 36;
 			// 
-			// textBox2
+			// txtGrandTotal
 			// 
-			this.textBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.textBox2.Location = new System.Drawing.Point(269, 110);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(217, 22);
-			this.textBox2.TabIndex = 52;
-			this.textBox2.Text = "0,00";
-			this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.txtGrandTotal.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.txtGrandTotal.Location = new System.Drawing.Point(269, 110);
+			this.txtGrandTotal.Name = "txtGrandTotal";
+			this.txtGrandTotal.ReadOnly = true;
+			this.txtGrandTotal.Size = new System.Drawing.Size(217, 22);
+			this.txtGrandTotal.TabIndex = 52;
+			this.txtGrandTotal.Text = "0,00";
+			this.txtGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// lblGrandTotal
 			// 
@@ -1121,15 +1122,16 @@ namespace E_document.UI
 			this.lblGrandTotal.TabIndex = 51;
 			this.lblGrandTotal.Text = "Grand Total:";
 			// 
-			// textBox3
+			// txtIncludingTaxes
 			// 
-			this.textBox3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.textBox3.Location = new System.Drawing.Point(269, 82);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(217, 22);
-			this.textBox3.TabIndex = 50;
-			this.textBox3.Text = "0,00";
-			this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.txtIncludingTaxes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.txtIncludingTaxes.Location = new System.Drawing.Point(269, 82);
+			this.txtIncludingTaxes.Name = "txtIncludingTaxes";
+			this.txtIncludingTaxes.ReadOnly = true;
+			this.txtIncludingTaxes.Size = new System.Drawing.Size(217, 22);
+			this.txtIncludingTaxes.TabIndex = 50;
+			this.txtIncludingTaxes.Text = "0,00";
+			this.txtIncludingTaxes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			// 
 			// lblVat
 			// 
@@ -1146,6 +1148,7 @@ namespace E_document.UI
 			this.txtCalculatedVAT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.txtCalculatedVAT.Location = new System.Drawing.Point(269, 54);
 			this.txtCalculatedVAT.Name = "txtCalculatedVAT";
+			this.txtCalculatedVAT.ReadOnly = true;
 			this.txtCalculatedVAT.Size = new System.Drawing.Size(217, 22);
 			this.txtCalculatedVAT.TabIndex = 48;
 			this.txtCalculatedVAT.Text = "0,00";
@@ -1166,6 +1169,7 @@ namespace E_document.UI
 			this.txtSubTotal.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.txtSubTotal.Location = new System.Drawing.Point(269, 26);
 			this.txtSubTotal.Name = "txtSubTotal";
+			this.txtSubTotal.ReadOnly = true;
 			this.txtSubTotal.Size = new System.Drawing.Size(217, 22);
 			this.txtSubTotal.TabIndex = 44;
 			this.txtSubTotal.Text = "0,00";
@@ -1370,9 +1374,9 @@ namespace E_document.UI
 		private System.Windows.Forms.DataGridView dgvAddedProducts;
 		private System.Windows.Forms.Label lblGridTitle;
 		private System.Windows.Forms.Panel pnlCalculation;
-		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox txtGrandTotal;
 		private System.Windows.Forms.Label lblGrandTotal;
-		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox txtIncludingTaxes;
 		private System.Windows.Forms.Label lblVat;
 		private System.Windows.Forms.TextBox txtCalculatedVAT;
 		private System.Windows.Forms.Label lblDiscount;
