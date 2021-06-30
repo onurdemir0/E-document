@@ -22,10 +22,11 @@ namespace E_document.Entities
 		public string State { get; set; }
 		public string Zip { get; set; }
 		public string Country { get; set; }
-		public string Phone { get; set; }
+		public string Phone { get; set; } 
 		public string Fax { get; set; }
 		public string Email { get; set; }
 		public string WebSite { get; set; }
 		public string TaxAuthority { get; set; }
+		public string Situation { get; set; }
 	}
 }

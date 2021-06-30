@@ -16,11 +16,13 @@ namespace E_document.UI
 {
 	public partial class frmCreateBill : Form
 	{
-		List<AddressBook> _addressBook = new List<AddressBook>();
+		//List<AddressBook> _addressBook = new List<AddressBook>();
 		Item _item = new Item();
 		CustomerDal customerDal = new CustomerDal();
 		AddressBook addressBook = new AddressBook();
 		AddressBookDal addressBookDal = new AddressBookDal();
+		BillDal billDal = new BillDal();
+		Bill bill = new Bill();
 
 
 		public frmCreateBill()
@@ -28,17 +30,12 @@ namespace E_document.UI
 			InitializeComponent();
 		}
 
-		private void pictureBoxClose_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
-
 		private void frmCreateBill_Load(object sender, EventArgs e)
 		{
 			lblEttnNo.Text = Guid.NewGuid().ToString();
 
 			SQLiteConnection sql_con = new SQLiteConnection("Data Source = E_Document.db");
-			string txtQuery = "SELECT TIN_NIN, Title FROM AddressBooks";
+			string txtQuery = "SELECT TIN_NIN, Title FROM AddressBooks WHERE Situation='" + "+" + "'";
 			SQLiteCommand sql_cmd = new SQLiteCommand(txtQuery, sql_con);
 
 			sql_con.Open();
@@ -95,7 +92,7 @@ namespace E_document.UI
 
 			string keyword = txtSearchCustomer.Text;
 
-			if (keyword.Length < 3)
+			if (keyword.Length < 4)
 			{
 				ClearText();
 				return;
@@ -152,26 +149,30 @@ namespace E_document.UI
 
 		private void CalculatedDetails()
 		{
-			_item.SubTotal = decimal.Parse(txtSubTotal.Text);
-			_item.SubTotal = 0;
+			decimal subTotal = decimal.Parse(txtSubTotal.Text);
+			subTotal = 0;
 
-			_item.CalculatedVAT = decimal.Parse(txtCalculatedVAT.Text);
-			_item.CalculatedVAT = 0;
+			decimal calculatedVAT = decimal.Parse(txtCalculatedVAT.Text);
+			calculatedVAT = 0;
 
 			for (int i = 0; i < dgvAddedProducts.Rows.Count; i++)
 			{
-				_item.SubTotal += Convert.ToDecimal(dgvAddedProducts.Rows[i].Cells[8].Value);
-				_item.CalculatedVAT += Convert.ToDecimal(dgvAddedProducts.Rows[i].Cells[7].Value);
+				subTotal += Convert.ToDecimal(dgvAddedProducts.Rows[i].Cells[8].Value);
+				calculatedVAT += Convert.ToDecimal(dgvAddedProducts.Rows[i].Cells[7].Value);
 			}
 
+			decimal totalTax = decimal.Parse(txtIncludingTaxes.Text);
+			totalTax = subTotal + calculatedVAT;
+
 			decimal grandTotal = decimal.Parse(txtGrandTotal.Text);
-			grandTotal = _item.SubTotal + _item.CalculatedVAT;
+			grandTotal = subTotal + calculatedVAT;
 
 			//subTotal += _item.Total;
 			//calculatedVAT += _item.VatPrice;
 
-			txtSubTotal.Text = _item.SubTotal.ToString();
-			txtCalculatedVAT.Text = _item.CalculatedVAT.ToString();
+			txtSubTotal.Text = subTotal.ToString();
+			txtCalculatedVAT.Text = calculatedVAT.ToString();
+			txtIncludingTaxes.Text = totalTax.ToString();
 			txtGrandTotal.Text = grandTotal.ToString();
 		}
 
@@ -212,7 +213,7 @@ namespace E_document.UI
 			_item.Unit = txtUnit.Text;
 			_item.VatRate = Convert.ToInt32(txtVatRate.Text);
 		}
-		private void GetValueToCustomer()
+		private void GetValueToAddressBook()
 		{
 			addressBook.TinNin = txtTinNin.Text;
 			addressBook.Title = txtTitle.Text;
@@ -233,10 +234,27 @@ namespace E_document.UI
 			addressBook.WebSite = txtWeb.Text;
 			addressBook.TaxAuthority = txtTaxAuth.Text;
 		}
+		private void GetValueToBill()
+		{
+			string custTinNin = txtTinNin.Text;
+			AddressBook addressBook = customerDal.GetCustIdFromTinNin(custTinNin);
+			bill.CustomerId = addressBook.AddressBookId;
 
+			bill.Ettn = lblEttnNo.Text;
+			bill.Type = comboBoxType.Text;
+			bill.BillDate = Convert.ToDateTime(dtpBillDate.Text);
+			bill.BillType = comboBoxBillType.Text;
+			bill.Currency = comboBoxCurrency.Text;
+			bill.OrderNo = txtOrder.Text;
+			bill.OrderDate = Convert.ToDateTime(dtpOrder.Text);
+			bill.WayBillNo = txtWayBillNo.Text;
+			bill.WayBillDate = Convert.ToDateTime(dtpWayBillDate.Text);
+		}
+	
 		private void btnAddToAddressBook_Click(object sender, EventArgs e)
 		{
-			GetValueToCustomer();
+			GetValueToAddressBook();
+			addressBook.Situation = "+";
 
 			bool success = addressBookDal.Add(addressBook);
 
@@ -309,6 +327,26 @@ namespace E_document.UI
 			//	MessageBox.Show(ex.Message);
 			//}
 
+		}
+
+		private void btnCreate_Click(object sender, EventArgs e)
+		{
+			
+			GetValueToAddressBook();
+			addressBook.Situation = "-";
+			bool success2 = addressBookDal.Add(addressBook);
+
+			GetValueToBill();
+			bool success = billDal.Add(bill);
+
+			if (success & success2)
+			{
+				MessageBox.Show("Successfully Created!");
+			}
+			else
+			{
+				MessageBox.Show("Failed!");
+			}
 		}
 	}
 }

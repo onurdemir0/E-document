@@ -20,9 +20,5 @@ namespace E_document.Entities
 		public int VatRate { get; set; }
 		public decimal VatPrice { get; set; }
 		public decimal Total { get; set; }
-		public decimal SubTotal { get; set; }
-		public decimal CalculatedVAT { get; set; }
-		public decimal IncludingTaxes { get; set; }
-		public decimal GrandTotal { get; set; }
 	}
 }

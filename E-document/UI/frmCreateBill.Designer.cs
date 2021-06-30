@@ -1240,6 +1240,7 @@ namespace E_document.UI
 			this.btnCreate.TabIndex = 2;
 			this.btnCreate.Text = "Create";
 			this.btnCreate.UseVisualStyleBackColor = true;
+			this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
 			// 
 			// btnClear
 			// 

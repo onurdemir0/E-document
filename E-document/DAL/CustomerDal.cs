@@ -12,6 +12,7 @@ namespace E_document.DAL
 {
 	public class CustomerDal : BaseDal
 	{
+		#region SEARCH FOR CUSTOMER
 		public AddressBook SearchCustomerForTransaction(string keyword)
 		{
 			AddressBook addressBook = new AddressBook();
@@ -22,7 +23,7 @@ namespace E_document.DAL
 			try
 			{
 				//CONTAINS
-				string txtQuery = "SELECT TIN_NIN, Title, FirstName, LastName, Road_Street, ApartmentName, ApartmentNo, Floor, Town, District, State, Zip, Country, Phone, Fax, Email, WebSite, TaxAuthority from AddressBooks WHERE TIN_NIN LIKE '%" + keyword + "%' OR Title LIKE '%" + keyword + "%'";
+				string txtQuery = "SELECT TIN_NIN, Title, FirstName, LastName, Road_Street, ApartmentName, ApartmentNo, Floor, Town, District, State, Zip, Country, Phone, Fax, Email, WebSite, TaxAuthority, Situation from AddressBooks WHERE TIN_NIN LIKE '%" + keyword + "%' OR Title LIKE '%" + keyword + "%'";
 				SQLiteDataAdapter adapter = new SQLiteDataAdapter(txtQuery, sql_con);
 				
 				sql_con.Open();
@@ -60,5 +61,39 @@ namespace E_document.DAL
 			}
 			return addressBook;
 		}
+		#endregion
+		#region METHOD TO GET ID OF THE CUSTOMER ON TIN/NIN
+		public AddressBook GetCustIdFromTinNin(string tinNin)
+		{
+			AddressBook addressBook = new AddressBook();
+			SQLiteConnection sql_con = new SQLiteConnection("Data Source = E_Document.db");
+
+			DataTable dt = new DataTable();
+
+			try
+			{
+				string txtQuery = "SELECT AddressBookId from AddressBooks WHERE TIN_NIN='" + tinNin + "'";
+				SQLiteDataAdapter adapter = new SQLiteDataAdapter(txtQuery, sql_con);
+
+				sql_con.Open();
+
+				adapter.Fill(dt);
+				if (dt.Rows.Count>0)
+				{
+					addressBook.AddressBookId = int.Parse(dt.Rows[0]["AddressBookId"].ToString());
+				}
+			}
+			catch (Exception e)
+			{
+				MessageBox.Show(e.Message);
+			}
+			finally
+			{
+				sql_con.Close(); 
+			}
+
+			return addressBook;
+		}
+		#endregion
 	}
 }

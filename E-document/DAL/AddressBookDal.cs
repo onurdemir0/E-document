@@ -1,6 +1,7 @@
 ﻿using E_document.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
@@ -17,50 +18,63 @@ namespace E_document.DAL
 			SetConnection();
 			try
 			{
-				string txtQuery = "insert into AddressBooks (TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority) values (@TIN_NIN,@Title,@FirstName,@LastName,@Road_Street,@ApartmentName,@ApartmentNo,@Floor,@Town,@District,@State,@Zip,@Country,@Phone,@Fax,@Email,@WebSite,@TaxAuthority)";
-				sql_cmd = new SQLiteCommand(txtQuery, sql_con);
+				SQLiteDataAdapter da = new SQLiteDataAdapter("Select TIN_NIN from AddressBooks where TIN_NIN = '" + addressBook.TinNin + "'", sql_con);
+				DataTable dt = new DataTable();
+				da.Fill(dt);
 
-				if (addressBook.TinNin.Length == 11)
+				if (dt.Rows.Count > 0)
 				{
-					sql_cmd.Parameters.AddWithValue("@Title", addressBook.FirstName + " " + addressBook.LastName);
-					sql_cmd.Parameters.AddWithValue("@FirstName", addressBook.FirstName);
-					sql_cmd.Parameters.AddWithValue("@LastName", addressBook.LastName);
+					MessageBox.Show("This TIN/NIN already exist");
 				}
+
 				else
 				{
-					sql_cmd.Parameters.AddWithValue("@Title", addressBook.Title);
-					sql_cmd.Parameters.AddWithValue("@FirstName", " ");
-					sql_cmd.Parameters.AddWithValue("@LastName", " ");
-				}
+					string txtQuery = "insert into AddressBooks (TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority,Situation) values (@TIN_NIN,@Title,@FirstName,@LastName,@Road_Street,@ApartmentName,@ApartmentNo,@Floor,@Town,@District,@State,@Zip,@Country,@Phone,@Fax,@Email,@WebSite,@TaxAuthority,@Situation)";
+					sql_cmd = new SQLiteCommand(txtQuery, sql_con);
 
-				sql_cmd.Parameters.AddWithValue("@TIN_NIN", addressBook.TinNin);
-				sql_cmd.Parameters.AddWithValue("@Road_Street", addressBook.RoadStreet);
-				sql_cmd.Parameters.AddWithValue("@ApartmentName", addressBook.ApartmentName);
-				sql_cmd.Parameters.AddWithValue("@ApartmentNo", addressBook.ApartmentNo);
-				sql_cmd.Parameters.AddWithValue("@Floor", addressBook.Floor);
-				sql_cmd.Parameters.AddWithValue("@Town", addressBook.Town);
-				sql_cmd.Parameters.AddWithValue("@District", addressBook.District);
-				sql_cmd.Parameters.AddWithValue("@State", addressBook.State);
-				sql_cmd.Parameters.AddWithValue("@Zip", addressBook.Zip);
-				sql_cmd.Parameters.AddWithValue("@Country", addressBook.Country);
-				sql_cmd.Parameters.AddWithValue("@Phone", addressBook.Phone);
-				sql_cmd.Parameters.AddWithValue("@Fax", addressBook.Fax);
-				sql_cmd.Parameters.AddWithValue("@Email", addressBook.Email);
-				sql_cmd.Parameters.AddWithValue("@WebSite", addressBook.WebSite);
-				sql_cmd.Parameters.AddWithValue("@TaxAuthority", addressBook.TaxAuthority);
+					if (addressBook.TinNin.Length == 11)
+					{
+						sql_cmd.Parameters.AddWithValue("@Title", addressBook.FirstName + " " + addressBook.LastName);
+						sql_cmd.Parameters.AddWithValue("@FirstName", addressBook.FirstName);
+						sql_cmd.Parameters.AddWithValue("@LastName", addressBook.LastName);
+					}
+					else
+					{
+						sql_cmd.Parameters.AddWithValue("@Title", addressBook.Title);
+						sql_cmd.Parameters.AddWithValue("@FirstName", " ");
+						sql_cmd.Parameters.AddWithValue("@LastName", " ");
+					}
 
-				sql_con.Open();
+					sql_cmd.Parameters.AddWithValue("@TIN_NIN", addressBook.TinNin);
+					sql_cmd.Parameters.AddWithValue("@Road_Street", addressBook.RoadStreet);
+					sql_cmd.Parameters.AddWithValue("@ApartmentName", addressBook.ApartmentName);
+					sql_cmd.Parameters.AddWithValue("@ApartmentNo", addressBook.ApartmentNo);
+					sql_cmd.Parameters.AddWithValue("@Floor", addressBook.Floor);
+					sql_cmd.Parameters.AddWithValue("@Town", addressBook.Town);
+					sql_cmd.Parameters.AddWithValue("@District", addressBook.District);
+					sql_cmd.Parameters.AddWithValue("@State", addressBook.State);
+					sql_cmd.Parameters.AddWithValue("@Zip", addressBook.Zip);
+					sql_cmd.Parameters.AddWithValue("@Country", addressBook.Country);
+					sql_cmd.Parameters.AddWithValue("@Phone", addressBook.Phone);
+					sql_cmd.Parameters.AddWithValue("@Fax", addressBook.Fax);
+					sql_cmd.Parameters.AddWithValue("@Email", addressBook.Email);
+					sql_cmd.Parameters.AddWithValue("@WebSite", addressBook.WebSite);
+					sql_cmd.Parameters.AddWithValue("@TaxAuthority", addressBook.TaxAuthority);
+					sql_cmd.Parameters.AddWithValue("@Situation", addressBook.Situation);
 
-				int rows = sql_cmd.ExecuteNonQuery();
+					sql_con.Open();
 
-				if (rows > 0)
-				{
-					isSuccess = true;
-				}
-				else
-				{
-					isSuccess = false;
-				}
+					int rows = sql_cmd.ExecuteNonQuery();
+
+					if (rows > 0)
+					{
+						isSuccess = true;
+					}
+					else
+					{
+						isSuccess = false;
+					}
+				}	
 			}
 			catch (Exception e)
 			{

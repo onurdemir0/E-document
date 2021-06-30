@@ -69,6 +69,7 @@ namespace E_document.UI
 			addressBook.Email = txtEmail.Text;
 			addressBook.WebSite = txtWeb.Text;
 			addressBook.TaxAuthority = txtTaxAuth.Text;
+			addressBook.Situation = "+";
 		}
 		private void ClearText()
 		{

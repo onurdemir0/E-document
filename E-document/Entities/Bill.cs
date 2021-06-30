@@ -9,6 +9,7 @@ namespace E_document.Entities
 	public class Bill
 	{
 		public int BillId { get; set; }
+		public int CustomerId { get; set; }
 		public string Ettn { get; set; }
 		public string Type { get; set; }
 		public DateTime BillDate { get; set; }
