@@ -207,9 +207,9 @@ namespace E_document.UI
 			this.lblBillType.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblBillType.Location = new System.Drawing.Point(11, 147);
 			this.lblBillType.Name = "lblBillType";
-			this.lblBillType.Size = new System.Drawing.Size(51, 13);
+			this.lblBillType.Size = new System.Drawing.Size(56, 13);
 			this.lblBillType.TabIndex = 67;
-			this.lblBillType.Text = "Bill Type:";
+			this.lblBillType.Text = "Bill Type*:";
 			// 
 			// dtpBillDate
 			// 
@@ -255,9 +255,9 @@ namespace E_document.UI
 			this.lblType.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblType.Location = new System.Drawing.Point(11, 91);
 			this.lblType.Name = "lblType";
-			this.lblType.Size = new System.Drawing.Size(33, 13);
+			this.lblType.Size = new System.Drawing.Size(38, 13);
 			this.lblType.TabIndex = 62;
-			this.lblType.Text = "Type:";
+			this.lblType.Text = "Type*:";
 			// 
 			// lblEttn
 			// 
@@ -534,9 +534,9 @@ namespace E_document.UI
 			this.lblCountry.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblCountry.Location = new System.Drawing.Point(398, 170);
 			this.lblCountry.Name = "lblCountry";
-			this.lblCountry.Size = new System.Drawing.Size(51, 13);
+			this.lblCountry.Size = new System.Drawing.Size(56, 13);
 			this.lblCountry.TabIndex = 50;
-			this.lblCountry.Text = "Country:";
+			this.lblCountry.Text = "Country*:";
 			// 
 			// lblZip
 			// 
@@ -554,9 +554,9 @@ namespace E_document.UI
 			this.lblState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblState.Location = new System.Drawing.Point(398, 114);
 			this.lblState.Name = "lblState";
-			this.lblState.Size = new System.Drawing.Size(83, 13);
+			this.lblState.Size = new System.Drawing.Size(88, 13);
 			this.lblState.TabIndex = 48;
-			this.lblState.Text = "State/Province:";
+			this.lblState.Text = "State/Province*:";
 			// 
 			// lblDistrict
 			// 
@@ -564,9 +564,9 @@ namespace E_document.UI
 			this.lblDistrict.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblDistrict.Location = new System.Drawing.Point(398, 86);
 			this.lblDistrict.Name = "lblDistrict";
-			this.lblDistrict.Size = new System.Drawing.Size(87, 13);
+			this.lblDistrict.Size = new System.Drawing.Size(92, 13);
 			this.lblDistrict.TabIndex = 47;
-			this.lblDistrict.Text = "District/County:";
+			this.lblDistrict.Text = "District/County*:";
 			// 
 			// txtTown
 			// 
@@ -701,9 +701,9 @@ namespace E_document.UI
 			this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblLastName.Location = new System.Drawing.Point(10, 170);
 			this.lblLastName.Name = "lblLastName";
-			this.lblLastName.Size = new System.Drawing.Size(62, 13);
+			this.lblLastName.Size = new System.Drawing.Size(67, 13);
 			this.lblLastName.TabIndex = 29;
-			this.lblLastName.Text = "Last Name:";
+			this.lblLastName.Text = "Last Name*:";
 			// 
 			// lblFirstName
 			// 
@@ -711,9 +711,9 @@ namespace E_document.UI
 			this.lblFirstName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblFirstName.Location = new System.Drawing.Point(10, 142);
 			this.lblFirstName.Name = "lblFirstName";
-			this.lblFirstName.Size = new System.Drawing.Size(64, 13);
+			this.lblFirstName.Size = new System.Drawing.Size(69, 13);
 			this.lblFirstName.TabIndex = 28;
-			this.lblFirstName.Text = "First Name:";
+			this.lblFirstName.Text = "First Name*:";
 			// 
 			// lblTitle
 			// 
@@ -721,9 +721,9 @@ namespace E_document.UI
 			this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblTitle.Location = new System.Drawing.Point(10, 114);
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.Size = new System.Drawing.Size(32, 13);
+			this.lblTitle.Size = new System.Drawing.Size(37, 13);
 			this.lblTitle.TabIndex = 27;
-			this.lblTitle.Text = "Title:";
+			this.lblTitle.Text = "Title*:";
 			// 
 			// lblTinNin
 			// 
@@ -930,9 +930,9 @@ namespace E_document.UI
 			this.lblItemName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblItemName.Location = new System.Drawing.Point(11, 61);
 			this.lblItemName.Name = "lblItemName";
-			this.lblItemName.Size = new System.Drawing.Size(64, 13);
+			this.lblItemName.Size = new System.Drawing.Size(69, 13);
 			this.lblItemName.TabIndex = 40;
-			this.lblItemName.Text = "Item Name:";
+			this.lblItemName.Text = "Item Name*:";
 			// 
 			// txtUnit
 			// 
@@ -956,9 +956,9 @@ namespace E_document.UI
 			this.lblUnit.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblUnit.Location = new System.Drawing.Point(399, 61);
 			this.lblUnit.Name = "lblUnit";
-			this.lblUnit.Size = new System.Drawing.Size(32, 13);
+			this.lblUnit.Size = new System.Drawing.Size(37, 13);
 			this.lblUnit.TabIndex = 36;
-			this.lblUnit.Text = "Unit:";
+			this.lblUnit.Text = "Unit*:";
 			// 
 			// lblItemNo
 			// 
@@ -966,9 +966,9 @@ namespace E_document.UI
 			this.lblItemNo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblItemNo.Location = new System.Drawing.Point(10, 33);
 			this.lblItemNo.Name = "lblItemNo";
-			this.lblItemNo.Size = new System.Drawing.Size(50, 13);
+			this.lblItemNo.Size = new System.Drawing.Size(55, 13);
 			this.lblItemNo.TabIndex = 35;
-			this.lblItemNo.Text = "Item No:";
+			this.lblItemNo.Text = "Item No*:";
 			// 
 			// lblProductTitle
 			// 
@@ -1372,7 +1372,6 @@ namespace E_document.UI
 		private System.Windows.Forms.Label lblItemNo;
 		private System.Windows.Forms.Label lblProductTitle;
 		private System.Windows.Forms.Panel pnlDataGrid;
-		private System.Windows.Forms.DataGridView dgvAddedProducts;
 		private System.Windows.Forms.Label lblGridTitle;
 		private System.Windows.Forms.Panel pnlCalculation;
 		private System.Windows.Forms.TextBox txtGrandTotal;
@@ -1404,5 +1403,6 @@ namespace E_document.UI
 		private System.Windows.Forms.Button btnDelete;
 		private System.Windows.Forms.Button btnAddToAddressBook;
 		public System.Windows.Forms.TextBox txtOrder;
+		public System.Windows.Forms.DataGridView dgvAddedProducts;
 	}
 }

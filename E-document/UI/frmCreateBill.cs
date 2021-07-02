@@ -23,7 +23,7 @@ namespace E_document.UI
 		AddressBookDal addressBookDal = new AddressBookDal();
 		BillDal billDal = new BillDal();
 		Bill bill = new Bill();
-
+		ItemDal itemDal = new ItemDal();
 
 		public frmCreateBill()
 		{
@@ -192,9 +192,9 @@ namespace E_document.UI
 			int n = dgvAddedProducts.Rows.Add();
 			dgvAddedProducts.Rows[n].Cells[1].Value = _item.ItemNo;
 			dgvAddedProducts.Rows[n].Cells[2].Value = _item.ItemName;
-			dgvAddedProducts.Rows[n].Cells[3].Value = _item.UnitPrice;
-			dgvAddedProducts.Rows[n].Cells[4].Value = _item.Quantity;
-			dgvAddedProducts.Rows[n].Cells[5].Value = _item.Unit;
+			dgvAddedProducts.Rows[n].Cells[3].Value = _item.Quantity;
+			dgvAddedProducts.Rows[n].Cells[4].Value = _item.Unit;
+			dgvAddedProducts.Rows[n].Cells[5].Value = _item.UnitPrice;
 			dgvAddedProducts.Rows[n].Cells[6].Value = _item.VatRate;
 			dgvAddedProducts.Rows[n].Cells[7].Value = _item.VatPrice;
 			dgvAddedProducts.Rows[n].Cells[8].Value = _item.Total;
@@ -249,6 +249,28 @@ namespace E_document.UI
 			bill.OrderDate = Convert.ToDateTime(dtpOrder.Text);
 			bill.WayBillNo = txtWayBillNo.Text;
 			bill.WayBillDate = Convert.ToDateTime(dtpWayBillDate.Text);
+		}
+		private void GetItemValueToDB()
+		{
+			Item item = new Item();
+
+			string billEttn = lblEttnNo.Text;
+			Bill bill = billDal.GetBillIdFromEttn(billEttn);
+			item.BillId = bill.BillId;
+
+			for (int i = 0; i < dgvAddedProducts.Rows.Count; i++)
+			{
+				item.LineNo = Convert.ToInt32(dgvAddedProducts.Rows[i].Cells[0].Value);
+				item.ItemNo = dgvAddedProducts.Rows[i].Cells[1].Value.ToString();
+				item.ItemName = dgvAddedProducts.Rows[i].Cells[2].Value.ToString();
+				item.Quantity = Convert.ToInt32(dgvAddedProducts.Rows[i].Cells[3].Value);
+				item.Unit = dgvAddedProducts.Rows[i].Cells[4].Value.ToString();
+				item.UnitPrice = Convert.ToInt32(dgvAddedProducts.Rows[i].Cells[5].Value);
+				item.VatRate = Convert.ToInt32(dgvAddedProducts.Rows[i].Cells[6].Value);
+				item.VatPrice = Convert.ToInt32(dgvAddedProducts.Rows[i].Cells[7].Value);
+				item.Total = Convert.ToInt32(dgvAddedProducts.Rows[i].Cells[8].Value);
+				bool successItem = itemDal.Add(item);
+			}
 		}
 	
 		private void btnAddToAddressBook_Click(object sender, EventArgs e)
@@ -338,6 +360,9 @@ namespace E_document.UI
 
 			GetValueToBill();
 			bool success = billDal.Add(bill);
+
+			GetItemValueToDB();
+
 
 			if (success & success2)
 			{

@@ -180,9 +180,9 @@ namespace E_document.UI
 			this.lblState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblState.Location = new System.Drawing.Point(341, 150);
 			this.lblState.Name = "lblState";
-			this.lblState.Size = new System.Drawing.Size(83, 13);
+			this.lblState.Size = new System.Drawing.Size(88, 13);
 			this.lblState.TabIndex = 48;
-			this.lblState.Text = "State/Province:";
+			this.lblState.Text = "State/Province*:";
 			// 
 			// txtCity
 			// 
@@ -230,9 +230,9 @@ namespace E_document.UI
 			this.lblCity.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblCity.Location = new System.Drawing.Point(340, 114);
 			this.lblCity.Name = "lblCity";
-			this.lblCity.Size = new System.Drawing.Size(29, 13);
+			this.lblCity.Size = new System.Drawing.Size(34, 13);
 			this.lblCity.TabIndex = 43;
-			this.lblCity.Text = "City:";
+			this.lblCity.Text = "City*:";
 			// 
 			// lblAddress2
 			// 
@@ -250,9 +250,9 @@ namespace E_document.UI
 			this.lblCountry.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblCountry.Location = new System.Drawing.Point(341, 225);
 			this.lblCountry.Name = "lblCountry";
-			this.lblCountry.Size = new System.Drawing.Size(51, 13);
+			this.lblCountry.Size = new System.Drawing.Size(56, 13);
 			this.lblCountry.TabIndex = 41;
-			this.lblCountry.Text = "Country:";
+			this.lblCountry.Text = "Country*:";
 			// 
 			// lblZip
 			// 
@@ -361,9 +361,9 @@ namespace E_document.UI
 			this.lblTaxIdentity.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblTaxIdentity.Location = new System.Drawing.Point(12, 225);
 			this.lblTaxIdentity.Name = "lblTaxIdentity";
-			this.lblTaxIdentity.Size = new System.Drawing.Size(68, 13);
+			this.lblTaxIdentity.Size = new System.Drawing.Size(73, 13);
 			this.lblTaxIdentity.TabIndex = 27;
-			this.lblTaxIdentity.Text = "Tax Identity:";
+			this.lblTaxIdentity.Text = "Tax Identity*:";
 			// 
 			// lblTaxAuth
 			// 
@@ -381,9 +381,9 @@ namespace E_document.UI
 			this.lblCompanyName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblCompanyName.Location = new System.Drawing.Point(11, 41);
 			this.lblCompanyName.Name = "lblCompanyName";
-			this.lblCompanyName.Size = new System.Drawing.Size(90, 13);
+			this.lblCompanyName.Size = new System.Drawing.Size(95, 13);
 			this.lblCompanyName.TabIndex = 24;
-			this.lblCompanyName.Text = "Company Name:";
+			this.lblCompanyName.Text = "Company Name*:";
 			// 
 			// lblTitle
 			// 

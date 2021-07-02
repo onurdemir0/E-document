@@ -1,6 +1,7 @@
 ﻿using E_document.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
@@ -54,6 +55,38 @@ namespace E_document.DAL
 			}
 
 			return isSuccess;
+		}
+
+		public Bill GetBillIdFromEttn(string ettn)
+		{
+			Bill bill = new Bill();
+			SQLiteConnection sql_con = new SQLiteConnection("Data Source = E_Document.db");
+
+			DataTable dt = new DataTable();
+
+			try
+			{
+				string txtQuery = "SELECT Billid from Bills WHERE Ettn='" + ettn + "'";
+				SQLiteDataAdapter adapter = new SQLiteDataAdapter(txtQuery, sql_con);
+
+				sql_con.Open();
+
+				adapter.Fill(dt);
+				if (dt.Rows.Count > 0)
+				{
+					bill.BillId = int.Parse(dt.Rows[0]["Billid"].ToString());
+				}
+			}
+			catch (Exception e)
+			{
+				MessageBox.Show(e.Message);
+			}
+			finally
+			{
+				sql_con.Close();
+			}
+
+			return bill;
 		}
 	}
 }

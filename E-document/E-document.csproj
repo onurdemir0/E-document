@@ -69,6 +69,7 @@
     <Compile Include="DAL\BaseDal.cs" />
     <Compile Include="DAL\BillDal.cs" />
     <Compile Include="DAL\CustomerDal.cs" />
+    <Compile Include="DAL\ItemDal.cs" />
     <Compile Include="DAL\settingsDal.cs" />
     <Compile Include="Entities\AddressBook.cs" />
     <Compile Include="Entities\Bill.cs" />
