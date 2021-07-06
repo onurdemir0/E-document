@@ -146,5 +146,49 @@ namespace E_document.DAL
 			}
 			return isSuccess;
 		}
+
+		public Dealer SearchSenderForTransaction(string keyword)
+		{
+			Dealer dealer = new Dealer();
+			SQLiteConnection sql_con = new SQLiteConnection("Data Source = E_Document.db");
+
+			DataTable dt = new DataTable();
+
+			try
+			{
+				string txtQuery = "SELECT SettingId, CompanyName, Email, Mobile, WebSite, TaxAuthority, TaxIdentity, FirstAddressLine, SecondAddressLine, City, State, Zip, Country from Settings WHERE CompanyName LIKE '%" + keyword + "%'";
+				SQLiteDataAdapter adapter = new SQLiteDataAdapter(txtQuery, sql_con);
+
+				sql_con.Open();
+				adapter.Fill(dt);
+
+				if (dt.Rows.Count > 0)
+				{
+					dealer.SettingId = Convert.ToInt32(dt.Rows[0]["SettingId"]);
+					dealer.CompanyName = dt.Rows[0]["CompanyName"].ToString();
+					dealer.Email = dt.Rows[0]["Email"].ToString();
+					dealer.Mobile = dt.Rows[0]["Mobile"].ToString();
+					dealer.WebSite = dt.Rows[0]["WebSite"].ToString();
+					dealer.TaxAuthority = dt.Rows[0]["TaxAuthority"].ToString();
+					dealer.TaxIdentity = dt.Rows[0]["TaxIdentity"].ToString();
+					dealer.FirstAddressLine = dt.Rows[0]["FirstAddressLine"].ToString();
+					dealer.SecondAddressLine = dt.Rows[0]["SecondAddressLine"].ToString();
+					dealer.City = dt.Rows[0]["City"].ToString();
+					dealer.State = dt.Rows[0]["State"].ToString();
+					dealer.Zip = dt.Rows[0]["Zip"].ToString();
+					dealer.Country = dt.Rows[0]["Country"].ToString();
+				}
+			}
+			catch (Exception e)
+			{
+				MessageBox.Show(e.Message);
+			}
+			finally
+			{
+				sql_con.Close();
+			}
+			return dealer;
+		}
+
 	}
 }

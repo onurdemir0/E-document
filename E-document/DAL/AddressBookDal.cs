@@ -1,4 +1,5 @@
 ﻿using E_document.Entities;
+using E_document.UI;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -32,19 +33,22 @@ namespace E_document.DAL
 					string txtQuery = "insert into AddressBooks (TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority,Situation) values (@TIN_NIN,@Title,@FirstName,@LastName,@Road_Street,@ApartmentName,@ApartmentNo,@Floor,@Town,@District,@State,@Zip,@Country,@Phone,@Fax,@Email,@WebSite,@TaxAuthority,@Situation)";
 					sql_cmd = new SQLiteCommand(txtQuery, sql_con);
 
-					if (addressBook.TinNin.Length == 11)
-					{
-						sql_cmd.Parameters.AddWithValue("@Title", addressBook.FirstName + " " + addressBook.LastName);
-						sql_cmd.Parameters.AddWithValue("@FirstName", addressBook.FirstName);
-						sql_cmd.Parameters.AddWithValue("@LastName", addressBook.LastName);
-					}
-					else
-					{
-						sql_cmd.Parameters.AddWithValue("@Title", addressBook.Title);
-						sql_cmd.Parameters.AddWithValue("@FirstName", " ");
-						sql_cmd.Parameters.AddWithValue("@LastName", " ");
-					}
+					//if (addressBook.TinNin.Length == 11)
+					//{
+					//	sql_cmd.Parameters.AddWithValue("@Title", addressBook.FirstName + " " + addressBook.LastName);
+					//	sql_cmd.Parameters.AddWithValue("@FirstName", addressBook.FirstName);
+					//	sql_cmd.Parameters.AddWithValue("@LastName", addressBook.LastName);
+					//}
+					//else
+					//{
+					//	sql_cmd.Parameters.AddWithValue("@Title", addressBook.Title);
+					//	sql_cmd.Parameters.AddWithValue("@FirstName", " ");
+					//	sql_cmd.Parameters.AddWithValue("@LastName", " ");
+					//}
 
+					sql_cmd.Parameters.AddWithValue("@Title", addressBook.Title);
+					sql_cmd.Parameters.AddWithValue("@FirstName", addressBook.FirstName);
+					sql_cmd.Parameters.AddWithValue("@LastName", addressBook.LastName);
 					sql_cmd.Parameters.AddWithValue("@TIN_NIN", addressBook.TinNin);
 					sql_cmd.Parameters.AddWithValue("@Road_Street", addressBook.RoadStreet);
 					sql_cmd.Parameters.AddWithValue("@ApartmentName", addressBook.ApartmentName);
@@ -99,19 +103,22 @@ namespace E_document.DAL
 					"Fax=@Fax, Email=@Email, WebSite=@WebSite, TaxAuthority=@TaxAuthority WHERE AddressBookId=@AddressBookId";
 				sql_cmd = new SQLiteCommand(txtQuery, sql_con);
 
-				if (addressBook.TinNin.Length == 11)
-				{
-					sql_cmd.Parameters.AddWithValue("@Title", addressBook.FirstName + " " + addressBook.LastName);
-					sql_cmd.Parameters.AddWithValue("@FirstName", addressBook.FirstName);
-					sql_cmd.Parameters.AddWithValue("@LastName", addressBook.LastName);
-				}
-				else
-				{
-					sql_cmd.Parameters.AddWithValue("@Title", addressBook.Title);
-					sql_cmd.Parameters.AddWithValue("@FirstName", " ");
-					sql_cmd.Parameters.AddWithValue("@LastName", " ");
-				}
+				//if (addressBook.TinNin.Length == 11)
+				//{
+				//	sql_cmd.Parameters.AddWithValue("@Title", addressBook.FirstName + " " + addressBook.LastName);
+				//	sql_cmd.Parameters.AddWithValue("@FirstName", addressBook.FirstName);
+				//	sql_cmd.Parameters.AddWithValue("@LastName", addressBook.LastName);
+				//}
+				//else
+				//{
+				//	sql_cmd.Parameters.AddWithValue("@Title", addressBook.Title);
+				//	sql_cmd.Parameters.AddWithValue("@FirstName", " ");
+				//	sql_cmd.Parameters.AddWithValue("@LastName", " ");
+				//}
 
+				sql_cmd.Parameters.AddWithValue("@Title", addressBook.Title);
+				sql_cmd.Parameters.AddWithValue("@FirstName", addressBook.FirstName);
+				sql_cmd.Parameters.AddWithValue("@LastName", addressBook.LastName);
 				sql_cmd.Parameters.AddWithValue("@TIN_NIN", addressBook.TinNin);
 				sql_cmd.Parameters.AddWithValue("@Road_Street", addressBook.RoadStreet);
 				sql_cmd.Parameters.AddWithValue("@ApartmentName", addressBook.ApartmentName);

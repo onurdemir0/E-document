@@ -54,8 +54,8 @@ namespace E_document.UI
 			// createBillToolStripMenuItem
 			// 
 			this.createBillToolStripMenuItem.Name = "createBillToolStripMenuItem";
-			this.createBillToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-			this.createBillToolStripMenuItem.Text = "Create Bill";
+			this.createBillToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+			this.createBillToolStripMenuItem.Text = "Create Invoice";
 			this.createBillToolStripMenuItem.Click += new System.EventHandler(this.createBillToolStripMenuItem_Click);
 			// 
 			// addressBookToolStripMenuItem

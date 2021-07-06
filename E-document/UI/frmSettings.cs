@@ -180,6 +180,7 @@ namespace E_document.UI
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
+			
 			GetValue();
 
 			//string txtQuery = "insert into Settings (CompanyName,Email,Mobile,WebSite,TaxAuthority,TaxIdentity,FirstAddressLine,SecondAddressLine,City,State,Zip,Country)values('" + Settings.CompanyName + "','" + Settings.Email + "','" + Settings.Mobile + "','" + Settings.WebSite + "','" + Settings.TaxAuthority + "','" + Settings.TaxIdentity + "','" + Settings.FirstAddressLine + "','" + Settings.SecondAddressLine + "','" + Settings.City + "','" + Settings.State + "','" + Settings.Zip + "','" + Settings.Country + "')";
@@ -214,18 +215,18 @@ namespace E_document.UI
 			}
 		}
 
-		private void txtEmail_Leave(object sender, EventArgs e)
-		{
-			string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
-			if (Regex.IsMatch(txtEmail.Text,pattern))
-			{
-				errorProvider1.Clear();
-			}
-			else
-			{
-				errorProvider1.SetError(this.txtEmail, "Please provide valid Mail address");
-			}
-		}
+		//private void txtEmail_Leave(object sender, EventArgs e)
+		//{
+		//	string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+		//	if (Regex.IsMatch(txtEmail.Text,pattern))
+		//	{
+		//		errorProvider1.Clear();
+		//	}
+		//	else
+		//	{
+		//		errorProvider1.SetError(this.txtEmail, "Please provide valid Mail address");
+		//	}
+		//}
 
 		private void txtEmail_Validating(object sender, CancelEventArgs e)
 		{
@@ -321,6 +322,15 @@ namespace E_document.UI
 			TextBoxEnableFalse();
 
 			MessageBox.Show("Successful");
+		}
+
+		private void txtCompanyName_Validating(object sender, CancelEventArgs e)
+		{
+			//if (string.IsNullOrWhiteSpace(txtCompanyName.Text))
+			//{
+			//	txtCompanyName.Focus();
+			//	MessageBox.Show("Please enter Company Name");
+			//}
 		}
 	}
 }

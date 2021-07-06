@@ -23,33 +23,8 @@ namespace E_document.UI
 		AddressBookDal dal = new AddressBookDal();
 		AddressBook addressBook = new AddressBook();
 
-		/*public SQLiteConnection sql_con;
-		public SQLiteCommand sql_cmd;
-		public SQLiteDataAdapter DB;
-		public DataSet DS = new DataSet();
-		public DataTable DT = new DataTable();*/
-
 		private void GetValue()
 		{
-			/*AddressBook.TinNin = txtTinNin.Text;
-			AddressBook.Title = txtTitle.Text;
-			AddressBook.FirstName = txtFirstName.Text;
-			AddressBook.LastName = txtLastName.Text;
-			AddressBook.RoadStreet = txtStreet.Text;
-			AddressBook.ApartmentName = txtApartName.Text;
-			AddressBook.ApartmentNo = txtApartNo.Text;
-			AddressBook.Floor = txtFloor.Text;
-			AddressBook.Town = txtTown.Text;
-			AddressBook.District = txtDistrict.Text;
-			AddressBook.State = txtState.Text;
-			AddressBook.Zip = txtZip.Text;
-			AddressBook.Country = txtCountry.Text;
-			AddressBook.Phone = txtPhone.Text;
-			AddressBook.Fax = txtFax.Text;
-			AddressBook.Email = txtEmail.Text;
-			AddressBook.WebSite = txtWeb.Text;
-			AddressBook.TaxAuthority = txtTaxAuth.Text;*/
-
 			addressBook.AddressBookId = Convert.ToInt32(lblCurrentId.Text);
 			addressBook.TinNin = txtTinNin.Text;
 			addressBook.Title = txtTitle.Text;
@@ -124,7 +99,7 @@ namespace E_document.UI
 			DataTable dt = dal.LoadData("AddressBooks");
 			dataGridAddressBook.DataSource = dt;
 		}
-	
+		
 		private void LabelVisibleFalse()
 		{
 			lblCurrentId.Visible = false;
@@ -137,46 +112,43 @@ namespace E_document.UI
 
 		private void txtTinNin_TextChanged(object sender, EventArgs e)
 		{
-			if (txtTinNin.TextLength == 10)
+			//if (txtTinNin.TextLength == 10)
+			//{
+			//	txtTitle.Enabled = true;
+			//	txtFirstName.Enabled = false;
+			//	txtLastName.Enabled = false;
+			//}
+			//else if (txtTinNin.TextLength == 11)
+			//{
+			//	txtFirstName.Enabled = true;
+			//	txtLastName.Enabled = true;
+			//	txtTitle.Enabled = false;
+			//}
+			//else
+			//{
+			//	txtTitle.Enabled = false;
+			//	txtFirstName.Enabled = false;
+			//	txtLastName.Enabled = false;
+			//}
+		}
+
+		private void GetCustomerType()
+		{
+			if (chkIndividual.Checked == true)
 			{
-				txtTitle.Enabled = true;
-				txtFirstName.Enabled = false;
-				txtLastName.Enabled = false;
+				addressBook.Title = addressBook.FirstName + " " + addressBook.LastName;
 			}
-			else if (txtTinNin.TextLength == 11)
+			else if (chkCorporate.Checked == true)
 			{
-				txtFirstName.Enabled = true;
-				txtLastName.Enabled = true;
-				txtTitle.Enabled = false;
-			}
-			else
-			{
-				txtTitle.Enabled = false;
-				txtFirstName.Enabled = false;
-				txtLastName.Enabled = false;
+				addressBook.FirstName = " ";
+				addressBook.LastName = " ";
 			}
 		}
 
 		private void btnSaveCustomer_Click(object sender, EventArgs e)
 		{
 			GetValue();
-
-			/*if (AddressBook.TinNin.Length == 11)
-			{
-				string txtQuery = "insert into AddressBooks (TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority)" +
-				"values('" + txtTinNin.Text + "','" + (AddressBook.FirstName + " " + AddressBook.LastName) + "','" + txtFirstName.Text + "','" + txtLastName.Text + "','" + txtStreet.Text + "','" + txtApartName.Text + "','" + txtApartNo.Text + "','" + txtFloor.Text + "','" + txtTown.Text + "','" + txtDistrict.Text + "'," +
-				"'" + txtState.Text + "','" + txtZip.Text + "','" + txtCountry.Text + "','" + txtPhone.Text + "','" + txtFax.Text + "','" + txtEmail.Text + "','" + txtWeb.Text + "','" + txtTaxAuth.Text + "')";
-				
-				dal.ExecuteQuery(txtQuery);
-			}
-			else
-			{
-				string txtQuery = "insert into AddressBooks (TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority)" +
-				"values('" + txtTinNin.Text + "','" + txtTitle.Text + "','" + " " + "','" + " " + "','" + txtStreet.Text + "','" + txtApartName.Text + "','" + txtApartNo.Text + "','" + txtFloor.Text + "','" + txtTown.Text + "','" + txtDistrict.Text + "'," +
-				"'" + txtState.Text + "','" + txtZip.Text + "','" + txtCountry.Text + "','" + txtPhone.Text + "','" + txtFax.Text + "','" + txtEmail.Text + "','" + txtWeb.Text + "','" + txtTaxAuth.Text + "')";
-				
-				dal.ExecuteQuery(txtQuery);
-			}*/
+			GetCustomerType();
 
 			bool success = dal.Add(addressBook);
 
@@ -250,31 +222,7 @@ namespace E_document.UI
 		private void btnUpdateCustomer_Click(object sender, EventArgs e)
 		{
 			GetValue();
-
-			/*if (AddressBook.TinNin.Length == 11)
-			{
-				string txtQuery = "update AddressBooks set TIN_NIN='" + AddressBook.TinNin + "', Title='" + (AddressBook.FirstName + " " + AddressBook.LastName) + "', " +
-				"FirstName='" + AddressBook.FirstName + "', LastName='" + AddressBook.LastName + "', Road_Street='" + AddressBook.RoadStreet + "', " +
-				"ApartmentName='" + AddressBook.ApartmentName + "', ApartmentNo='" + AddressBook.ApartmentNo + "', " +
-				"Floor='" + AddressBook.Floor + "', Town='" + AddressBook.Town + "', District='" + AddressBook.District + "'," +
-				"State='" + AddressBook.State + "', Zip='" + AddressBook.Zip + "', Country='" + AddressBook.Country + "'," +
-				"Phone='" + AddressBook.Phone + "', Fax='" + AddressBook.Fax + "', Email='" + AddressBook.Email + "'," +
-				"WebSite='" + AddressBook.WebSite + "', TaxAuthority='" + AddressBook.TaxAuthority + "' WHERE AddressBookId='" + lblCurrentId.Text + "'";
-				
-				dal.ExecuteQuery(txtQuery);
-			}
-			else
-			{
-				/*string txtQuery = "update AddressBooks set TIN_NIN='" + AddressBook.TinNin + "', Title='" + AddressBook.Title + "', " +
-				"FirstName='" + " " + "', LastName='" + " " + "', Road_Street='" + AddressBook.RoadStreet + "', " +
-				"ApartmentName='" + AddressBook.ApartmentName + "', ApartmentNo='" + AddressBook.ApartmentNo + "', " +
-				"Floor='" + AddressBook.Floor + "', Town='" + AddressBook.Town + "', District='" + AddressBook.District + "'," +
-				"State='" + AddressBook.State + "', Zip='" + AddressBook.Zip + "', Country='" + AddressBook.Country + "'," +
-				"Phone='" + AddressBook.Phone + "', Fax='" + AddressBook.Fax + "', Email='" + AddressBook.Email + "'," +
-				"WebSite='" + AddressBook.WebSite + "', TaxAuthority='" + AddressBook.TaxAuthority + "' WHERE AddressBookId='" + lblCurrentId.Text + "'";
-				
-				dal.ExecuteQuery(txtQuery);
-			}*/
+			GetCustomerType();
 
 			bool success = dal.Update(addressBook);
 
@@ -290,6 +238,28 @@ namespace E_document.UI
 			ClearText();
 			LabelVisibleFalse();
 			LoadData();
+		}
+
+		private void chkIndividual_CheckedChanged(object sender, EventArgs e)
+		{
+			if (chkIndividual.Checked == true)
+			{
+				chkCorporate.Checked = false;
+				txtTitle.Enabled = false;
+				txtFirstName.Enabled = true;
+				txtLastName.Enabled = true;
+			}
+		}
+
+		private void chkCorporate_CheckedChanged(object sender, EventArgs e)
+		{
+			if (chkCorporate.Checked == true)
+			{
+				chkIndividual.Checked = false;
+				txtTitle.Enabled = true;
+				txtFirstName.Enabled = false;
+				txtLastName.Enabled = false;
+			}
 		}
 	}
 }

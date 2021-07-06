@@ -308,7 +308,6 @@ namespace E_document.UI
 			this.txtEmail.Name = "txtEmail";
 			this.txtEmail.Size = new System.Drawing.Size(168, 22);
 			this.txtEmail.TabIndex = 24;
-			this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
 			this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
 			// 
 			// txtTaxIdentity
@@ -334,6 +333,7 @@ namespace E_document.UI
 			this.txtCompanyName.Name = "txtCompanyName";
 			this.txtCompanyName.Size = new System.Drawing.Size(168, 22);
 			this.txtCompanyName.TabIndex = 23;
+			this.txtCompanyName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCompanyName_Validating);
 			// 
 			// lblMobile
 			// 
@@ -371,9 +371,9 @@ namespace E_document.UI
 			this.lblTaxAuth.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblTaxAuth.Location = new System.Drawing.Point(12, 186);
 			this.lblTaxAuth.Name = "lblTaxAuth";
-			this.lblTaxAuth.Size = new System.Drawing.Size(77, 13);
+			this.lblTaxAuth.Size = new System.Drawing.Size(82, 13);
 			this.lblTaxAuth.TabIndex = 26;
-			this.lblTaxAuth.Text = "Tax Authority:";
+			this.lblTaxAuth.Text = "Tax Authority*:";
 			// 
 			// lblCompanyName
 			// 

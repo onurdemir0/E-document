@@ -73,6 +73,7 @@
     <Compile Include="DAL\settingsDal.cs" />
     <Compile Include="Entities\AddressBook.cs" />
     <Compile Include="Entities\Bill.cs" />
+    <Compile Include="Entities\Dealer.cs" />
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Entities\Settings.cs" />
     <Compile Include="Program.cs" />
@@ -132,6 +133,7 @@
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\E_document.Entities.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

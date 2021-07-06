@@ -24,6 +24,7 @@ namespace E_document.UI
 		BillDal billDal = new BillDal();
 		Bill bill = new Bill();
 		ItemDal itemDal = new ItemDal();
+		settingsDal _settingsDal = new settingsDal();
 
 		public frmCreateBill()
 		{
@@ -35,6 +36,7 @@ namespace E_document.UI
 			lblEttnNo.Text = Guid.NewGuid().ToString();
 
 			SQLiteConnection sql_con = new SQLiteConnection("Data Source = E_Document.db");
+
 			string txtQuery = "SELECT TIN_NIN, Title FROM AddressBooks WHERE Situation='" + "+" + "'";
 			SQLiteCommand sql_cmd = new SQLiteCommand(txtQuery, sql_con);
 
@@ -51,45 +53,27 @@ namespace E_document.UI
 
 			txtSearchCustomer.AutoCompleteCustomSource = myCollection;
 			dr.Close();
+
+
+			string txtQuery2 = "SELECT CompanyName FROM Settings";
+			SQLiteCommand sql_cmd2 = new SQLiteCommand(txtQuery2, sql_con);
+
+			SQLiteDataReader dr2 = sql_cmd2.ExecuteReader();
+			AutoCompleteStringCollection myCollection2 = new AutoCompleteStringCollection();
+
+			while (dr2.Read())
+			{
+				myCollection2.Add(dr2.GetString(0));
+			}
+
+			txtSenderSearch.AutoCompleteCustomSource = myCollection2;
+			dr.Close();
+
 			sql_con.Close();
-
-			//AutoCompleteStringCollection namesCollection = new AutoCompleteStringCollection();
-			//SQLiteConnection sql_con = new SQLiteConnection("Data Source = E_Document.db");
-			//sql_con.Open();
-			//SQLiteCommand sql_cmd = sql_con.CreateCommand();
-			//sql_cmd.CommandType = CommandType.Text;
-			//sql_cmd.CommandText = "SELECT * FROM AddressBooks";
-			//SQLiteDataReader dReader = sql_cmd.ExecuteReader();
-
-			//if (dReader.Read())
-			//{
-			//	while (dReader.Read())
-			//	{
-			//		namesCollection.Add(dReader["Title"].ToString());
-			//		AddressBook book = new AddressBook
-			//		{
-			//			TinNin = dReader["TIN_NIN"].ToString(),
-			//			Title = dReader["Title"].ToString(),
-			//			FirstName = dReader["FirstName"].ToString()
-			//		};
-			//		_addressBook.Add(book);
-			//	}
-			//}
-			//else
-			//{
-			//	MessageBox.Show("Data not found");
-			//}
-			//dReader.Close();
 		}
 
 		private void txtSearchCustomer_TextChanged(object sender, EventArgs e)
 		{
-			//if (_addressBook.Contains(sender))
-			//{
-			//	txtTinNin.Text = _addressBook[Convert.ToInt32(sender)].TinNin;
-			//	txtTitle.Text = _addressBook[Convert.ToInt32(sender)].Title;
-			//}
-
 			string keyword = txtSearchCustomer.Text;
 
 			if (keyword.Length < 4)
@@ -240,6 +224,8 @@ namespace E_document.UI
 			AddressBook addressBook = customerDal.GetCustIdFromTinNin(custTinNin);
 			bill.CustomerId = addressBook.AddressBookId;
 
+			bill.SettingsId = Settings.SettingId;
+
 			bill.Ettn = lblEttnNo.Text;
 			bill.Type = comboBoxType.Text;
 			bill.BillDate = Convert.ToDateTime(dtpBillDate.Text);
@@ -249,6 +235,38 @@ namespace E_document.UI
 			bill.OrderDate = Convert.ToDateTime(dtpOrder.Text);
 			bill.WayBillNo = txtWayBillNo.Text;
 			bill.WayBillDate = Convert.ToDateTime(dtpWayBillDate.Text);
+
+			bill.TinNin = txtTinNin.Text;
+			bill.Title = txtTitle.Text;
+			bill.FirstName = txtFirstName.Text;
+			bill.LastName = txtLastName.Text;
+			bill.RoadStreet = txtStreet.Text;
+			bill.ApartmentName = txtApartName.Text;
+			bill.ApartmentNo = txtApartNo.Text;
+			bill.Floor = txtFloor.Text;
+			bill.Town = txtTown.Text;
+			bill.District = txtDistrict.Text;
+			bill.State = txtState.Text;
+			bill.Zip = txtZip.Text;
+			bill.Country = txtCountry.Text;
+			bill.Phone = txtPhone.Text;
+			bill.Fax = txtFax.Text;
+			bill.Email = txtEmail.Text;
+			bill.WebSite = txtWeb.Text;
+			bill.TaxAuthority = txtTaxAuth.Text;
+
+			bill.CompanyName = Settings.CompanyName;
+			bill.CompanyEmail = Settings.Email;
+			bill.CompanyMobile = Settings.Mobile;
+			bill.CompanyWebSite = Settings.WebSite;
+			bill.CompanyTaxAuthority = Settings.TaxAuthority;
+			bill.CompanyTaxIdentity = Settings.TaxIdentity;
+			bill.FirstAddressLine = Settings.FirstAddressLine;
+			bill.SecondAddressLine = Settings.SecondAddressLine;
+			bill.CompanyCity = Settings.City;
+			bill.CompanyState = Settings.State;
+			bill.CompanyZip = Settings.Zip;
+			bill.CompanyCountry = Settings.Country;
 		}
 		private void GetItemValueToDB()
 		{
@@ -272,10 +290,26 @@ namespace E_document.UI
 				bool successItem = itemDal.Add(item);
 			}
 		}
+
+		public void GetCustomerType()
+		{
+			if (chkIndividual.Checked == true)
+			{
+				addressBook.Title = addressBook.FirstName + " " + addressBook.LastName;
+			}
+			else if (chkCorporate.Checked == true)
+			{
+				addressBook.FirstName = " ";
+				addressBook.LastName = " ";
+			}
+		}
 	
 		private void btnAddToAddressBook_Click(object sender, EventArgs e)
 		{
 			GetValueToAddressBook();
+
+			GetCustomerType();
+
 			addressBook.Situation = "+";
 
 			bool success = addressBookDal.Add(addressBook);
@@ -292,24 +326,24 @@ namespace E_document.UI
 
 		private void txtTinNin_TextChanged(object sender, EventArgs e)
 		{
-			if (txtTinNin.TextLength == 10)
-			{
-				txtTitle.Enabled = true;
-				txtFirstName.Enabled = false;
-				txtLastName.Enabled = false;
-			}
-			else if (txtTinNin.TextLength == 11)
-			{
-				txtFirstName.Enabled = true;
-				txtLastName.Enabled = true;
-				txtTitle.Enabled = false;
-			}
-			else
-			{
-				txtTitle.Enabled = false;
-				txtFirstName.Enabled = false;
-				txtLastName.Enabled = false;
-			}
+			//if (txtTinNin.TextLength == 10)
+			//{
+			//	txtTitle.Enabled = true;
+			//	txtFirstName.Enabled = false;
+			//	txtLastName.Enabled = false;
+			//}
+			//else if (txtTinNin.TextLength == 11)
+			//{
+			//	txtFirstName.Enabled = true;
+			//	txtLastName.Enabled = true;
+			//	txtTitle.Enabled = false;
+			//}
+			//else
+			//{
+			//	txtTitle.Enabled = false;
+			//	txtFirstName.Enabled = false;
+			//	txtLastName.Enabled = false;
+			//}
 		}
 
 		private void btnDelete_Click(object sender, EventArgs e)
@@ -353,8 +387,9 @@ namespace E_document.UI
 
 		private void btnCreate_Click(object sender, EventArgs e)
 		{
-			
 			GetValueToAddressBook();
+			GetCustomerType();
+
 			addressBook.Situation = "-";
 			bool success2 = addressBookDal.Add(addressBook);
 
@@ -363,7 +398,6 @@ namespace E_document.UI
 
 			GetItemValueToDB();
 
-
 			if (success & success2)
 			{
 				MessageBox.Show("Successfully Created!");
@@ -371,6 +405,51 @@ namespace E_document.UI
 			else
 			{
 				MessageBox.Show("Failed!");
+			}
+		}
+
+		private void chkIndividual_CheckedChanged(object sender, EventArgs e)
+		{
+			if (chkIndividual.Checked == true)
+			{
+				chkCorporate.Checked = false;
+				txtTitle.Enabled = false;
+				txtFirstName.Enabled = true;
+				txtLastName.Enabled = true;
+			}	
+		}
+
+		private void chkCorporate_CheckedChanged(object sender, EventArgs e)
+		{
+			if (chkCorporate.Checked == true)
+			{
+				chkIndividual.Checked = false;
+				txtTitle.Enabled = true;
+				txtFirstName.Enabled = false;
+				txtLastName.Enabled = false;
+			}
+		}
+
+		private void txtSenderSearch_TextChanged(object sender, EventArgs e)
+		{
+			string keyword = txtSenderSearch.Text;
+
+			if (keyword.Length >=3)
+			{
+				Dealer dealer = _settingsDal.SearchSenderForTransaction(keyword);
+				Settings.SettingId = dealer.SettingId;
+				Settings.CompanyName = dealer.CompanyName;
+				Settings.Email = dealer.Email;
+				Settings.Mobile = dealer.Mobile;
+				Settings.WebSite = dealer.WebSite;
+				Settings.TaxAuthority = dealer.TaxAuthority;
+				Settings.TaxIdentity = dealer.TaxIdentity;
+				Settings.FirstAddressLine = dealer.FirstAddressLine;
+				Settings.SecondAddressLine = dealer.SecondAddressLine;
+				Settings.City = dealer.City;
+				Settings.State = dealer.State;
+				Settings.Zip = dealer.Zip;
+				Settings.Country = dealer.Country;
 			}
 		}
 	}
