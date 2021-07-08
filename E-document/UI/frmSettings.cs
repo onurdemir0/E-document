@@ -23,29 +23,8 @@ namespace E_document.UI
 
 		settingsDal dal = new settingsDal();
 
-
-		/*public SQLiteConnection sql_con;
-		public SQLiteCommand sql_cmd;
-		public SQLiteDataAdapter DB;
-		public DataSet DS = new DataSet();
-		public DataTable DT = new DataTable();*/
-
-		//Settings settings = new Settings();
 		public void GetValue()
 		{
-			/*settings.CompanyName = txtCompanyName.Text;
-			settings.Email = txtEmail.Text;
-			settings.Mobile = txtMobile.Text;
-			settings.WebSite = txtWeb.Text;
-			settings.TaxAuthority = txtTaxAuth.Text;
-			settings.TaxIdentity = txtTaxIdentity.Text;
-			settings.FirstAddressLine = txtAddress1.Text;
-			settings.SecondAddressLine = txtAddress2.Text;
-			settings.City = txtCity.Text;
-			settings.State = txtState.Text;
-			settings.Zip = txtZip.Text;
-			settings.Country = txtCountry.Text;*/
-
 			Settings.SettingId = Convert.ToInt32(lblCurrentId.Text);
 			Settings.CompanyName = txtCompanyName.Text;
 			Settings.Email = txtEmail.Text;
@@ -95,11 +74,6 @@ namespace E_document.UI
 			this.Close();
 		}
 
-		/*private void SetConnection()
-		{
-			sql_con = new SQLiteConnection("Data Source = E_Document.db");
-		}*/
-
 		private void LabelVisibleFalse()
 		{
 			lblCurrentId.Visible = false;
@@ -140,32 +114,9 @@ namespace E_document.UI
 			txtCountry.Enabled = true;
 		}
 
-		/*private void ExecuteQuery(string txtQuery)
-		{
-			SetConnection();
-			sql_con.Open();
-			sql_cmd = sql_con.CreateCommand();
-			sql_cmd.CommandText = txtQuery;
-			sql_cmd.ExecuteNonQuery();
-			sql_con.Close();
-		}*/
-		/*private void LoadData()
-		{
-			SetConnection();
-			sql_con.Open();
-			sql_cmd = sql_con.CreateCommand();
-			string CommandText = "select * from Settings";
-			DB = new SQLiteDataAdapter(CommandText, sql_con);
-			DS.Reset();
-			DB.Fill(DS);
-			DT = DS.Tables[0];
-			dataGridSettings.DataSource = DT;
-			sql_con.Close();
-		}*/
-
 		private void LoadData()
 		{
-			DataTable dt = dal.LoadData("Settings");
+			DataTable dt = dal.LoadData("select * from Settings");
 			dataGridSettings.DataSource = dt;
 		}
 		private void frmSettings_Load(object sender, EventArgs e)
@@ -180,31 +131,29 @@ namespace E_document.UI
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
-			
 			GetValue();
-
-			//string txtQuery = "insert into Settings (CompanyName,Email,Mobile,WebSite,TaxAuthority,TaxIdentity,FirstAddressLine,SecondAddressLine,City,State,Zip,Country)values('" + Settings.CompanyName + "','" + Settings.Email + "','" + Settings.Mobile + "','" + Settings.WebSite + "','" + Settings.TaxAuthority + "','" + Settings.TaxIdentity + "','" + Settings.FirstAddressLine + "','" + Settings.SecondAddressLine + "','" + Settings.City + "','" + Settings.State + "','" + Settings.Zip + "','" + Settings.Country + "')";
-			//ExecuteQuery(txtQuery);
-
-			//dal.Add();
-			//dal.ExecuteQuery(txtQuery);
-
-			bool success = dal.Add();
-
-			if (success)
+			
+			if (String.IsNullOrEmpty(txtCompanyName.Text) || String.IsNullOrEmpty(txtTaxAuth.Text) || String.IsNullOrEmpty(txtTaxIdentity.Text) || String.IsNullOrEmpty(txtCity.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(txtCountry.Text))
 			{
-				MessageBox.Show("Successfully Created!");
+				MessageBox.Show("Please fill in the required fields!");
 			}
 			else
 			{
-				MessageBox.Show("Failed!");
-			}
+				bool success = dal.Add();
 
-			ClearText();
+				if (success)
+				{
+					MessageBox.Show("Successfully Created!");
+					ClearText();
+				}
+				else
+				{
+					MessageBox.Show("Failed!");
+				}
+			}
+		
 			LabelVisibleFalse();
 			LoadData();
-
-			MessageBox.Show("Saved!");
 		}
 
 		private void txtMobile_KeyPress(object sender, KeyPressEventArgs e)
@@ -214,19 +163,6 @@ namespace E_document.UI
 				e.Handled = true;
 			}
 		}
-
-		//private void txtEmail_Leave(object sender, EventArgs e)
-		//{
-		//	string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
-		//	if (Regex.IsMatch(txtEmail.Text,pattern))
-		//	{
-		//		errorProvider1.Clear();
-		//	}
-		//	else
-		//	{
-		//		errorProvider1.SetError(this.txtEmail, "Please provide valid Mail address");
-		//	}
-		//}
 
 		private void txtEmail_Validating(object sender, CancelEventArgs e)
 		{
@@ -268,27 +204,26 @@ namespace E_document.UI
 		private void btnUpdate_Click(object sender, EventArgs e)
 		{
 			GetValue();
-			//string txtQuery = "update Settings set CompanyName='" + txtCompanyName.Text + "', Email='" + txtEmail.Text + "', " +
-			//	"Mobile='" + txtMobile.Text + "', WebSite='" + txtWeb.Text + "', TaxAuthority='" + txtTaxAuth.Text + "', " +
-			//	"TaxIdentity='" + txtTaxIdentity.Text + "', FirstAddressLine='" + txtAddress1.Text + "', " +
-			//	"SecondAddressLine='" + txtAddress2.Text + "', City='" + txtCity.Text + "', State='" + txtState.Text + "'," +
-			//	"Zip='" + txtZip.Text + "', Country='" + txtCountry.Text + "' WHERE SettingId='" + lblCurrentId.Text + "'";
 
-			//ExecuteQuery(txtQuery);
-			//dal.ExecuteQuery(txtQuery);
-
-			bool success = dal.Update();
-
-			if (success)
+			if (String.IsNullOrEmpty(txtCompanyName.Text) || String.IsNullOrEmpty(txtTaxAuth.Text) || String.IsNullOrEmpty(txtTaxIdentity.Text) || String.IsNullOrEmpty(txtCity.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(txtCountry.Text))
 			{
-				MessageBox.Show("Successfully Updated!");
+				MessageBox.Show("Please fill in the required fields!");
 			}
 			else
 			{
-				MessageBox.Show("Failed!");
-			}
+				bool success = dal.Update();
 
-			ClearText();
+				if (success)
+				{
+					MessageBox.Show("Successfully Updated!");
+					ClearText();
+				}
+				else
+				{
+					MessageBox.Show("Failed!");
+				}
+			}
+			
 			LabelVisibleFalse();
 			LoadData();
 		}
@@ -296,9 +231,6 @@ namespace E_document.UI
 		private void btnDelete_Click(object sender, EventArgs e)
 		{
 			Settings.SettingId = Convert.ToInt32(lblCurrentId.Text);
-			//string txtQuery = "delete from Settings WHERE SettingId='" + lblCurrentId.Text + "'";
-			//ExecuteQuery(txtQuery);
-			//dal.ExecuteQuery(txtQuery);
 
 			bool success = dal.Delete();
 
@@ -322,15 +254,6 @@ namespace E_document.UI
 			TextBoxEnableFalse();
 
 			MessageBox.Show("Successful");
-		}
-
-		private void txtCompanyName_Validating(object sender, CancelEventArgs e)
-		{
-			//if (string.IsNullOrWhiteSpace(txtCompanyName.Text))
-			//{
-			//	txtCompanyName.Focus();
-			//	MessageBox.Show("Please enter Company Name");
-			//}
 		}
 	}
 }

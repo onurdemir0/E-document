@@ -40,7 +40,8 @@ namespace E_document.DAL
 				SetConnection();
 				sql_con.Open();
 				sql_cmd = sql_con.CreateCommand();
-				string CommandText = "select * from " + commandTxt;
+				//string CommandText = "select * from " + commandTxt;
+				string CommandText = commandTxt;
 				DB = new SQLiteDataAdapter(CommandText, sql_con);
 				DS.Reset();
 				DB.Fill(DS);

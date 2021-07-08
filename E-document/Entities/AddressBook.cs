@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace E_document.Entities
 	public class AddressBook
 	{
 		public int AddressBookId { get; set; }
+		[Required]
 		public string TinNin { get; set; }
 		public string Title { get; set; }
 		public string FirstName { get; set; }

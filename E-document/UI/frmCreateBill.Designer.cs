@@ -136,7 +136,7 @@ namespace E_document.UI
 			this.lblSubTotal = new System.Windows.Forms.Label();
 			this.lblCalculationTitle = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.txtNote = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.btnCreate = new System.Windows.Forms.Button();
@@ -1229,20 +1229,20 @@ namespace E_document.UI
 			// panel1
 			// 
 			this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panel1.Controls.Add(this.textBox1);
+			this.panel1.Controls.Add(this.txtNote);
 			this.panel1.Controls.Add(this.label5);
 			this.panel1.Location = new System.Drawing.Point(12, 1261);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(766, 121);
 			this.panel1.TabIndex = 53;
 			// 
-			// textBox1
+			// txtNote
 			// 
-			this.textBox1.Location = new System.Drawing.Point(17, 35);
-			this.textBox1.Multiline = true;
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(733, 72);
-			this.textBox1.TabIndex = 33;
+			this.txtNote.Location = new System.Drawing.Point(17, 35);
+			this.txtNote.Multiline = true;
+			this.txtNote.Name = "txtNote";
+			this.txtNote.Size = new System.Drawing.Size(733, 72);
+			this.txtNote.TabIndex = 33;
 			// 
 			// label5
 			// 
@@ -1460,7 +1460,7 @@ namespace E_document.UI
 		private System.Windows.Forms.Label lblSubTotal;
 		private System.Windows.Forms.Label lblCalculationTitle;
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox txtNote;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Button btnCreate;

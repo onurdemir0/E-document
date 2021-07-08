@@ -23,7 +23,7 @@ namespace E_document.DAL
 
 				//string txtQuery = "insert into Bills (CustomerId,SettingsId,Ettn,Type,BillDate,BillType,Currency,OrderNo,OrderDate,WayBillNo,WaybillDate,TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority) values (@CustomerId,@SettingsId,@Ettn,@Type,@BillDate,@BillType,@Currency,@OrderNo,@OrderDate,@WayBillNo,@WaybillDate,@TIN_NIN,@Title,@FirstName,@LastName,@Road_Street,@ApartmentName,@ApartmentNo,@Floor,@Town,@District,@State,@Zip,@Country,@Phone,@Fax,@Email,@WebSite,@TaxAuthority)";
 
-				string txtQuery = "insert into Bills (CustomerId,SettingsId,Ettn,Type,BillDate,BillType,Currency,OrderNo,OrderDate,WayBillNo,WaybillDate,TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority,CompanyName,CompanyEmail,CompanyMobile,CompanyWebSite,CompanyTaxAuthority,CompanyTaxIdentity,FirstAddressLine,SecondAddressLine,CompanyCity,CompanyState,CompanyZip,CompanyCountry) values (@CustomerId,@SettingsId,@Ettn,@Type,@BillDate,@BillType,@Currency,@OrderNo,@OrderDate,@WayBillNo,@WaybillDate,@TIN_NIN,@Title,@FirstName,@LastName,@Road_Street,@ApartmentName,@ApartmentNo,@Floor,@Town,@District,@State,@Zip,@Country,@Phone,@Fax,@Email,@WebSite,@TaxAuthority,@CompanyName,@CompanyEmail,@CompanyMobile,@CompanyWebSite,@CompanyTaxAuthority,@CompanyTaxIdentity,@FirstAddressLine,@SecondAddressLine,@CompanyCity,@CompanyState,@CompanyZip,@CompanyCountry)";
+				string txtQuery = "insert into Bills (CustomerId,SettingsId,Ettn,Type,BillDate,BillType,Currency,OrderNo,OrderDate,WayBillNo,WaybillDate,TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority,CompanyName,CompanyEmail,CompanyMobile,CompanyWebSite,CompanyTaxAuthority,CompanyTaxIdentity,FirstAddressLine,SecondAddressLine,CompanyCity,CompanyState,CompanyZip,CompanyCountry,Note) values (@CustomerId,@SettingsId,@Ettn,@Type,@BillDate,@BillType,@Currency,@OrderNo,@OrderDate,@WayBillNo,@WaybillDate,@TIN_NIN,@Title,@FirstName,@LastName,@Road_Street,@ApartmentName,@ApartmentNo,@Floor,@Town,@District,@State,@Zip,@Country,@Phone,@Fax,@Email,@WebSite,@TaxAuthority,@CompanyName,@CompanyEmail,@CompanyMobile,@CompanyWebSite,@CompanyTaxAuthority,@CompanyTaxIdentity,@FirstAddressLine,@SecondAddressLine,@CompanyCity,@CompanyState,@CompanyZip,@CompanyCountry,@Note)";
 				sql_cmd = new SQLiteCommand(txtQuery, sql_con);
 
 				sql_cmd.Parameters.AddWithValue("@CustomerId", bill.CustomerId);
@@ -69,6 +69,8 @@ namespace E_document.DAL
 				sql_cmd.Parameters.AddWithValue("@CompanyState", bill.CompanyState);
 				sql_cmd.Parameters.AddWithValue("@CompanyZip", bill.CompanyZip);
 				sql_cmd.Parameters.AddWithValue("@CompanyCountry", bill.CompanyCountry);
+
+				sql_cmd.Parameters.AddWithValue("@Note", bill.Note);
 
 				sql_con.Open();
 
@@ -125,6 +127,61 @@ namespace E_document.DAL
 			}
 
 			return bill;
+		}
+
+		public bool AddCustToAddressBook(AddressBook addressBook)
+		{
+			bool isSuccess = false;
+			SetConnection();
+
+			try
+			{
+				string txtQuery = "insert into AddressBooks (TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority,Situation) values (@TIN_NIN,@Title,@FirstName,@LastName,@Road_Street,@ApartmentName,@ApartmentNo,@Floor,@Town,@District,@State,@Zip,@Country,@Phone,@Fax,@Email,@WebSite,@TaxAuthority,@Situation)";
+				sql_cmd = new SQLiteCommand(txtQuery, sql_con);
+
+				sql_cmd.Parameters.AddWithValue("@Title", addressBook.Title);
+				sql_cmd.Parameters.AddWithValue("@FirstName", addressBook.FirstName);
+				sql_cmd.Parameters.AddWithValue("@LastName", addressBook.LastName);
+				sql_cmd.Parameters.AddWithValue("@TIN_NIN", addressBook.TinNin);
+				sql_cmd.Parameters.AddWithValue("@Road_Street", addressBook.RoadStreet);
+				sql_cmd.Parameters.AddWithValue("@ApartmentName", addressBook.ApartmentName);
+				sql_cmd.Parameters.AddWithValue("@ApartmentNo", addressBook.ApartmentNo);
+				sql_cmd.Parameters.AddWithValue("@Floor", addressBook.Floor);
+				sql_cmd.Parameters.AddWithValue("@Town", addressBook.Town);
+				sql_cmd.Parameters.AddWithValue("@District", addressBook.District);
+				sql_cmd.Parameters.AddWithValue("@State", addressBook.State);
+				sql_cmd.Parameters.AddWithValue("@Zip", addressBook.Zip);
+				sql_cmd.Parameters.AddWithValue("@Country", addressBook.Country);
+				sql_cmd.Parameters.AddWithValue("@Phone", addressBook.Phone);
+				sql_cmd.Parameters.AddWithValue("@Fax", addressBook.Fax);
+				sql_cmd.Parameters.AddWithValue("@Email", addressBook.Email);
+				sql_cmd.Parameters.AddWithValue("@WebSite", addressBook.WebSite);
+				sql_cmd.Parameters.AddWithValue("@TaxAuthority", addressBook.TaxAuthority);
+				sql_cmd.Parameters.AddWithValue("@Situation", addressBook.Situation);
+
+				sql_con.Open();
+
+				int rows = sql_cmd.ExecuteNonQuery();
+
+				if (rows > 0)
+				{
+					isSuccess = true;
+				}
+				else
+				{
+					isSuccess = false;
+				}
+			}
+			catch (Exception e)
+			{
+				MessageBox.Show(e.Message);
+			}
+			finally
+			{
+				sql_con.Close();
+			}
+
+			return isSuccess;
 		}
 	}
 }

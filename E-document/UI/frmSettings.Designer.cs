@@ -333,7 +333,6 @@ namespace E_document.UI
 			this.txtCompanyName.Name = "txtCompanyName";
 			this.txtCompanyName.Size = new System.Drawing.Size(168, 22);
 			this.txtCompanyName.TabIndex = 23;
-			this.txtCompanyName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCompanyName_Validating);
 			// 
 			// lblMobile
 			// 
@@ -499,7 +498,6 @@ namespace E_document.UI
 		private System.Windows.Forms.Panel pnlContent;
 		private System.Windows.Forms.Label lblTitle;
 		private System.Windows.Forms.TextBox txtTaxIdentity;
-		private System.Windows.Forms.TextBox txtTaxAuth;
 		private System.Windows.Forms.Label lblMobile;
 		private System.Windows.Forms.Label lblEmail;
 		private System.Windows.Forms.Label lblTaxIdentity;
@@ -532,5 +530,6 @@ namespace E_document.UI
 		private System.Windows.Forms.Button btnDelete;
 		private System.Windows.Forms.Button btnUse;
 		public System.Windows.Forms.TextBox txtCompanyName;
+		public System.Windows.Forms.TextBox txtTaxAuth;
 	}
 }

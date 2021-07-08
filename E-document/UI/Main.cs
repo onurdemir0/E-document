@@ -30,11 +30,6 @@ namespace E_document.UI
 			this.Close();
 		}
 
-		private void Main_Load(object sender, EventArgs e)
-		{
-			label1.Text = Settings.CompanyName;
-		}
-
 		public void SetConnection()
 		{
 			sql_con = new SQLiteConnection(@"Data Source=C:\EDocument\E_Document.db;Version=3;New=False;Compress=True;");
@@ -55,11 +50,6 @@ namespace E_document.UI
 		{
 			frmCreateBill createBill = new frmCreateBill();
 			createBill.Show();
-		}
-
-		private void btnGet_Click(object sender, EventArgs e)
-		{
-			label2.Text = Settings.Country;
 		}
 
 		private void addressBookToolStripMenuItem_Click(object sender, EventArgs e)

@@ -3,6 +3,7 @@ using E_document.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
@@ -96,7 +97,7 @@ namespace E_document.UI
 
 		private void LoadData()
 		{
-			DataTable dt = dal.LoadData("AddressBooks");
+			DataTable dt = dal.LoadData("select * from AddressBooks WHERE Situation='" + "+" + "'");
 			dataGridAddressBook.DataSource = dt;
 		}
 		
@@ -150,20 +151,58 @@ namespace E_document.UI
 			GetValue();
 			GetCustomerType();
 
-			bool success = dal.Add(addressBook);
-
-			if (success)
+			if (chkCorporate.Checked == true)
 			{
-				MessageBox.Show("Successfully Created to Address Book!");
+				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtTitle.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(txtCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
+				{
+					MessageBox.Show("Please fill in the required fields!");
+				}
+				else
+				{
+					bool success = dal.Add(addressBook);
+
+					if (success)
+					{
+						MessageBox.Show("Successfully Created to Address Book!");
+						ClearText();
+					}
+					else
+					{
+						MessageBox.Show("Failed!");
+					}
+
+					LabelVisibleFalse();
+					LoadData();
+				}
+			}
+			else if (chkIndividual.Checked == true)
+			{
+				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtFirstName.Text) || String.IsNullOrEmpty(txtLastName.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(txtCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
+				{
+					MessageBox.Show("Please fill in the required fields!");
+				}
+				else
+				{
+					bool success = dal.Add(addressBook);
+
+					if (success)
+					{
+						MessageBox.Show("Successfully Created to Address Book!");
+						ClearText();
+					}
+					else
+					{
+						MessageBox.Show("Failed!");
+					}
+
+					LabelVisibleFalse();
+					LoadData();
+				}
 			}
 			else
 			{
-				MessageBox.Show("Failed!");
+				MessageBox.Show("Please select which customer type you want to add");
 			}
-			
-			ClearText();
-			LabelVisibleFalse();
-			LoadData();
 		}
 
 		private void btnDeleteCustomer_Click(object sender, EventArgs e)
@@ -259,6 +298,14 @@ namespace E_document.UI
 				txtTitle.Enabled = true;
 				txtFirstName.Enabled = false;
 				txtLastName.Enabled = false;
+			}
+		}
+
+		private void txtTinNin_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if ((!char.IsNumber(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
+			{
+				e.Handled = true;
 			}
 		}
 	}

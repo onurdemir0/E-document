@@ -30,6 +30,8 @@ namespace E_document.UI
 		private void InitializeComponent()
 		{
 			this.pnlCustomer = new System.Windows.Forms.Panel();
+			this.chkIndividual = new System.Windows.Forms.CheckBox();
+			this.chkCorporate = new System.Windows.Forms.CheckBox();
 			this.lblCurrentId = new System.Windows.Forms.Label();
 			this.lblCompanyId = new System.Windows.Forms.Label();
 			this.txtTaxAuth = new System.Windows.Forms.TextBox();
@@ -74,8 +76,6 @@ namespace E_document.UI
 			this.btnDeleteCustomer = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.dataGridAddressBook = new System.Windows.Forms.DataGridView();
-			this.chkIndividual = new System.Windows.Forms.CheckBox();
-			this.chkCorporate = new System.Windows.Forms.CheckBox();
 			this.pnlCustomer.SuspendLayout();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridAddressBook)).BeginInit();
@@ -130,6 +130,28 @@ namespace E_document.UI
 			this.pnlCustomer.Size = new System.Drawing.Size(722, 336);
 			this.pnlCustomer.TabIndex = 6;
 			// 
+			// chkIndividual
+			// 
+			this.chkIndividual.AutoSize = true;
+			this.chkIndividual.Location = new System.Drawing.Point(165, 59);
+			this.chkIndividual.Name = "chkIndividual";
+			this.chkIndividual.Size = new System.Drawing.Size(145, 17);
+			this.chkIndividual.TabIndex = 70;
+			this.chkIndividual.Text = "Individual Customer Entry";
+			this.chkIndividual.UseVisualStyleBackColor = true;
+			this.chkIndividual.CheckedChanged += new System.EventHandler(this.chkIndividual_CheckedChanged);
+			// 
+			// chkCorporate
+			// 
+			this.chkCorporate.AutoSize = true;
+			this.chkCorporate.Location = new System.Drawing.Point(15, 59);
+			this.chkCorporate.Name = "chkCorporate";
+			this.chkCorporate.Size = new System.Drawing.Size(146, 17);
+			this.chkCorporate.TabIndex = 69;
+			this.chkCorporate.Text = "Corporate Customer Entry";
+			this.chkCorporate.UseVisualStyleBackColor = true;
+			this.chkCorporate.CheckedChanged += new System.EventHandler(this.chkCorporate_CheckedChanged);
+			// 
 			// lblCurrentId
 			// 
 			this.lblCurrentId.AutoSize = true;
@@ -164,9 +186,9 @@ namespace E_document.UI
 			this.lblTaxAuth.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblTaxAuth.Location = new System.Drawing.Point(398, 309);
 			this.lblTaxAuth.Name = "lblTaxAuth";
-			this.lblTaxAuth.Size = new System.Drawing.Size(77, 13);
+			this.lblTaxAuth.Size = new System.Drawing.Size(82, 13);
 			this.lblTaxAuth.TabIndex = 63;
-			this.lblTaxAuth.Text = "Tax Authority:";
+			this.lblTaxAuth.Text = "Tax Authority*:";
 			// 
 			// txtWeb
 			// 
@@ -278,9 +300,9 @@ namespace E_document.UI
 			this.lblCountry.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblCountry.Location = new System.Drawing.Point(398, 169);
 			this.lblCountry.Name = "lblCountry";
-			this.lblCountry.Size = new System.Drawing.Size(51, 13);
+			this.lblCountry.Size = new System.Drawing.Size(56, 13);
 			this.lblCountry.TabIndex = 50;
-			this.lblCountry.Text = "Country:";
+			this.lblCountry.Text = "Country*:";
 			// 
 			// lblZip
 			// 
@@ -298,9 +320,9 @@ namespace E_document.UI
 			this.lblState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblState.Location = new System.Drawing.Point(398, 113);
 			this.lblState.Name = "lblState";
-			this.lblState.Size = new System.Drawing.Size(83, 13);
+			this.lblState.Size = new System.Drawing.Size(88, 13);
 			this.lblState.TabIndex = 48;
-			this.lblState.Text = "State/Province:";
+			this.lblState.Text = "State/Province*:";
 			// 
 			// lblDistrict
 			// 
@@ -308,9 +330,9 @@ namespace E_document.UI
 			this.lblDistrict.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblDistrict.Location = new System.Drawing.Point(398, 85);
 			this.lblDistrict.Name = "lblDistrict";
-			this.lblDistrict.Size = new System.Drawing.Size(87, 13);
+			this.lblDistrict.Size = new System.Drawing.Size(92, 13);
 			this.lblDistrict.TabIndex = 47;
-			this.lblDistrict.Text = "District/County:";
+			this.lblDistrict.Text = "District/County*:";
 			// 
 			// txtTown
 			// 
@@ -388,6 +410,7 @@ namespace E_document.UI
 			this.txtTinNin.Size = new System.Drawing.Size(168, 22);
 			this.txtTinNin.TabIndex = 38;
 			this.txtTinNin.TextChanged += new System.EventHandler(this.txtTinNin_TextChanged);
+			this.txtTinNin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTinNin_KeyPress);
 			// 
 			// lblTown
 			// 
@@ -445,9 +468,9 @@ namespace E_document.UI
 			this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblLastName.Location = new System.Drawing.Point(10, 169);
 			this.lblLastName.Name = "lblLastName";
-			this.lblLastName.Size = new System.Drawing.Size(62, 13);
+			this.lblLastName.Size = new System.Drawing.Size(67, 13);
 			this.lblLastName.TabIndex = 29;
-			this.lblLastName.Text = "Last Name:";
+			this.lblLastName.Text = "Last Name*:";
 			// 
 			// lblFirstName
 			// 
@@ -455,9 +478,9 @@ namespace E_document.UI
 			this.lblFirstName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblFirstName.Location = new System.Drawing.Point(10, 141);
 			this.lblFirstName.Name = "lblFirstName";
-			this.lblFirstName.Size = new System.Drawing.Size(64, 13);
+			this.lblFirstName.Size = new System.Drawing.Size(69, 13);
 			this.lblFirstName.TabIndex = 28;
-			this.lblFirstName.Text = "First Name:";
+			this.lblFirstName.Text = "First Name*:";
 			// 
 			// lblTitle
 			// 
@@ -465,9 +488,9 @@ namespace E_document.UI
 			this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
 			this.lblTitle.Location = new System.Drawing.Point(10, 113);
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.Size = new System.Drawing.Size(32, 13);
+			this.lblTitle.Size = new System.Drawing.Size(37, 13);
 			this.lblTitle.TabIndex = 27;
-			this.lblTitle.Text = "Title:";
+			this.lblTitle.Text = "Title*:";
 			// 
 			// lblTinNin
 			// 
@@ -536,34 +559,12 @@ namespace E_document.UI
 			this.dataGridAddressBook.TabIndex = 0;
 			this.dataGridAddressBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAddressBook_CellClick);
 			// 
-			// chkIndividual
-			// 
-			this.chkIndividual.AutoSize = true;
-			this.chkIndividual.Location = new System.Drawing.Point(165, 59);
-			this.chkIndividual.Name = "chkIndividual";
-			this.chkIndividual.Size = new System.Drawing.Size(145, 17);
-			this.chkIndividual.TabIndex = 70;
-			this.chkIndividual.Text = "Individual Customer Entry";
-			this.chkIndividual.UseVisualStyleBackColor = true;
-			this.chkIndividual.CheckedChanged += new System.EventHandler(this.chkIndividual_CheckedChanged);
-			// 
-			// chkCorporate
-			// 
-			this.chkCorporate.AutoSize = true;
-			this.chkCorporate.Location = new System.Drawing.Point(15, 59);
-			this.chkCorporate.Name = "chkCorporate";
-			this.chkCorporate.Size = new System.Drawing.Size(146, 17);
-			this.chkCorporate.TabIndex = 69;
-			this.chkCorporate.Text = "Corporate Customer Entry";
-			this.chkCorporate.UseVisualStyleBackColor = true;
-			this.chkCorporate.CheckedChanged += new System.EventHandler(this.chkCorporate_CheckedChanged);
-			// 
 			// frmAddressBook
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoScroll = true;
-			this.ClientSize = new System.Drawing.Size(786, 544);
+			this.ClientSize = new System.Drawing.Size(764, 552);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.btnDeleteCustomer);
 			this.Controls.Add(this.btnUpdateCustomer);
@@ -609,7 +610,6 @@ namespace E_document.UI
 		private System.Windows.Forms.TextBox txtTitle;
 		private System.Windows.Forms.TextBox txtApartName;
 		private System.Windows.Forms.TextBox txtStreet;
-		private System.Windows.Forms.TextBox txtTinNin;
 		private System.Windows.Forms.Label lblTown;
 		private System.Windows.Forms.Label lblFloor;
 		private System.Windows.Forms.Label lblApartNo;
@@ -629,5 +629,6 @@ namespace E_document.UI
 		private System.Windows.Forms.DataGridView dataGridAddressBook;
 		public System.Windows.Forms.CheckBox chkIndividual;
 		public System.Windows.Forms.CheckBox chkCorporate;
+		private System.Windows.Forms.TextBox txtTinNin;
 	}
 }

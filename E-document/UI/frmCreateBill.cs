@@ -16,7 +16,6 @@ namespace E_document.UI
 {
 	public partial class frmCreateBill : Form
 	{
-		//List<AddressBook> _addressBook = new List<AddressBook>();
 		Item _item = new Item();
 		CustomerDal customerDal = new CustomerDal();
 		AddressBook addressBook = new AddressBook();
@@ -151,9 +150,6 @@ namespace E_document.UI
 			decimal grandTotal = decimal.Parse(txtGrandTotal.Text);
 			grandTotal = subTotal + calculatedVAT;
 
-			//subTotal += _item.Total;
-			//calculatedVAT += _item.VatPrice;
-
 			txtSubTotal.Text = subTotal.ToString();
 			txtCalculatedVAT.Text = calculatedVAT.ToString();
 			txtIncludingTaxes.Text = totalTax.ToString();
@@ -167,12 +163,6 @@ namespace E_document.UI
 			_item.VatPrice = (_item.UnitPrice * _item.VatRate / 100) * _item.Quantity;
 			_item.Total = (_item.UnitPrice * _item.Quantity);
 
-			//decimal subTotal = decimal.Parse(txtSubTotal.Text);
-			//subTotal += _item.Total;
-
-			//decimal calculatedVAT = decimal.Parse(txtCalculatedVAT.Text);
-			//calculatedVAT += _item.VatPrice;
-
 			int n = dgvAddedProducts.Rows.Add();
 			dgvAddedProducts.Rows[n].Cells[1].Value = _item.ItemNo;
 			dgvAddedProducts.Rows[n].Cells[2].Value = _item.ItemName;
@@ -184,9 +174,6 @@ namespace E_document.UI
 			dgvAddedProducts.Rows[n].Cells[8].Value = _item.Total;
 
 			CalculatedDetails();
-
-			//txtSubTotal.Text = subTotal.ToString();
-			//txtCalculatedVAT.Text = calculatedVAT.ToString();
 		}
 		private void GetValueToItem()
 		{
@@ -235,6 +222,7 @@ namespace E_document.UI
 			bill.OrderDate = Convert.ToDateTime(dtpOrder.Text);
 			bill.WayBillNo = txtWayBillNo.Text;
 			bill.WayBillDate = Convert.ToDateTime(dtpWayBillDate.Text);
+			bill.Note = txtNote.Text;
 
 			bill.TinNin = txtTinNin.Text;
 			bill.Title = txtTitle.Text;
@@ -358,31 +346,6 @@ namespace E_document.UI
 			}
 
 			CalculatedDetails();
-
-			//decimal subTotal = decimal.Parse(txtSubTotal.Text);
-			//subTotal -= _item.Total;
-
-			//decimal calculatedVAT = decimal.Parse(txtCalculatedVAT.Text);
-			//calculatedVAT -= _item.VatPrice;
-
-			//txtSubTotal.Text = subTotal.ToString();
-			//txtCalculatedVAT.Text = calculatedVAT.ToString();
-
-			//try
-			//{
-			//	int rowIndex = dgvAddedProducts.CurrentCell.RowIndex;
-
-			//	if (rowIndex > 1)
-			//	{
-			//		dgvAddedProducts.Rows.RemoveAt(rowIndex);
-			//	}
-
-			//}
-			//catch (Exception ex)
-			//{
-			//	MessageBox.Show(ex.Message);
-			//}
-
 		}
 
 		private void btnCreate_Click(object sender, EventArgs e)
@@ -391,7 +354,7 @@ namespace E_document.UI
 			GetCustomerType();
 
 			addressBook.Situation = "-";
-			bool success2 = addressBookDal.Add(addressBook);
+			bool success2 = billDal.AddCustToAddressBook(addressBook);
 
 			GetValueToBill();
 			bool success = billDal.Add(bill);

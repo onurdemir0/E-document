@@ -20,6 +20,7 @@ namespace E_document.Entities
 		public DateTime OrderDate { get; set; }
 		public string WayBillNo { get; set; }
 		public DateTime WayBillDate { get; set; }
+		public string Note { get; set; }
 
 		public string TinNin { get; set; }
 		public string Title { get; set; }
