@@ -22,6 +22,7 @@ namespace E_document.UI
 		}
 
 		settingsDal dal = new settingsDal();
+		BaseDal baseDal = new BaseDal();
 
 		public void GetValue()
 		{
@@ -37,7 +38,7 @@ namespace E_document.UI
 			Settings.City = txtCity.Text;
 			Settings.State = txtState.Text;
 			Settings.Zip = txtZip.Text;
-			Settings.Country = txtCountry.Text;
+			Settings.Country = cmbCountry.Text;
 		}
 		private void LoadValue()
 		{
@@ -52,7 +53,7 @@ namespace E_document.UI
 			txtCity.Text = Settings.City;
 			txtState.Text = Settings.State;
 			txtZip.Text = Settings.Zip;
-			txtCountry.Text = Settings.Country;
+			cmbCountry.Text = Settings.Country;
 		}
 		private void ClearText()
 		{
@@ -67,7 +68,7 @@ namespace E_document.UI
 			txtCity.Text = "";
 			txtState.Text = "";
 			txtZip.Text = "";
-			txtCountry.Text = "";
+			cmbCountry.Text = "";
 		}
 		private void pictureBoxClose_Click(object sender, EventArgs e)
 		{
@@ -96,7 +97,7 @@ namespace E_document.UI
 			txtCity.Enabled = false;
 			txtState.Enabled = false;
 			txtZip.Enabled = false;
-			txtCountry.Enabled = false;
+			cmbCountry.Enabled = false;
 		}
 		private void TextBoxEnableTrue()
 		{
@@ -111,17 +112,28 @@ namespace E_document.UI
 			txtCity.Enabled = true;
 			txtState.Enabled = true;
 			txtZip.Enabled = true;
-			txtCountry.Enabled = true;
+			cmbCountry.Enabled = true;
+		}
+
+		private void LoadCountryToCmb()
+		{
+			List<Country> countries = Country.GetCountries();
+
+			foreach (Country country in countries)
+			{
+				cmbCountry.Items.Add(country.Name);
+			}
 		}
 
 		private void LoadData()
 		{
-			DataTable dt = dal.LoadData("select * from Settings");
+			DataTable dt = baseDal.LoadData("select * from Settings");
 			dataGridSettings.DataSource = dt;
 		}
 		private void frmSettings_Load(object sender, EventArgs e)
 		{
 			LoadData();
+			LoadCountryToCmb();
 			if (Settings.CompanyName != null)
 			{
 				LoadValue();
@@ -133,9 +145,15 @@ namespace E_document.UI
 		{
 			GetValue();
 			
-			if (String.IsNullOrEmpty(txtCompanyName.Text) || String.IsNullOrEmpty(txtTaxAuth.Text) || String.IsNullOrEmpty(txtTaxIdentity.Text) || String.IsNullOrEmpty(txtCity.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(txtCountry.Text))
+			if (String.IsNullOrEmpty(txtCompanyName.Text) || String.IsNullOrEmpty(txtTaxAuth.Text) || String.IsNullOrEmpty(txtTaxIdentity.Text) || String.IsNullOrEmpty(txtCity.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text))
 			{
-				MessageBox.Show("Please fill in the required fields!");
+				//MessageBox.Show("Please fill in the required fields!");
+				MessageBox.Show(lblReq.Text);
+			}
+			else if (txtTaxIdentity.Text.Length != 10)
+			{
+				//MessageBox.Show("Tax Identity must be 10 characters");
+				MessageBox.Show(lblTax.Text);
 			}
 			else
 			{
@@ -143,12 +161,15 @@ namespace E_document.UI
 
 				if (success)
 				{
-					MessageBox.Show("Successfully Created!");
+					//MessageBox.Show("Successfully Created!");
+					MessageBox.Show(lblSuccess.Text);
+
 					ClearText();
 				}
 				else
 				{
-					MessageBox.Show("Failed!");
+					//MessageBox.Show("Failed!");
+					MessageBox.Show(lblFail.Text);
 				}
 			}
 		
@@ -197,17 +218,22 @@ namespace E_document.UI
 			txtCity.Text = dataGridSettings.SelectedRows[0].Cells[9].Value.ToString();
 			txtState.Text = dataGridSettings.SelectedRows[0].Cells[10].Value.ToString();
 			txtZip.Text = dataGridSettings.SelectedRows[0].Cells[11].Value.ToString();
-			txtCountry.Text = dataGridSettings.SelectedRows[0].Cells[12].Value.ToString();
-
+			cmbCountry.Text = dataGridSettings.SelectedRows[0].Cells[12].Value.ToString();
 		}
 
 		private void btnUpdate_Click(object sender, EventArgs e)
 		{
 			GetValue();
 
-			if (String.IsNullOrEmpty(txtCompanyName.Text) || String.IsNullOrEmpty(txtTaxAuth.Text) || String.IsNullOrEmpty(txtTaxIdentity.Text) || String.IsNullOrEmpty(txtCity.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(txtCountry.Text))
+			if (String.IsNullOrEmpty(txtCompanyName.Text) || String.IsNullOrEmpty(txtTaxAuth.Text) || String.IsNullOrEmpty(txtTaxIdentity.Text) || String.IsNullOrEmpty(txtCity.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text))
 			{
-				MessageBox.Show("Please fill in the required fields!");
+				//MessageBox.Show("Please fill in the required fields!");
+				MessageBox.Show(lblReq.Text);
+			}
+			else if (txtTaxIdentity.Text.Length != 10)
+			{
+				//MessageBox.Show("Tax Identity Number must be 10 characters");
+				MessageBox.Show(lblTax.Text);
 			}
 			else
 			{
@@ -215,15 +241,17 @@ namespace E_document.UI
 
 				if (success)
 				{
-					MessageBox.Show("Successfully Updated!");
+					//MessageBox.Show("Successfully Updated!");
+					MessageBox.Show(lblUpdate.Text);
 					ClearText();
 				}
 				else
 				{
-					MessageBox.Show("Failed!");
+					//MessageBox.Show("Failed!");
+					MessageBox.Show(lblFail.Text);
 				}
 			}
-			
+
 			LabelVisibleFalse();
 			LoadData();
 		}
@@ -236,11 +264,13 @@ namespace E_document.UI
 
 			if (success)
 			{
-				MessageBox.Show("Deleted Successfully!");
+				//MessageBox.Show("Deleted Successfully!");
+				MessageBox.Show(lblDelete.Text);
 			}
 			else
 			{
-				MessageBox.Show("Failed!");
+				//MessageBox.Show("Failed!");
+				MessageBox.Show(lblFail.Text);
 			}
 
 			ClearText();
@@ -248,12 +278,20 @@ namespace E_document.UI
 			LoadData();
 		}
 
-		private void btnUse_Click(object sender, EventArgs e)
-		{
-			GetValue();
-			TextBoxEnableFalse();
+		//private void btnUse_Click(object sender, EventArgs e)
+		//{
+		//	GetValue();
+		//	TextBoxEnableFalse();
 
-			MessageBox.Show("Successful");
+		//	MessageBox.Show("Successful");
+		//}
+
+		private void txtTaxIdentity_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if ((!char.IsNumber(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
+			{
+				e.Handled = true;
+			}
 		}
 	}
 }

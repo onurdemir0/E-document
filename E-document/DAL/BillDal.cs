@@ -23,7 +23,7 @@ namespace E_document.DAL
 
 				//string txtQuery = "insert into Bills (CustomerId,SettingsId,Ettn,Type,BillDate,BillType,Currency,OrderNo,OrderDate,WayBillNo,WaybillDate,TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority) values (@CustomerId,@SettingsId,@Ettn,@Type,@BillDate,@BillType,@Currency,@OrderNo,@OrderDate,@WayBillNo,@WaybillDate,@TIN_NIN,@Title,@FirstName,@LastName,@Road_Street,@ApartmentName,@ApartmentNo,@Floor,@Town,@District,@State,@Zip,@Country,@Phone,@Fax,@Email,@WebSite,@TaxAuthority)";
 
-				string txtQuery = "insert into Bills (CustomerId,SettingsId,Ettn,Type,BillDate,BillType,Currency,OrderNo,OrderDate,WayBillNo,WaybillDate,TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority,CompanyName,CompanyEmail,CompanyMobile,CompanyWebSite,CompanyTaxAuthority,CompanyTaxIdentity,FirstAddressLine,SecondAddressLine,CompanyCity,CompanyState,CompanyZip,CompanyCountry,Note) values (@CustomerId,@SettingsId,@Ettn,@Type,@BillDate,@BillType,@Currency,@OrderNo,@OrderDate,@WayBillNo,@WaybillDate,@TIN_NIN,@Title,@FirstName,@LastName,@Road_Street,@ApartmentName,@ApartmentNo,@Floor,@Town,@District,@State,@Zip,@Country,@Phone,@Fax,@Email,@WebSite,@TaxAuthority,@CompanyName,@CompanyEmail,@CompanyMobile,@CompanyWebSite,@CompanyTaxAuthority,@CompanyTaxIdentity,@FirstAddressLine,@SecondAddressLine,@CompanyCity,@CompanyState,@CompanyZip,@CompanyCountry,@Note)";
+				string txtQuery = "insert into Bills (CustomerId,SettingsId,Ettn,Type,BillDate,BillType,Currency,OrderNo,OrderDate,WayBillNo,WaybillDate,TIN_NIN,Title,FirstName,LastName,Road_Street,ApartmentName,ApartmentNo,Floor,Town,District,State,Zip,Country,Phone,Fax,Email,WebSite,TaxAuthority,CompanyName,CompanyEmail,CompanyMobile,CompanyWebSite,CompanyTaxAuthority,CompanyTaxIdentity,FirstAddressLine,SecondAddressLine,CompanyCity,CompanyState,CompanyZip,CompanyCountry,PayeeAccount,Note,XmlString) values (@CustomerId,@SettingsId,@Ettn,@Type,@BillDate,@BillType,@Currency,@OrderNo,@OrderDate,@WayBillNo,@WaybillDate,@TIN_NIN,@Title,@FirstName,@LastName,@Road_Street,@ApartmentName,@ApartmentNo,@Floor,@Town,@District,@State,@Zip,@Country,@Phone,@Fax,@Email,@WebSite,@TaxAuthority,@CompanyName,@CompanyEmail,@CompanyMobile,@CompanyWebSite,@CompanyTaxAuthority,@CompanyTaxIdentity,@FirstAddressLine,@SecondAddressLine,@CompanyCity,@CompanyState,@CompanyZip,@CompanyCountry,@PayeeAccount,@Note,@XmlString)";
 				sql_cmd = new SQLiteCommand(txtQuery, sql_con);
 
 				sql_cmd.Parameters.AddWithValue("@CustomerId", bill.CustomerId);
@@ -70,7 +70,9 @@ namespace E_document.DAL
 				sql_cmd.Parameters.AddWithValue("@CompanyZip", bill.CompanyZip);
 				sql_cmd.Parameters.AddWithValue("@CompanyCountry", bill.CompanyCountry);
 
+				sql_cmd.Parameters.AddWithValue("@PayeeAccount", bill.PayeeAccount);
 				sql_cmd.Parameters.AddWithValue("@Note", bill.Note);
+				sql_cmd.Parameters.AddWithValue("@XmlString", bill.XmlString);
 
 				sql_con.Open();
 

@@ -39,7 +39,7 @@ namespace E_document.UI
 			addressBook.District = txtDistrict.Text;
 			addressBook.State = txtState.Text;
 			addressBook.Zip = txtZip.Text;
-			addressBook.Country = txtCountry.Text;
+			addressBook.Country = cmbCountry.Text;
 			addressBook.Phone = txtPhone.Text;
 			addressBook.Fax = txtFax.Text;
 			addressBook.Email = txtEmail.Text;
@@ -61,39 +61,13 @@ namespace E_document.UI
 			txtDistrict.Clear();
 			txtState.Clear();
 			txtZip.Clear();
-			txtCountry.Clear();
+			cmbCountry.Text = "";
 			txtPhone.Clear();
 			txtFax.Clear();
 			txtEmail.Clear();
 			txtWeb.Clear();
 			txtTaxAuth.Clear();
 		}
-		/*private void SetConnection()
-		{
-			sql_con = new SQLiteConnection("Data Source = E_Document.db");
-		}*/
-		/*private void ExecuteQuery(string txtQuery)
-		{
-			SetConnection();
-			sql_con.Open();
-			sql_cmd = sql_con.CreateCommand();
-			sql_cmd.CommandText = txtQuery;
-			sql_cmd.ExecuteNonQuery();
-			sql_con.Close();
-		}*/
-		/*private void LoadData()
-		{
-			SetConnection();
-			sql_con.Open();
-			sql_cmd = sql_con.CreateCommand();
-			string CommandText = "select * from AddressBooks";
-			DB = new SQLiteDataAdapter(CommandText, sql_con);
-			DS.Reset();
-			DB.Fill(DS);
-			DT = DS.Tables[0];
-			dataGridAddressBook.DataSource = DT;
-			sql_con.Close();
-		}*/
 
 		private void LoadData()
 		{
@@ -109,28 +83,6 @@ namespace E_document.UI
 		private void LabelVisibleTrue()
 		{
 			lblCurrentId.Visible = true;
-		}
-
-		private void txtTinNin_TextChanged(object sender, EventArgs e)
-		{
-			//if (txtTinNin.TextLength == 10)
-			//{
-			//	txtTitle.Enabled = true;
-			//	txtFirstName.Enabled = false;
-			//	txtLastName.Enabled = false;
-			//}
-			//else if (txtTinNin.TextLength == 11)
-			//{
-			//	txtFirstName.Enabled = true;
-			//	txtLastName.Enabled = true;
-			//	txtTitle.Enabled = false;
-			//}
-			//else
-			//{
-			//	txtTitle.Enabled = false;
-			//	txtFirstName.Enabled = false;
-			//	txtLastName.Enabled = false;
-			//}
 		}
 
 		private void GetCustomerType()
@@ -153,14 +105,17 @@ namespace E_document.UI
 
 			if (chkCorporate.Checked == true)
 			{
-				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtTitle.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(txtCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
+				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtTitle.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
 				{
-					MessageBox.Show("Please fill in the required fields!");
+					//MessageBox.Show("Please fill in the required fields!");
+					MessageBox.Show(lblReq.Text);
 				}
 				else
 				{
+					addressBook.FirstName = "";
+					addressBook.LastName = "";
 					bool success = dal.Add(addressBook);
-
+					
 					if (success)
 					{
 						MessageBox.Show("Successfully Created to Address Book!");
@@ -177,7 +132,7 @@ namespace E_document.UI
 			}
 			else if (chkIndividual.Checked == true)
 			{
-				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtFirstName.Text) || String.IsNullOrEmpty(txtLastName.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(txtCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
+				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtFirstName.Text) || String.IsNullOrEmpty(txtLastName.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
 				{
 					MessageBox.Show("Please fill in the required fields!");
 				}
@@ -205,11 +160,81 @@ namespace E_document.UI
 			}
 		}
 
+		private void btnUpdateCustomer_Click(object sender, EventArgs e)
+		{
+			GetValue();
+			GetCustomerType();
+
+			if (chkCorporate.Checked == true)
+			{
+				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtTitle.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
+				{
+					MessageBox.Show("Please fill in the required fields!");
+				}
+				else
+				{
+					addressBook.FirstName = "";
+					addressBook.LastName = "";
+					bool success = dal.Update(addressBook);
+
+					if (success)
+					{
+						MessageBox.Show("Successfully Updated to Address Book!");
+						ClearText();
+					}
+					else
+					{
+						MessageBox.Show("Failed!");
+					}
+
+					LabelVisibleFalse();
+					LoadData();
+				}
+			}
+
+			else if (chkIndividual.Checked == true)
+			{
+				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtFirstName.Text) || String.IsNullOrEmpty(txtLastName.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
+				{
+					MessageBox.Show("Please fill in the required fields!");
+				}
+				else
+				{
+					bool success = dal.Update(addressBook);
+
+					if (success)
+					{
+						MessageBox.Show("Successfully Updated to Address Book!");
+						ClearText();
+					}
+					else
+					{
+						MessageBox.Show("Failed!");
+					}
+
+					LabelVisibleFalse();
+					LoadData();
+				}
+			}
+
+			//bool success = dal.Update(addressBook);
+
+			//if (success)
+			//{
+			//	MessageBox.Show("Successfully Updated to Address Book!");
+			//}
+			//else
+			//{
+			//	MessageBox.Show("Failed!");
+			//}
+
+			//ClearText();
+			//LabelVisibleFalse();
+			//LoadData();
+		}
+
 		private void btnDeleteCustomer_Click(object sender, EventArgs e)
 		{
-			//string txtQuery = "delete from AddressBooks WHERE AddressBookId='" + lblCurrentId.Text + "'";
-			//dal.ExecuteQuery(txtQuery);
-
 			addressBook.AddressBookId = Convert.ToInt32(lblCurrentId.Text);
 			bool success = dal.Delete(addressBook);
 
@@ -227,14 +252,26 @@ namespace E_document.UI
 			LoadData();
 		}
 
+		private void LoadCountryToCmb()
+		{
+			List<Country> countries = Country.GetCountries();
+
+			foreach (Country country in countries)
+			{
+				cmbCountry.Items.Add(country.Name);
+			}
+		}
+
 		private void frmAddressBook_Load(object sender, EventArgs e)
 		{
 			LoadData();
+			LoadCountryToCmb();
 		}
 
 		private void dataGridAddressBook_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			LabelVisibleTrue();
+			
 			lblCurrentId.Text = dataGridAddressBook.SelectedRows[0].Cells[0].Value.ToString();
 			txtTinNin.Text = dataGridAddressBook.SelectedRows[0].Cells[1].Value.ToString();
 			txtTitle.Text = dataGridAddressBook.SelectedRows[0].Cells[2].Value.ToString();
@@ -250,33 +287,12 @@ namespace E_document.UI
 			txtState.Text = dataGridAddressBook.SelectedRows[0].Cells[11].Value.ToString();
 			txtZip.Text = dataGridAddressBook.SelectedRows[0].Cells[12].Value.ToString();
 
-			txtCountry.Text = dataGridAddressBook.SelectedRows[0].Cells[13].Value.ToString();
+			cmbCountry.Text = dataGridAddressBook.SelectedRows[0].Cells[13].Value.ToString();
 			txtPhone.Text = dataGridAddressBook.SelectedRows[0].Cells[14].Value.ToString();
 			txtFax.Text = dataGridAddressBook.SelectedRows[0].Cells[15].Value.ToString();
 			txtEmail.Text = dataGridAddressBook.SelectedRows[0].Cells[16].Value.ToString();
 			txtWeb.Text = dataGridAddressBook.SelectedRows[0].Cells[17].Value.ToString();
 			txtTaxAuth.Text = dataGridAddressBook.SelectedRows[0].Cells[18].Value.ToString();
-		}
-
-		private void btnUpdateCustomer_Click(object sender, EventArgs e)
-		{
-			GetValue();
-			GetCustomerType();
-
-			bool success = dal.Update(addressBook);
-
-			if (success)
-			{
-				MessageBox.Show("Successfully Updated to Address Book!");
-			}
-			else
-			{
-				MessageBox.Show("Failed!");
-			}
-
-			ClearText();
-			LabelVisibleFalse();
-			LoadData();
 		}
 
 		private void chkIndividual_CheckedChanged(object sender, EventArgs e)
@@ -302,6 +318,28 @@ namespace E_document.UI
 		}
 
 		private void txtTinNin_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if ((!char.IsNumber(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
+			{
+				e.Handled = true;
+			}
+		}
+
+		private void txtFirstName_TextChanged(object sender, EventArgs e)
+		{
+			if (!String.IsNullOrEmpty(txtFirstName.Text))
+			{
+				chkCorporate.Checked = false;
+				chkIndividual.Checked = true;
+			}
+			else if (String.IsNullOrEmpty(txtFirstName.Text))
+			{
+				chkIndividual.Checked = false;
+				chkCorporate.Checked = true;
+			}
+		}
+
+		private void txtFloor_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if ((!char.IsNumber(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
 			{

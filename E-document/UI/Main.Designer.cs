@@ -30,70 +30,134 @@ namespace E_document.UI
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-			this.menuStripTop = new System.Windows.Forms.MenuStrip();
-			this.createBillToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.addressBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.menuStripTop.SuspendLayout();
+			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+			this.btnEn = new System.Windows.Forms.Button();
+			this.btnDe = new System.Windows.Forms.Button();
+			this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
+			this.lblExit = new System.Windows.Forms.Label();
+			this.sqLiteCommandBuilder1 = new System.Data.SQLite.SQLiteCommandBuilder();
+			this.lblMinimized = new System.Windows.Forms.Label();
+			this.BtnSettings = new E_document.ButtonControls.RJButton();
+			this.btnAddressBook = new E_document.ButtonControls.RJButton();
+			this.btnCreateInvoice = new E_document.ButtonControls.RJButton();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// menuStripTop
-			// 
-			this.menuStripTop.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.createBillToolStripMenuItem,
-            this.addressBookToolStripMenuItem,
-            this.settingsToolStripMenuItem});
-			this.menuStripTop.Location = new System.Drawing.Point(0, 0);
-			this.menuStripTop.Name = "menuStripTop";
-			this.menuStripTop.Size = new System.Drawing.Size(691, 24);
-			this.menuStripTop.TabIndex = 0;
-			this.menuStripTop.Text = "menuStrip1";
-			// 
-			// createBillToolStripMenuItem
-			// 
-			this.createBillToolStripMenuItem.Name = "createBillToolStripMenuItem";
-			this.createBillToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-			this.createBillToolStripMenuItem.Text = "Create Invoice";
-			this.createBillToolStripMenuItem.Click += new System.EventHandler(this.createBillToolStripMenuItem_Click);
-			// 
-			// addressBookToolStripMenuItem
-			// 
-			this.addressBookToolStripMenuItem.Name = "addressBookToolStripMenuItem";
-			this.addressBookToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
-			this.addressBookToolStripMenuItem.Text = "Address Book";
-			this.addressBookToolStripMenuItem.Click += new System.EventHandler(this.addressBookToolStripMenuItem_Click);
-			// 
-			// settingsToolStripMenuItem
-			// 
-			this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-			this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-			this.settingsToolStripMenuItem.Text = "Settings";
-			this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
-			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(0, 27);
+			resources.ApplyResources(this.pictureBox1, "pictureBox1");
+			this.pictureBox1.BackColor = System.Drawing.Color.Black;
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(679, 395);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-			this.pictureBox1.TabIndex = 1;
 			this.pictureBox1.TabStop = false;
+			// 
+			// btnEn
+			// 
+			resources.ApplyResources(this.btnEn, "btnEn");
+			this.btnEn.FlatAppearance.BorderSize = 0;
+			this.btnEn.Name = "btnEn";
+			this.btnEn.UseVisualStyleBackColor = true;
+			this.btnEn.Click += new System.EventHandler(this.btnEn_Click);
+			// 
+			// btnDe
+			// 
+			resources.ApplyResources(this.btnDe, "btnDe");
+			this.btnDe.FlatAppearance.BorderSize = 0;
+			this.btnDe.Name = "btnDe";
+			this.btnDe.UseVisualStyleBackColor = true;
+			this.btnDe.Click += new System.EventHandler(this.btnDe_Click);
+			// 
+			// entityCommand1
+			// 
+			this.entityCommand1.CommandTimeout = 0;
+			this.entityCommand1.CommandTree = null;
+			this.entityCommand1.Connection = null;
+			this.entityCommand1.EnablePlanCaching = true;
+			this.entityCommand1.Transaction = null;
+			// 
+			// lblExit
+			// 
+			resources.ApplyResources(this.lblExit, "lblExit");
+			this.lblExit.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.lblExit.Name = "lblExit";
+			this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
+			// 
+			// sqLiteCommandBuilder1
+			// 
+			this.sqLiteCommandBuilder1.DataAdapter = null;
+			this.sqLiteCommandBuilder1.QuoteSuffix = "]";
+			// 
+			// lblMinimized
+			// 
+			resources.ApplyResources(this.lblMinimized, "lblMinimized");
+			this.lblMinimized.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.lblMinimized.Name = "lblMinimized";
+			this.lblMinimized.Click += new System.EventHandler(this.lblMinimized_Click);
+			// 
+			// BtnSettings
+			// 
+			resources.ApplyResources(this.BtnSettings, "BtnSettings");
+			this.BtnSettings.BackColor = System.Drawing.Color.DarkCyan;
+			this.BtnSettings.BackgroundColor = System.Drawing.Color.DarkCyan;
+			this.BtnSettings.BorderColor = System.Drawing.Color.PaleVioletRed;
+			this.BtnSettings.BorderRadius = 15;
+			this.BtnSettings.BorderSize = 0;
+			this.BtnSettings.FlatAppearance.BorderSize = 0;
+			this.BtnSettings.ForeColor = System.Drawing.Color.White;
+			this.BtnSettings.Name = "BtnSettings";
+			this.BtnSettings.TextColor = System.Drawing.Color.White;
+			this.BtnSettings.UseVisualStyleBackColor = false;
+			this.BtnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
+			// 
+			// btnAddressBook
+			// 
+			resources.ApplyResources(this.btnAddressBook, "btnAddressBook");
+			this.btnAddressBook.BackColor = System.Drawing.Color.LightSeaGreen;
+			this.btnAddressBook.BackgroundColor = System.Drawing.Color.LightSeaGreen;
+			this.btnAddressBook.BorderColor = System.Drawing.Color.PaleVioletRed;
+			this.btnAddressBook.BorderRadius = 15;
+			this.btnAddressBook.BorderSize = 0;
+			this.btnAddressBook.FlatAppearance.BorderSize = 0;
+			this.btnAddressBook.ForeColor = System.Drawing.Color.White;
+			this.btnAddressBook.Name = "btnAddressBook";
+			this.btnAddressBook.TextColor = System.Drawing.Color.White;
+			this.btnAddressBook.UseVisualStyleBackColor = false;
+			this.btnAddressBook.Click += new System.EventHandler(this.btnAddressBook_Click);
+			// 
+			// btnCreateInvoice
+			// 
+			resources.ApplyResources(this.btnCreateInvoice, "btnCreateInvoice");
+			this.btnCreateInvoice.BackColor = System.Drawing.Color.MediumTurquoise;
+			this.btnCreateInvoice.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+			this.btnCreateInvoice.BorderColor = System.Drawing.Color.Black;
+			this.btnCreateInvoice.BorderRadius = 15;
+			this.btnCreateInvoice.BorderSize = 0;
+			this.btnCreateInvoice.FlatAppearance.BorderSize = 0;
+			this.btnCreateInvoice.ForeColor = System.Drawing.Color.White;
+			this.btnCreateInvoice.Name = "btnCreateInvoice";
+			this.btnCreateInvoice.TextColor = System.Drawing.Color.White;
+			this.btnCreateInvoice.UseVisualStyleBackColor = false;
+			this.btnCreateInvoice.Click += new System.EventHandler(this.btnCreateInvoice_Click);
 			// 
 			// Main
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(691, 436);
+			this.BackColor = System.Drawing.Color.White;
+			this.Controls.Add(this.lblMinimized);
+			this.Controls.Add(this.lblExit);
+			this.Controls.Add(this.BtnSettings);
+			this.Controls.Add(this.btnAddressBook);
+			this.Controls.Add(this.btnCreateInvoice);
+			this.Controls.Add(this.btnDe);
+			this.Controls.Add(this.btnEn);
 			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.menuStripTop);
-			this.MainMenuStrip = this.menuStripTop;
+			this.ForeColor = System.Drawing.Color.Black;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "Main";
-			this.Text = "MDP Group";
-			this.menuStripTop.ResumeLayout(false);
-			this.menuStripTop.PerformLayout();
+			this.Load += new System.EventHandler(this.Main_Load);
+			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Main_MouseDown);
+			this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -101,11 +165,16 @@ namespace E_document.UI
 		}
 
 		#endregion
-
-		private System.Windows.Forms.MenuStrip menuStripTop;
-		private System.Windows.Forms.ToolStripMenuItem createBillToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem addressBookToolStripMenuItem;
 		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.ComponentModel.BackgroundWorker backgroundWorker1;
+		private System.Windows.Forms.Button btnEn;
+		private System.Windows.Forms.Button btnDe;
+		private ButtonControls.RJButton btnCreateInvoice;
+		private ButtonControls.RJButton btnAddressBook;
+		private ButtonControls.RJButton BtnSettings;
+		private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
+		private System.Windows.Forms.Label lblExit;
+		private System.Data.SQLite.SQLiteCommandBuilder sqLiteCommandBuilder1;
+		private System.Windows.Forms.Label lblMinimized;
 	}
 }

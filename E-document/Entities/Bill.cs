@@ -53,5 +53,8 @@ namespace E_document.Entities
 		public string CompanyState { get; set; }
 		public string CompanyZip { get; set; }
 		public string CompanyCountry { get; set; }
+
+		public string PayeeAccount { get; set; }
+		public string XmlString { get; set; }
 	}
 }

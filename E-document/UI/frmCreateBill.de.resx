@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblCurrency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="lblCurrency.Text" xml:space="preserve">
+    <value>Währung:</value>
+  </data>
+  <data name="comboBoxBillType.Items" xml:space="preserve">
+    <value>VERKAUF</value>
+  </data>
+  <data name="comboBoxBillType.Items1" xml:space="preserve">
+    <value>RETOURE</value>
+  </data>
+  <data name="lblBillType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 13</value>
+  </data>
+  <data name="lblBillType.Text" xml:space="preserve">
+    <value>Rechnungsart*:</value>
+  </data>
+  <data name="lblBillDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 13</value>
+  </data>
+  <data name="lblBillDate.Text" xml:space="preserve">
+    <value>Rechnungsdatum:</value>
+  </data>
+  <data name="comboBoxScenario.Items" xml:space="preserve">
+    <value>Basisrechnung </value>
+  </data>
+  <data name="comboBoxScenario.Items1" xml:space="preserve">
+    <value>Handelsrechnung</value>
+  </data>
+  <data name="lblType.Text" xml:space="preserve">
+    <value>Szenario*:</value>
+  </data>
+  <data name="lblBillTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 15</value>
+  </data>
+  <data name="lblBillTitle.Text" xml:space="preserve">
+    <value>Rechnungsinformation</value>
+  </data>
+  <data name="lblOrderDa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="lblOrderDa.Text" xml:space="preserve">
+    <value>Bestelldatum:</value>
+  </data>
+  <data name="lblOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="lblOrder.Text" xml:space="preserve">
+    <value>Best-Nr. :</value>
+  </data>
+  <data name="lblOrderTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 15</value>
+  </data>
+  <data name="lblOrderTitle.Text" xml:space="preserve">
+    <value>Bestellinformation</value>
+  </data>
+  <data name="txtApartNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 228</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtApartNo.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblApartNo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblApartNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 231</value>
+  </data>
+  <data name="lblApartNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 13</value>
+  </data>
+  <data name="lblApartNo.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="lblApartNo.Text" xml:space="preserve">
+    <value>Hausnummer*:</value>
+  </data>
+  <data name="chkIndividual.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 17</value>
+  </data>
+  <data name="chkIndividual.Text" xml:space="preserve">
+    <value>Privatkunde hinzufügen</value>
+  </data>
+  <data name="chkCorporate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 17</value>
+  </data>
+  <data name="chkCorporate.Text" xml:space="preserve">
+    <value>Firmenkunde hınzufügen</value>
+  </data>
+  <data name="btnAddToAddressBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>546, 340</value>
+  </data>
+  <data name="btnAddToAddressBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 34</value>
+  </data>
+  <data name="btnAddToAddressBook.Text" xml:space="preserve">
+    <value>im Adressbuch speichern</value>
+  </data>
+  <data name="lblTaxAuth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="lblTaxAuth.Text" xml:space="preserve">
+    <value>Finanzamt*:</value>
+  </data>
+  <data name="lblWeb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="lblWeb.Text" xml:space="preserve">
+    <value>Website:</value>
+  </data>
+  <data name="lblPhone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="lblPhone.Text" xml:space="preserve">
+    <value>Telefon:</value>
+  </data>
+  <data name="lblCountry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="lblCountry.Text" xml:space="preserve">
+    <value>Ülke*:</value>
+  </data>
+  <data name="lblZip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="lblZip.Text" xml:space="preserve">
+    <value>Land:</value>
+  </data>
+  <data name="lblState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="lblState.Text" xml:space="preserve">
+    <value>Bundesland*:</value>
+  </data>
+  <data name="lblDistrict.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="lblDistrict.Text" xml:space="preserve">
+    <value>Stadt*:</value>
+  </data>
+  <data name="txtApartName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 256</value>
+  </data>
+  <data name="lblTown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="lblTown.Text" xml:space="preserve">
+    <value>Stadtteil:</value>
+  </data>
+  <data name="lblFloor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="lblFloor.Text" xml:space="preserve">
+    <value>Etage:</value>
+  </data>
+  <data name="lblApartName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 259</value>
+  </data>
+  <data name="lblApartName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
+  </data>
+  <data name="lblApartName.Text" xml:space="preserve">
+    <value>Gebäudenname:</value>
+  </data>
+  <data name="lblStreet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="lblStreet.Text" xml:space="preserve">
+    <value>Straße*:</value>
+  </data>
+  <data name="lblLastName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="lblLastName.Text" xml:space="preserve">
+    <value>Nachname*:</value>
+  </data>
+  <data name="lblFirstName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="lblFirstName.Text" xml:space="preserve">
+    <value>Name*:</value>
+  </data>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>Titel*:</value>
+  </data>
+  <data name="lblTinNin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="lblTinNin.Text" xml:space="preserve">
+    <value>PNr / Steuer-ID*:</value>
+  </data>
+  <data name="lblSearchCustomer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 13</value>
+  </data>
+  <data name="lblSearchCustomer.Text" xml:space="preserve">
+    <value>Kunde suchen:</value>
+  </data>
+  <data name="lblCustomerTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 15</value>
+  </data>
+  <data name="lblCustomerTitle.Text" xml:space="preserve">
+    <value>Kundeninformation</value>
+  </data>
+  <data name="lblWayBillDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 13</value>
+  </data>
+  <data name="lblWayBillDate.Text" xml:space="preserve">
+    <value>Frachtbriefdatum:</value>
+  </data>
+  <data name="lblWayBillNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="lblWayBillNo.Text" xml:space="preserve">
+    <value>Frbr.-Nr. :</value>
+  </data>
+  <data name="lblWaybillInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 15</value>
+  </data>
+  <data name="lblWaybillInfo.Text" xml:space="preserve">
+    <value>Frachtbriefinformation</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>LÖSCHEN</value>
+  </data>
+  <data name="lblVatRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="lblVatRate.Text" xml:space="preserve">
+    <value>Steuersatz %:</value>
+  </data>
+  <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>633, 120</value>
+  </data>
+  <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 27</value>
+  </data>
+  <data name="btnAdd.Text" xml:space="preserve">
+    <value>HINZUFÜGEN</value>
+  </data>
+  <data name="lblQuantity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="lblQuantity.Text" xml:space="preserve">
+    <value>Stückzahi*:</value>
+  </data>
+  <data name="lblUnitPrice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="lblUnitPrice.Text" xml:space="preserve">
+    <value>Einheitspreis*:</value>
+  </data>
+  <data name="lblItemName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="lblItemName.Text" xml:space="preserve">
+    <value>Produktname*:</value>
+  </data>
+  <data name="lblUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="lblUnit.Text" xml:space="preserve">
+    <value>Einheit*:</value>
+  </data>
+  <data name="lblItemNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="lblItemNo.Text" xml:space="preserve">
+    <value>Produkt-Nr. *:</value>
+  </data>
+  <data name="lblProductTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 15</value>
+  </data>
+  <data name="lblProductTitle.Text" xml:space="preserve">
+    <value>Produktinformation</value>
+  </data>
+  <data name="lblGridTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 15</value>
+  </data>
+  <data name="lblGridTitle.Text" xml:space="preserve">
+    <value>Hinzugefügte Artikel</value>
+  </data>
+  <data name="lblGrandTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="lblGrandTotal.Text" xml:space="preserve">
+    <value>Gesamtsumme:</value>
+  </data>
+  <data name="lblVat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
+  <data name="lblVat.Text" xml:space="preserve">
+    <value>Gesamtpreis zzgl. Steuern:</value>
+  </data>
+  <data name="lblDiscount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="lblDiscount.Text" xml:space="preserve">
+    <value>Kalkulierte MwSt. :</value>
+  </data>
+  <data name="lblSubTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 13</value>
+  </data>
+  <data name="lblSubTotal.Text" xml:space="preserve">
+    <value>Zwischensumme:</value>
+  </data>
+  <data name="lblCalculationTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 15</value>
+  </data>
+  <data name="lblCalculationTitle.Text" xml:space="preserve">
+    <value>Berechnungsdetails</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 15</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Notiz</value>
+  </data>
+  <data name="btnCreate.Text" xml:space="preserve">
+    <value>Erstellen</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>Aufheben</value>
+  </data>
+  <data name="lblSearchSender.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 13</value>
+  </data>
+  <data name="lblSearchSender.Text" xml:space="preserve">
+    <value>Absender suchen:</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 15</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Absender</value>
+  </data>
+  <data name="txtPayeeAcc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 32</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Zahlungsempfängerkonto:</value>
+  </data>
+  <data name="lblPayeeInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 15</value>
+  </data>
+  <data name="lblPayeeInfo.Text" xml:space="preserve">
+    <value>Zahlungsempfänger-Information</value>
+  </data>
+  <data name="columnLineNo.HeaderText" xml:space="preserve">
+    <value>Zeilen Nr </value>
+  </data>
+  <data name="columnLineNo.Width" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="columnItemNo.HeaderText" xml:space="preserve">
+    <value>Artikel Nr</value>
+  </data>
+  <data name="columnItem.HeaderText" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="columnQuantity.HeaderText" xml:space="preserve">
+    <value>Stückzahl</value>
+  </data>
+  <data name="columnUnit.HeaderText" xml:space="preserve">
+    <value>Einheit</value>
+  </data>
+  <data name="columnUnitPrice.HeaderText" xml:space="preserve">
+    <value>Einheitspreis</value>
+  </data>
+  <data name="columnUnitPrice.Width" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="columnVatRate.HeaderText" xml:space="preserve">
+    <value>MwSt. %</value>
+  </data>
+  <data name="columnVatRate.Width" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="columnVatPrice.HeaderText" xml:space="preserve">
+    <value>MwSt. Preis</value>
+  </data>
+  <data name="columnTotal.HeaderText" xml:space="preserve">
+    <value>Gesamt</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Rechnung erstellen</value>
+  </data>
+</root>

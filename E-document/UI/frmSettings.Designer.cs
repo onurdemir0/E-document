@@ -35,13 +35,16 @@ namespace E_document.UI
 			this.pictureBoxClose = new System.Windows.Forms.PictureBox();
 			this.lblTop = new System.Windows.Forms.Label();
 			this.pnlContent = new System.Windows.Forms.Panel();
+			this.lblUpdate = new System.Windows.Forms.Label();
+			this.lblTax = new System.Windows.Forms.Label();
+			this.lblReq = new System.Windows.Forms.Label();
+			this.cmbCountry = new System.Windows.Forms.ComboBox();
 			this.lblCurrentId = new System.Windows.Forms.Label();
 			this.lblCompanyId = new System.Windows.Forms.Label();
 			this.txtState = new System.Windows.Forms.TextBox();
 			this.lblState = new System.Windows.Forms.Label();
 			this.txtCity = new System.Windows.Forms.TextBox();
 			this.txtAddress2 = new System.Windows.Forms.TextBox();
-			this.txtCountry = new System.Windows.Forms.TextBox();
 			this.txtZip = new System.Windows.Forms.TextBox();
 			this.txtAddress1 = new System.Windows.Forms.TextBox();
 			this.lblCity = new System.Windows.Forms.Label();
@@ -66,9 +69,11 @@ namespace E_document.UI
 			this.btnUpdate = new System.Windows.Forms.Button();
 			this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
 			this.pnlDataGrid = new System.Windows.Forms.Panel();
-			this.btnUse = new System.Windows.Forms.Button();
-			this.btnDelete = new System.Windows.Forms.Button();
 			this.dataGridSettings = new System.Windows.Forms.DataGridView();
+			this.btnDelete = new System.Windows.Forms.Button();
+			this.lblSuccess = new System.Windows.Forms.Label();
+			this.lblFail = new System.Windows.Forms.Label();
+			this.lblDelete = new System.Windows.Forms.Label();
 			this.sqLiteCommandBuilder1 = new System.Data.SQLite.SQLiteCommandBuilder();
 			this.pnlTop.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
@@ -83,44 +88,34 @@ namespace E_document.UI
 			this.pnlTop.BackColor = System.Drawing.Color.SkyBlue;
 			this.pnlTop.Controls.Add(this.pictureBoxClose);
 			this.pnlTop.Controls.Add(this.lblTop);
-			this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlTop.Location = new System.Drawing.Point(0, 0);
+			resources.ApplyResources(this.pnlTop, "pnlTop");
 			this.pnlTop.Name = "pnlTop";
-			this.pnlTop.Size = new System.Drawing.Size(665, 30);
-			this.pnlTop.TabIndex = 2;
 			// 
 			// pictureBoxClose
 			// 
-			this.pictureBoxClose.Dock = System.Windows.Forms.DockStyle.Right;
-			this.pictureBoxClose.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClose.Image")));
-			this.pictureBoxClose.Location = new System.Drawing.Point(630, 0);
+			resources.ApplyResources(this.pictureBoxClose, "pictureBoxClose");
 			this.pictureBoxClose.Name = "pictureBoxClose";
-			this.pictureBoxClose.Size = new System.Drawing.Size(35, 30);
-			this.pictureBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBoxClose.TabIndex = 2;
 			this.pictureBoxClose.TabStop = false;
 			this.pictureBoxClose.Click += new System.EventHandler(this.pictureBoxClose_Click);
 			// 
 			// lblTop
 			// 
-			this.lblTop.AutoSize = true;
-			this.lblTop.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblTop.Location = new System.Drawing.Point(300, 3);
+			resources.ApplyResources(this.lblTop, "lblTop");
 			this.lblTop.Name = "lblTop";
-			this.lblTop.Size = new System.Drawing.Size(79, 21);
-			this.lblTop.TabIndex = 1;
-			this.lblTop.Text = "SETTINGS";
 			// 
 			// pnlContent
 			// 
 			this.pnlContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.pnlContent.Controls.Add(this.lblUpdate);
+			this.pnlContent.Controls.Add(this.lblTax);
+			this.pnlContent.Controls.Add(this.lblReq);
+			this.pnlContent.Controls.Add(this.cmbCountry);
 			this.pnlContent.Controls.Add(this.lblCurrentId);
 			this.pnlContent.Controls.Add(this.lblCompanyId);
 			this.pnlContent.Controls.Add(this.txtState);
 			this.pnlContent.Controls.Add(this.lblState);
 			this.pnlContent.Controls.Add(this.txtCity);
 			this.pnlContent.Controls.Add(this.txtAddress2);
-			this.pnlContent.Controls.Add(this.txtCountry);
 			this.pnlContent.Controls.Add(this.txtZip);
 			this.pnlContent.Controls.Add(this.txtAddress1);
 			this.pnlContent.Controls.Add(this.lblCity);
@@ -141,276 +136,174 @@ namespace E_document.UI
 			this.pnlContent.Controls.Add(this.lblTaxAuth);
 			this.pnlContent.Controls.Add(this.lblCompanyName);
 			this.pnlContent.Controls.Add(this.lblTitle);
-			this.pnlContent.Location = new System.Drawing.Point(12, 36);
+			resources.ApplyResources(this.pnlContent, "pnlContent");
 			this.pnlContent.Name = "pnlContent";
-			this.pnlContent.Size = new System.Drawing.Size(642, 260);
-			this.pnlContent.TabIndex = 3;
+			// 
+			// lblUpdate
+			// 
+			resources.ApplyResources(this.lblUpdate, "lblUpdate");
+			this.lblUpdate.Name = "lblUpdate";
+			// 
+			// lblTax
+			// 
+			resources.ApplyResources(this.lblTax, "lblTax");
+			this.lblTax.Name = "lblTax";
+			// 
+			// lblReq
+			// 
+			resources.ApplyResources(this.lblReq, "lblReq");
+			this.lblReq.Name = "lblReq";
+			// 
+			// cmbCountry
+			// 
+			this.cmbCountry.FormattingEnabled = true;
+			resources.ApplyResources(this.cmbCountry, "cmbCountry");
+			this.cmbCountry.Name = "cmbCountry";
 			// 
 			// lblCurrentId
 			// 
-			this.lblCurrentId.AutoSize = true;
-			this.lblCurrentId.Location = new System.Drawing.Point(439, 10);
+			resources.ApplyResources(this.lblCurrentId, "lblCurrentId");
 			this.lblCurrentId.Name = "lblCurrentId";
-			this.lblCurrentId.Size = new System.Drawing.Size(13, 13);
-			this.lblCurrentId.TabIndex = 51;
-			this.lblCurrentId.Text = "1";
-			this.lblCurrentId.Visible = false;
 			// 
 			// lblCompanyId
 			// 
-			this.lblCompanyId.AutoSize = true;
-			this.lblCompanyId.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblCompanyId.Location = new System.Drawing.Point(341, 10);
+			resources.ApplyResources(this.lblCompanyId, "lblCompanyId");
 			this.lblCompanyId.Name = "lblCompanyId";
-			this.lblCompanyId.Size = new System.Drawing.Size(21, 13);
-			this.lblCompanyId.TabIndex = 50;
-			this.lblCompanyId.Text = "ID:";
 			// 
 			// txtState
 			// 
-			this.txtState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtState.Location = new System.Drawing.Point(442, 147);
+			resources.ApplyResources(this.txtState, "txtState");
 			this.txtState.Name = "txtState";
-			this.txtState.Size = new System.Drawing.Size(168, 22);
-			this.txtState.TabIndex = 32;
 			// 
 			// lblState
 			// 
-			this.lblState.AutoSize = true;
-			this.lblState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblState.Location = new System.Drawing.Point(341, 150);
+			resources.ApplyResources(this.lblState, "lblState");
 			this.lblState.Name = "lblState";
-			this.lblState.Size = new System.Drawing.Size(88, 13);
-			this.lblState.TabIndex = 48;
-			this.lblState.Text = "State/Province*:";
 			// 
 			// txtCity
 			// 
-			this.txtCity.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtCity.Location = new System.Drawing.Point(442, 111);
+			resources.ApplyResources(this.txtCity, "txtCity");
 			this.txtCity.Name = "txtCity";
-			this.txtCity.Size = new System.Drawing.Size(168, 22);
-			this.txtCity.TabIndex = 31;
 			// 
 			// txtAddress2
 			// 
-			this.txtAddress2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtAddress2.Location = new System.Drawing.Point(442, 74);
+			resources.ApplyResources(this.txtAddress2, "txtAddress2");
 			this.txtAddress2.Name = "txtAddress2";
-			this.txtAddress2.Size = new System.Drawing.Size(168, 22);
-			this.txtAddress2.TabIndex = 30;
-			// 
-			// txtCountry
-			// 
-			this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtCountry.Location = new System.Drawing.Point(442, 222);
-			this.txtCountry.Name = "txtCountry";
-			this.txtCountry.Size = new System.Drawing.Size(168, 22);
-			this.txtCountry.TabIndex = 34;
 			// 
 			// txtZip
 			// 
-			this.txtZip.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtZip.Location = new System.Drawing.Point(442, 183);
+			resources.ApplyResources(this.txtZip, "txtZip");
 			this.txtZip.Name = "txtZip";
-			this.txtZip.Size = new System.Drawing.Size(168, 22);
-			this.txtZip.TabIndex = 33;
 			// 
 			// txtAddress1
 			// 
-			this.txtAddress1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtAddress1.Location = new System.Drawing.Point(442, 38);
+			resources.ApplyResources(this.txtAddress1, "txtAddress1");
 			this.txtAddress1.Name = "txtAddress1";
-			this.txtAddress1.Size = new System.Drawing.Size(168, 22);
-			this.txtAddress1.TabIndex = 29;
 			// 
 			// lblCity
 			// 
-			this.lblCity.AutoSize = true;
-			this.lblCity.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblCity.Location = new System.Drawing.Point(340, 114);
+			resources.ApplyResources(this.lblCity, "lblCity");
 			this.lblCity.Name = "lblCity";
-			this.lblCity.Size = new System.Drawing.Size(34, 13);
-			this.lblCity.TabIndex = 43;
-			this.lblCity.Text = "City*:";
 			// 
 			// lblAddress2
 			// 
-			this.lblAddress2.AutoSize = true;
-			this.lblAddress2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblAddress2.Location = new System.Drawing.Point(341, 77);
+			resources.ApplyResources(this.lblAddress2, "lblAddress2");
 			this.lblAddress2.Name = "lblAddress2";
-			this.lblAddress2.Size = new System.Drawing.Size(84, 13);
-			this.lblAddress2.TabIndex = 42;
-			this.lblAddress2.Text = "Address Line 2:";
 			// 
 			// lblCountry
 			// 
-			this.lblCountry.AutoSize = true;
-			this.lblCountry.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblCountry.Location = new System.Drawing.Point(341, 225);
+			resources.ApplyResources(this.lblCountry, "lblCountry");
 			this.lblCountry.Name = "lblCountry";
-			this.lblCountry.Size = new System.Drawing.Size(56, 13);
-			this.lblCountry.TabIndex = 41;
-			this.lblCountry.Text = "Country*:";
 			// 
 			// lblZip
 			// 
-			this.lblZip.AutoSize = true;
-			this.lblZip.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblZip.Location = new System.Drawing.Point(341, 186);
+			resources.ApplyResources(this.lblZip, "lblZip");
 			this.lblZip.Name = "lblZip";
-			this.lblZip.Size = new System.Drawing.Size(90, 13);
-			this.lblZip.TabIndex = 40;
-			this.lblZip.Text = "ZIP/Postal Code:";
 			// 
 			// lblAddress1
 			// 
-			this.lblAddress1.AutoSize = true;
-			this.lblAddress1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblAddress1.Location = new System.Drawing.Point(340, 41);
+			resources.ApplyResources(this.lblAddress1, "lblAddress1");
 			this.lblAddress1.Name = "lblAddress1";
-			this.lblAddress1.Size = new System.Drawing.Size(84, 13);
-			this.lblAddress1.TabIndex = 39;
-			this.lblAddress1.Text = "Address Line 1:";
 			// 
 			// txtWeb
 			// 
-			this.txtWeb.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtWeb.Location = new System.Drawing.Point(113, 147);
+			resources.ApplyResources(this.txtWeb, "txtWeb");
 			this.txtWeb.Name = "txtWeb";
-			this.txtWeb.Size = new System.Drawing.Size(168, 22);
-			this.txtWeb.TabIndex = 26;
 			// 
 			// lblWeb
 			// 
-			this.lblWeb.AutoSize = true;
-			this.lblWeb.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblWeb.Location = new System.Drawing.Point(12, 150);
+			resources.ApplyResources(this.lblWeb, "lblWeb");
 			this.lblWeb.Name = "lblWeb";
-			this.lblWeb.Size = new System.Drawing.Size(56, 13);
-			this.lblWeb.TabIndex = 35;
-			this.lblWeb.Text = "Web Site:";
 			// 
 			// txtMobile
 			// 
-			this.txtMobile.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtMobile.Location = new System.Drawing.Point(113, 111);
+			resources.ApplyResources(this.txtMobile, "txtMobile");
 			this.txtMobile.Name = "txtMobile";
-			this.txtMobile.Size = new System.Drawing.Size(168, 22);
-			this.txtMobile.TabIndex = 25;
 			this.txtMobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobile_KeyPress);
 			// 
 			// txtEmail
 			// 
-			this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtEmail.Location = new System.Drawing.Point(113, 74);
+			resources.ApplyResources(this.txtEmail, "txtEmail");
 			this.txtEmail.Name = "txtEmail";
-			this.txtEmail.Size = new System.Drawing.Size(168, 22);
-			this.txtEmail.TabIndex = 24;
 			this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
 			// 
 			// txtTaxIdentity
 			// 
-			this.txtTaxIdentity.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtTaxIdentity.Location = new System.Drawing.Point(113, 222);
+			resources.ApplyResources(this.txtTaxIdentity, "txtTaxIdentity");
 			this.txtTaxIdentity.Name = "txtTaxIdentity";
-			this.txtTaxIdentity.Size = new System.Drawing.Size(168, 22);
-			this.txtTaxIdentity.TabIndex = 28;
+			this.txtTaxIdentity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaxIdentity_KeyPress);
 			// 
 			// txtTaxAuth
 			// 
-			this.txtTaxAuth.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtTaxAuth.Location = new System.Drawing.Point(113, 183);
+			resources.ApplyResources(this.txtTaxAuth, "txtTaxAuth");
 			this.txtTaxAuth.Name = "txtTaxAuth";
-			this.txtTaxAuth.Size = new System.Drawing.Size(168, 22);
-			this.txtTaxAuth.TabIndex = 27;
 			// 
 			// txtCompanyName
 			// 
-			this.txtCompanyName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.txtCompanyName.Location = new System.Drawing.Point(113, 38);
+			resources.ApplyResources(this.txtCompanyName, "txtCompanyName");
 			this.txtCompanyName.Name = "txtCompanyName";
-			this.txtCompanyName.Size = new System.Drawing.Size(168, 22);
-			this.txtCompanyName.TabIndex = 23;
 			// 
 			// lblMobile
 			// 
-			this.lblMobile.AutoSize = true;
-			this.lblMobile.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblMobile.Location = new System.Drawing.Point(11, 114);
+			resources.ApplyResources(this.lblMobile, "lblMobile");
 			this.lblMobile.Name = "lblMobile";
-			this.lblMobile.Size = new System.Drawing.Size(46, 13);
-			this.lblMobile.TabIndex = 29;
-			this.lblMobile.Text = "Mobile:";
 			// 
 			// lblEmail
 			// 
-			this.lblEmail.AutoSize = true;
-			this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblEmail.Location = new System.Drawing.Point(12, 77);
+			resources.ApplyResources(this.lblEmail, "lblEmail");
 			this.lblEmail.Name = "lblEmail";
-			this.lblEmail.Size = new System.Drawing.Size(42, 13);
-			this.lblEmail.TabIndex = 28;
-			this.lblEmail.Text = "E-Mail:";
 			// 
 			// lblTaxIdentity
 			// 
-			this.lblTaxIdentity.AutoSize = true;
-			this.lblTaxIdentity.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblTaxIdentity.Location = new System.Drawing.Point(12, 225);
+			resources.ApplyResources(this.lblTaxIdentity, "lblTaxIdentity");
 			this.lblTaxIdentity.Name = "lblTaxIdentity";
-			this.lblTaxIdentity.Size = new System.Drawing.Size(73, 13);
-			this.lblTaxIdentity.TabIndex = 27;
-			this.lblTaxIdentity.Text = "Tax Identity*:";
 			// 
 			// lblTaxAuth
 			// 
-			this.lblTaxAuth.AutoSize = true;
-			this.lblTaxAuth.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblTaxAuth.Location = new System.Drawing.Point(12, 186);
+			resources.ApplyResources(this.lblTaxAuth, "lblTaxAuth");
 			this.lblTaxAuth.Name = "lblTaxAuth";
-			this.lblTaxAuth.Size = new System.Drawing.Size(82, 13);
-			this.lblTaxAuth.TabIndex = 26;
-			this.lblTaxAuth.Text = "Tax Authority*:";
 			// 
 			// lblCompanyName
 			// 
-			this.lblCompanyName.AutoSize = true;
-			this.lblCompanyName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblCompanyName.Location = new System.Drawing.Point(11, 41);
+			resources.ApplyResources(this.lblCompanyName, "lblCompanyName");
 			this.lblCompanyName.Name = "lblCompanyName";
-			this.lblCompanyName.Size = new System.Drawing.Size(95, 13);
-			this.lblCompanyName.TabIndex = 24;
-			this.lblCompanyName.Text = "Company Name*:";
 			// 
 			// lblTitle
 			// 
-			this.lblTitle.AutoSize = true;
-			this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.lblTitle.Location = new System.Drawing.Point(11, 8);
+			resources.ApplyResources(this.lblTitle, "lblTitle");
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.Size = new System.Drawing.Size(158, 15);
-			this.lblTitle.TabIndex = 0;
-			this.lblTitle.Text = "Save Company Information";
 			// 
 			// btnSave
 			// 
-			this.btnSave.Location = new System.Drawing.Point(547, 301);
+			resources.ApplyResources(this.btnSave, "btnSave");
 			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(75, 23);
-			this.btnSave.TabIndex = 35;
-			this.btnSave.Text = "SAVE";
 			this.btnSave.UseVisualStyleBackColor = true;
 			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// btnUpdate
 			// 
-			this.btnUpdate.Location = new System.Drawing.Point(426, 302);
+			resources.ApplyResources(this.btnUpdate, "btnUpdate");
 			this.btnUpdate.Name = "btnUpdate";
-			this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-			this.btnUpdate.TabIndex = 36;
-			this.btnUpdate.Text = "UPDATE";
 			this.btnUpdate.UseVisualStyleBackColor = true;
 			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
 			// 
@@ -420,42 +313,38 @@ namespace E_document.UI
 			// 
 			// pnlDataGrid
 			// 
-			this.pnlDataGrid.Controls.Add(this.btnUse);
-			this.pnlDataGrid.Controls.Add(this.btnDelete);
 			this.pnlDataGrid.Controls.Add(this.dataGridSettings);
-			this.pnlDataGrid.Location = new System.Drawing.Point(12, 331);
+			resources.ApplyResources(this.pnlDataGrid, "pnlDataGrid");
 			this.pnlDataGrid.Name = "pnlDataGrid";
-			this.pnlDataGrid.Size = new System.Drawing.Size(642, 130);
-			this.pnlDataGrid.TabIndex = 37;
-			// 
-			// btnUse
-			// 
-			this.btnUse.Location = new System.Drawing.Point(535, 104);
-			this.btnUse.Name = "btnUse";
-			this.btnUse.Size = new System.Drawing.Size(75, 23);
-			this.btnUse.TabIndex = 38;
-			this.btnUse.Text = "USE";
-			this.btnUse.UseVisualStyleBackColor = true;
-			this.btnUse.Click += new System.EventHandler(this.btnUse_Click);
-			// 
-			// btnDelete
-			// 
-			this.btnDelete.Location = new System.Drawing.Point(414, 104);
-			this.btnDelete.Name = "btnDelete";
-			this.btnDelete.Size = new System.Drawing.Size(75, 23);
-			this.btnDelete.TabIndex = 37;
-			this.btnDelete.Text = "DELETE";
-			this.btnDelete.UseVisualStyleBackColor = true;
-			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
 			// dataGridSettings
 			// 
 			this.dataGridSettings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridSettings.Location = new System.Drawing.Point(16, 3);
+			resources.ApplyResources(this.dataGridSettings, "dataGridSettings");
 			this.dataGridSettings.Name = "dataGridSettings";
-			this.dataGridSettings.Size = new System.Drawing.Size(595, 98);
-			this.dataGridSettings.TabIndex = 0;
 			this.dataGridSettings.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSettings_CellClick);
+			// 
+			// btnDelete
+			// 
+			resources.ApplyResources(this.btnDelete, "btnDelete");
+			this.btnDelete.Name = "btnDelete";
+			this.btnDelete.UseVisualStyleBackColor = true;
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+			// 
+			// lblSuccess
+			// 
+			resources.ApplyResources(this.lblSuccess, "lblSuccess");
+			this.lblSuccess.Name = "lblSuccess";
+			// 
+			// lblFail
+			// 
+			resources.ApplyResources(this.lblFail, "lblFail");
+			this.lblFail.Name = "lblFail";
+			// 
+			// lblDelete
+			// 
+			resources.ApplyResources(this.lblDelete, "lblDelete");
+			this.lblDelete.Name = "lblDelete";
 			// 
 			// sqLiteCommandBuilder1
 			// 
@@ -464,10 +353,13 @@ namespace E_document.UI
 			// 
 			// frmSettings
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.LightCyan;
-			this.ClientSize = new System.Drawing.Size(665, 473);
+			this.Controls.Add(this.lblDelete);
+			this.Controls.Add(this.lblFail);
+			this.Controls.Add(this.lblSuccess);
+			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.pnlDataGrid);
 			this.Controls.Add(this.btnUpdate);
 			this.Controls.Add(this.btnSave);
@@ -475,8 +367,6 @@ namespace E_document.UI
 			this.Controls.Add(this.pnlTop);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "frmSettings";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "SETTINGS";
 			this.Load += new System.EventHandler(this.frmSettings_Load);
 			this.pnlTop.ResumeLayout(false);
 			this.pnlTop.PerformLayout();
@@ -487,6 +377,7 @@ namespace E_document.UI
 			this.pnlDataGrid.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridSettings)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -511,7 +402,6 @@ namespace E_document.UI
 		private System.Windows.Forms.Label lblState;
 		private System.Windows.Forms.TextBox txtCity;
 		private System.Windows.Forms.TextBox txtAddress2;
-		private System.Windows.Forms.TextBox txtCountry;
 		private System.Windows.Forms.TextBox txtZip;
 		private System.Windows.Forms.TextBox txtAddress1;
 		private System.Windows.Forms.Label lblCity;
@@ -528,8 +418,14 @@ namespace E_document.UI
 		private System.Data.SQLite.SQLiteCommandBuilder sqLiteCommandBuilder1;
 		private System.Windows.Forms.Label lblCurrentId;
 		private System.Windows.Forms.Button btnDelete;
-		private System.Windows.Forms.Button btnUse;
 		public System.Windows.Forms.TextBox txtCompanyName;
 		public System.Windows.Forms.TextBox txtTaxAuth;
+		private System.Windows.Forms.ComboBox cmbCountry;
+		private System.Windows.Forms.Label lblReq;
+		private System.Windows.Forms.Label lblTax;
+		private System.Windows.Forms.Label lblSuccess;
+		private System.Windows.Forms.Label lblFail;
+		private System.Windows.Forms.Label lblUpdate;
+		private System.Windows.Forms.Label lblDelete;
 	}
 }
