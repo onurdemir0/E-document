@@ -118,6 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 13</value>
+  </data>
+  <data name="lblDelete.Text" xml:space="preserve">
+    <value>Erfolgreich aus dem Adressbuch gelöscht!</value>
+  </data>
+  <data name="lblFail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>498, 9</value>
+  </data>
+  <data name="lblFail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 13</value>
+  </data>
+  <data name="lblFail.Text" xml:space="preserve">
+    <value>Fehlgeschlagen!</value>
+  </data>
+  <data name="lblSuccess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 13</value>
+  </data>
+  <data name="lblSuccess.Text" xml:space="preserve">
+    <value>Erfolgreich ins Adressbuch hinzugefügt!</value>
+  </data>
   <data name="lblReq.Size" type="System.Drawing.Size, System.Drawing">
     <value>229, 13</value>
   </data>
@@ -299,6 +320,21 @@
   </data>
   <data name="btnDeleteCustomer.Text" xml:space="preserve">
     <value>LÖSCHEN</value>
+  </data>
+  <data name="lblCustomerType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 13</value>
+  </data>
+  <data name="lblCustomerType.Text" xml:space="preserve">
+    <value>Bitte wählen Sie den Kundentyp aus.</value>
+  </data>
+  <data name="lblUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 359</value>
+  </data>
+  <data name="lblUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 13</value>
+  </data>
+  <data name="lblUpdate.Text" xml:space="preserve">
+    <value>Erfolgreich im Adressbuch aktualisiert!</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Adressbuch</value>

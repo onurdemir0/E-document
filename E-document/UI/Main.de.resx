@@ -225,4 +225,7 @@
   <data name="btnCreateInvoice.Text" xml:space="preserve">
     <value>Rechnung erstellen</value>
   </data>
+  <data name="btnInvoices.Text" xml:space="preserve">
+    <value>Rechnungen</value>
+  </data>
 </root>

@@ -32,9 +32,33 @@ namespace E_document.UI
 			this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 		}
 
+		//public static string DefaultLanguage = "en";
+		private void Main_Load(object sender, EventArgs e)
+		{
+			//if (Thread.CurrentThread.CurrentUICulture.Name == "de")
+			//{
+			//	MessageBox.Show("hi");
+			//}
+			//if (Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName == "de")
+			//{
+			//	MessageBox.Show("hi");
+			//}
+
+			//string language = Properties.Settings.Default.DefaultLanguage;
+			//if (language == "German")
+			//{
+			//	MessageBox.Show("hi");
+			//}
+
+			Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
+
+		}
+
 		private void btnDe_Click(object sender, EventArgs e)
 		{
 			Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("de");
+
+			//DefaultLanguage = "German";
 
 			this.Controls.Clear();
 			InitializeComponent();
@@ -66,6 +90,12 @@ namespace E_document.UI
 			settings.Show();
 		}
 
+		private void btnInvoices_Click(object sender, EventArgs e)
+		{
+			frmInvoices invoices = new frmInvoices();
+			invoices.Show();
+		}
+
 		private void lblExit_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
@@ -89,11 +119,6 @@ namespace E_document.UI
 		private void Main_MouseDown(object sender, MouseEventArgs e)
 		{
 			lastPoint = new Point(e.X, e.Y);
-		}
-
-		private void Main_Load(object sender, EventArgs e)
-		{
-
 		}
 	}
 }

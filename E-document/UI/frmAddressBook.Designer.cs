@@ -31,6 +31,9 @@ namespace E_document.UI
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddressBook));
 			this.pnlCustomer = new System.Windows.Forms.Panel();
+			this.lblDelete = new System.Windows.Forms.Label();
+			this.lblFail = new System.Windows.Forms.Label();
+			this.lblSuccess = new System.Windows.Forms.Label();
 			this.lblReq = new System.Windows.Forms.Label();
 			this.txtApartName = new System.Windows.Forms.TextBox();
 			this.lblApartName = new System.Windows.Forms.Label();
@@ -79,6 +82,8 @@ namespace E_document.UI
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.dataGridAddressBook = new System.Windows.Forms.DataGridView();
 			this.sqLiteCommandBuilder1 = new System.Data.SQLite.SQLiteCommandBuilder();
+			this.lblCustomerType = new System.Windows.Forms.Label();
+			this.lblUpdate = new System.Windows.Forms.Label();
 			this.pnlCustomer.SuspendLayout();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridAddressBook)).BeginInit();
@@ -86,8 +91,10 @@ namespace E_document.UI
 			// 
 			// pnlCustomer
 			// 
-			resources.ApplyResources(this.pnlCustomer, "pnlCustomer");
 			this.pnlCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.pnlCustomer.Controls.Add(this.lblDelete);
+			this.pnlCustomer.Controls.Add(this.lblFail);
+			this.pnlCustomer.Controls.Add(this.lblSuccess);
 			this.pnlCustomer.Controls.Add(this.lblReq);
 			this.pnlCustomer.Controls.Add(this.txtApartName);
 			this.pnlCustomer.Controls.Add(this.lblApartName);
@@ -130,7 +137,24 @@ namespace E_document.UI
 			this.pnlCustomer.Controls.Add(this.lblTitle);
 			this.pnlCustomer.Controls.Add(this.lblTinNin);
 			this.pnlCustomer.Controls.Add(this.lblCustomerTitle);
+			resources.ApplyResources(this.pnlCustomer, "pnlCustomer");
 			this.pnlCustomer.Name = "pnlCustomer";
+			this.pnlCustomer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCustomer_Paint);
+			// 
+			// lblDelete
+			// 
+			resources.ApplyResources(this.lblDelete, "lblDelete");
+			this.lblDelete.Name = "lblDelete";
+			// 
+			// lblFail
+			// 
+			resources.ApplyResources(this.lblFail, "lblFail");
+			this.lblFail.Name = "lblFail";
+			// 
+			// lblSuccess
+			// 
+			resources.ApplyResources(this.lblSuccess, "lblSuccess");
+			this.lblSuccess.Name = "lblSuccess";
 			// 
 			// lblReq
 			// 
@@ -169,8 +193,8 @@ namespace E_document.UI
 			// 
 			// cmbCountry
 			// 
-			resources.ApplyResources(this.cmbCountry, "cmbCountry");
 			this.cmbCountry.FormattingEnabled = true;
+			resources.ApplyResources(this.cmbCountry, "cmbCountry");
 			this.cmbCountry.Name = "cmbCountry";
 			// 
 			// chkIndividual
@@ -372,14 +396,14 @@ namespace E_document.UI
 			// 
 			// panel1
 			// 
-			resources.ApplyResources(this.panel1, "panel1");
 			this.panel1.Controls.Add(this.dataGridAddressBook);
+			resources.ApplyResources(this.panel1, "panel1");
 			this.panel1.Name = "panel1";
 			// 
 			// dataGridAddressBook
 			// 
-			resources.ApplyResources(this.dataGridAddressBook, "dataGridAddressBook");
 			this.dataGridAddressBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			resources.ApplyResources(this.dataGridAddressBook, "dataGridAddressBook");
 			this.dataGridAddressBook.Name = "dataGridAddressBook";
 			this.dataGridAddressBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAddressBook_CellClick);
 			// 
@@ -388,10 +412,22 @@ namespace E_document.UI
 			this.sqLiteCommandBuilder1.DataAdapter = null;
 			this.sqLiteCommandBuilder1.QuoteSuffix = "]";
 			// 
+			// lblCustomerType
+			// 
+			resources.ApplyResources(this.lblCustomerType, "lblCustomerType");
+			this.lblCustomerType.Name = "lblCustomerType";
+			// 
+			// lblUpdate
+			// 
+			resources.ApplyResources(this.lblUpdate, "lblUpdate");
+			this.lblUpdate.Name = "lblUpdate";
+			// 
 			// frmAddressBook
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.lblUpdate);
+			this.Controls.Add(this.lblCustomerType);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.btnDeleteCustomer);
 			this.Controls.Add(this.btnUpdateCustomer);
@@ -404,6 +440,7 @@ namespace E_document.UI
 			this.panel1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridAddressBook)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -458,5 +495,10 @@ namespace E_document.UI
 		private System.Windows.Forms.TextBox txtApartName;
 		private System.Windows.Forms.Label lblApartName;
 		private System.Windows.Forms.Label lblReq;
+		private System.Windows.Forms.Label lblSuccess;
+		private System.Windows.Forms.Label lblFail;
+		private System.Windows.Forms.Label lblCustomerType;
+		private System.Windows.Forms.Label lblUpdate;
+		private System.Windows.Forms.Label lblDelete;
 	}
 }

@@ -44,12 +44,15 @@ namespace E_document.UI
 			this.lblBillTitle = new System.Windows.Forms.Label();
 			this.cmbCountry = new System.Windows.Forms.ComboBox();
 			this.pnlOrderInfo = new System.Windows.Forms.Panel();
+			this.lblOrderVal = new System.Windows.Forms.Label();
 			this.dtpOrder = new System.Windows.Forms.DateTimePicker();
 			this.txtOrder = new System.Windows.Forms.TextBox();
 			this.lblOrderDa = new System.Windows.Forms.Label();
 			this.lblOrder = new System.Windows.Forms.Label();
 			this.lblOrderTitle = new System.Windows.Forms.Label();
 			this.pnlCustomer = new System.Windows.Forms.Panel();
+			this.lblIndividualVal = new System.Windows.Forms.Label();
+			this.lblCorporateVal = new System.Windows.Forms.Label();
 			this.txtApartNo = new System.Windows.Forms.TextBox();
 			this.lblApartNo = new System.Windows.Forms.Label();
 			this.chkIndividual = new System.Windows.Forms.CheckBox();
@@ -92,12 +95,14 @@ namespace E_document.UI
 			this.lblSearchCustomer = new System.Windows.Forms.Label();
 			this.lblCustomerTitle = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.lblWaybillVal = new System.Windows.Forms.Label();
 			this.dtpWayBillDate = new System.Windows.Forms.DateTimePicker();
 			this.txtWayBillNo = new System.Windows.Forms.TextBox();
 			this.lblWayBillDate = new System.Windows.Forms.Label();
 			this.lblWayBillNo = new System.Windows.Forms.Label();
 			this.lblWaybillInfo = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.lblItemVal = new System.Windows.Forms.Label();
 			this.cmbUnit = new System.Windows.Forms.ComboBox();
 			this.btnDelete = new System.Windows.Forms.Button();
 			this.txtVatRate = new System.Windows.Forms.TextBox();
@@ -115,6 +120,15 @@ namespace E_document.UI
 			this.lblProductTitle = new System.Windows.Forms.Label();
 			this.pnlDataGrid = new System.Windows.Forms.Panel();
 			this.dgvAddedProducts = new System.Windows.Forms.DataGridView();
+			this.columnLineNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.columnItemNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.columnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.columnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.columnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.columnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.columnVatRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.columnVatPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.columnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.lblGridTitle = new System.Windows.Forms.Label();
 			this.pnlCalculation = new System.Windows.Forms.Panel();
 			this.txtGrandTotal = new System.Windows.Forms.TextBox();
@@ -133,6 +147,7 @@ namespace E_document.UI
 			this.btnCreate = new System.Windows.Forms.Button();
 			this.btnClear = new System.Windows.Forms.Button();
 			this.panel5 = new System.Windows.Forms.Panel();
+			this.lblSenderVal = new System.Windows.Forms.Label();
 			this.txtSenderSearch = new System.Windows.Forms.TextBox();
 			this.lblSearchSender = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
@@ -140,15 +155,6 @@ namespace E_document.UI
 			this.txtPayeeAcc = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.lblPayeeInfo = new System.Windows.Forms.Label();
-			this.columnLineNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.columnItemNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.columnItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.columnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.columnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.columnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.columnVatRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.columnVatPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.columnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.pnlBillinfo.SuspendLayout();
 			this.pnlOrderInfo.SuspendLayout();
 			this.pnlCustomer.SuspendLayout();
@@ -254,12 +260,18 @@ namespace E_document.UI
 			// 
 			resources.ApplyResources(this.pnlOrderInfo, "pnlOrderInfo");
 			this.pnlOrderInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.pnlOrderInfo.Controls.Add(this.lblOrderVal);
 			this.pnlOrderInfo.Controls.Add(this.dtpOrder);
 			this.pnlOrderInfo.Controls.Add(this.txtOrder);
 			this.pnlOrderInfo.Controls.Add(this.lblOrderDa);
 			this.pnlOrderInfo.Controls.Add(this.lblOrder);
 			this.pnlOrderInfo.Controls.Add(this.lblOrderTitle);
 			this.pnlOrderInfo.Name = "pnlOrderInfo";
+			// 
+			// lblOrderVal
+			// 
+			resources.ApplyResources(this.lblOrderVal, "lblOrderVal");
+			this.lblOrderVal.Name = "lblOrderVal";
 			// 
 			// dtpOrder
 			// 
@@ -295,6 +307,8 @@ namespace E_document.UI
 			// 
 			resources.ApplyResources(this.pnlCustomer, "pnlCustomer");
 			this.pnlCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.pnlCustomer.Controls.Add(this.lblIndividualVal);
+			this.pnlCustomer.Controls.Add(this.lblCorporateVal);
 			this.pnlCustomer.Controls.Add(this.txtApartNo);
 			this.pnlCustomer.Controls.Add(this.lblApartNo);
 			this.pnlCustomer.Controls.Add(this.cmbCountry);
@@ -338,6 +352,16 @@ namespace E_document.UI
 			this.pnlCustomer.Controls.Add(this.lblSearchCustomer);
 			this.pnlCustomer.Controls.Add(this.lblCustomerTitle);
 			this.pnlCustomer.Name = "pnlCustomer";
+			// 
+			// lblIndividualVal
+			// 
+			resources.ApplyResources(this.lblIndividualVal, "lblIndividualVal");
+			this.lblIndividualVal.Name = "lblIndividualVal";
+			// 
+			// lblCorporateVal
+			// 
+			resources.ApplyResources(this.lblCorporateVal, "lblCorporateVal");
+			this.lblCorporateVal.Name = "lblCorporateVal";
 			// 
 			// txtApartNo
 			// 
@@ -559,12 +583,18 @@ namespace E_document.UI
 			// 
 			resources.ApplyResources(this.panel4, "panel4");
 			this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel4.Controls.Add(this.lblWaybillVal);
 			this.panel4.Controls.Add(this.dtpWayBillDate);
 			this.panel4.Controls.Add(this.txtWayBillNo);
 			this.panel4.Controls.Add(this.lblWayBillDate);
 			this.panel4.Controls.Add(this.lblWayBillNo);
 			this.panel4.Controls.Add(this.lblWaybillInfo);
 			this.panel4.Name = "panel4";
+			// 
+			// lblWaybillVal
+			// 
+			resources.ApplyResources(this.lblWaybillVal, "lblWaybillVal");
+			this.lblWaybillVal.Name = "lblWaybillVal";
 			// 
 			// dtpWayBillDate
 			// 
@@ -598,6 +628,7 @@ namespace E_document.UI
 			// 
 			resources.ApplyResources(this.panel2, "panel2");
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel2.Controls.Add(this.lblItemVal);
 			this.panel2.Controls.Add(this.cmbUnit);
 			this.panel2.Controls.Add(this.btnDelete);
 			this.panel2.Controls.Add(this.txtVatRate);
@@ -614,6 +645,11 @@ namespace E_document.UI
 			this.panel2.Controls.Add(this.lblItemNo);
 			this.panel2.Controls.Add(this.lblProductTitle);
 			this.panel2.Name = "panel2";
+			// 
+			// lblItemVal
+			// 
+			resources.ApplyResources(this.lblItemVal, "lblItemVal");
+			this.lblItemVal.Name = "lblItemVal";
 			// 
 			// cmbUnit
 			// 
@@ -729,6 +765,60 @@ namespace E_document.UI
 			this.dgvAddedProducts.ReadOnly = true;
 			this.dgvAddedProducts.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvAddedProducts_RowPostPaint);
 			// 
+			// columnLineNo
+			// 
+			resources.ApplyResources(this.columnLineNo, "columnLineNo");
+			this.columnLineNo.Name = "columnLineNo";
+			this.columnLineNo.ReadOnly = true;
+			// 
+			// columnItemNo
+			// 
+			resources.ApplyResources(this.columnItemNo, "columnItemNo");
+			this.columnItemNo.Name = "columnItemNo";
+			this.columnItemNo.ReadOnly = true;
+			// 
+			// columnItem
+			// 
+			resources.ApplyResources(this.columnItem, "columnItem");
+			this.columnItem.Name = "columnItem";
+			this.columnItem.ReadOnly = true;
+			// 
+			// columnQuantity
+			// 
+			resources.ApplyResources(this.columnQuantity, "columnQuantity");
+			this.columnQuantity.Name = "columnQuantity";
+			this.columnQuantity.ReadOnly = true;
+			// 
+			// columnUnit
+			// 
+			resources.ApplyResources(this.columnUnit, "columnUnit");
+			this.columnUnit.Name = "columnUnit";
+			this.columnUnit.ReadOnly = true;
+			// 
+			// columnUnitPrice
+			// 
+			resources.ApplyResources(this.columnUnitPrice, "columnUnitPrice");
+			this.columnUnitPrice.Name = "columnUnitPrice";
+			this.columnUnitPrice.ReadOnly = true;
+			// 
+			// columnVatRate
+			// 
+			resources.ApplyResources(this.columnVatRate, "columnVatRate");
+			this.columnVatRate.Name = "columnVatRate";
+			this.columnVatRate.ReadOnly = true;
+			// 
+			// columnVatPrice
+			// 
+			resources.ApplyResources(this.columnVatPrice, "columnVatPrice");
+			this.columnVatPrice.Name = "columnVatPrice";
+			this.columnVatPrice.ReadOnly = true;
+			// 
+			// columnTotal
+			// 
+			resources.ApplyResources(this.columnTotal, "columnTotal");
+			this.columnTotal.Name = "columnTotal";
+			this.columnTotal.ReadOnly = true;
+			// 
 			// lblGridTitle
 			// 
 			resources.ApplyResources(this.lblGridTitle, "lblGridTitle");
@@ -841,10 +931,16 @@ namespace E_document.UI
 			// 
 			resources.ApplyResources(this.panel5, "panel5");
 			this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel5.Controls.Add(this.lblSenderVal);
 			this.panel5.Controls.Add(this.txtSenderSearch);
 			this.panel5.Controls.Add(this.lblSearchSender);
 			this.panel5.Controls.Add(this.label1);
 			this.panel5.Name = "panel5";
+			// 
+			// lblSenderVal
+			// 
+			resources.ApplyResources(this.lblSenderVal, "lblSenderVal");
+			this.lblSenderVal.Name = "lblSenderVal";
 			// 
 			// txtSenderSearch
 			// 
@@ -889,60 +985,6 @@ namespace E_document.UI
 			// 
 			resources.ApplyResources(this.lblPayeeInfo, "lblPayeeInfo");
 			this.lblPayeeInfo.Name = "lblPayeeInfo";
-			// 
-			// columnLineNo
-			// 
-			resources.ApplyResources(this.columnLineNo, "columnLineNo");
-			this.columnLineNo.Name = "columnLineNo";
-			this.columnLineNo.ReadOnly = true;
-			// 
-			// columnItemNo
-			// 
-			resources.ApplyResources(this.columnItemNo, "columnItemNo");
-			this.columnItemNo.Name = "columnItemNo";
-			this.columnItemNo.ReadOnly = true;
-			// 
-			// columnItem
-			// 
-			resources.ApplyResources(this.columnItem, "columnItem");
-			this.columnItem.Name = "columnItem";
-			this.columnItem.ReadOnly = true;
-			// 
-			// columnQuantity
-			// 
-			resources.ApplyResources(this.columnQuantity, "columnQuantity");
-			this.columnQuantity.Name = "columnQuantity";
-			this.columnQuantity.ReadOnly = true;
-			// 
-			// columnUnit
-			// 
-			resources.ApplyResources(this.columnUnit, "columnUnit");
-			this.columnUnit.Name = "columnUnit";
-			this.columnUnit.ReadOnly = true;
-			// 
-			// columnUnitPrice
-			// 
-			resources.ApplyResources(this.columnUnitPrice, "columnUnitPrice");
-			this.columnUnitPrice.Name = "columnUnitPrice";
-			this.columnUnitPrice.ReadOnly = true;
-			// 
-			// columnVatRate
-			// 
-			resources.ApplyResources(this.columnVatRate, "columnVatRate");
-			this.columnVatRate.Name = "columnVatRate";
-			this.columnVatRate.ReadOnly = true;
-			// 
-			// columnVatPrice
-			// 
-			resources.ApplyResources(this.columnVatPrice, "columnVatPrice");
-			this.columnVatPrice.Name = "columnVatPrice";
-			this.columnVatPrice.ReadOnly = true;
-			// 
-			// columnTotal
-			// 
-			resources.ApplyResources(this.columnTotal, "columnTotal");
-			this.columnTotal.Name = "columnTotal";
-			this.columnTotal.ReadOnly = true;
 			// 
 			// frmCreateBill
 			// 
@@ -1108,5 +1150,11 @@ namespace E_document.UI
 		private System.Windows.Forms.DataGridViewTextBoxColumn columnVatRate;
 		private System.Windows.Forms.DataGridViewTextBoxColumn columnVatPrice;
 		private System.Windows.Forms.DataGridViewTextBoxColumn columnTotal;
+		private System.Windows.Forms.Label lblWaybillVal;
+		private System.Windows.Forms.Label lblSenderVal;
+		private System.Windows.Forms.Label lblOrderVal;
+		private System.Windows.Forms.Label lblCorporateVal;
+		private System.Windows.Forms.Label lblIndividualVal;
+		private System.Windows.Forms.Label lblItemVal;
 	}
 }

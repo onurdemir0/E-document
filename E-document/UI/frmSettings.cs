@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using E_document.DAL;
+using System.Threading;
 
 namespace E_document.UI
 {
@@ -115,9 +116,19 @@ namespace E_document.UI
 			cmbCountry.Enabled = true;
 		}
 
-		private void LoadCountryToCmb()
+		private void LoadDeCountryToCmb()
 		{
-			List<Country> countries = Country.GetCountries();
+			List<Country> countries = Country.GetCountriesToDe();
+
+			foreach (Country country in countries)
+			{
+				cmbCountry.Items.Add(country.Name);
+			}
+		}
+
+		private void LoadEnCountryToCmb()
+		{
+			List<Country> countries = Country.GetCountriesToEn();
 
 			foreach (Country country in countries)
 			{
@@ -133,11 +144,16 @@ namespace E_document.UI
 		private void frmSettings_Load(object sender, EventArgs e)
 		{
 			LoadData();
-			LoadCountryToCmb();
-			if (Settings.CompanyName != null)
+
+			var culture = Thread.CurrentThread.CurrentUICulture.ToString();
+
+			if (culture == "en")
 			{
-				LoadValue();
-				TextBoxEnableFalse();
+				LoadEnCountryToCmb();
+			}
+			else if (culture == "de")
+			{
+				LoadDeCountryToCmb();
 			}
 		}
 

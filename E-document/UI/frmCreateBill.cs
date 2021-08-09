@@ -11,6 +11,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -53,9 +54,19 @@ namespace E_document.UI
 			comboBoxCurrency.SelectedItem = ("Euro");
 		}
 
-		private void LoadCountryToCmb()
+		private void LoadDeCountryToCmb()
 		{
-			List<Country> countries = Country.GetCountries();
+			List<Country> countries = Country.GetCountriesToDe();
+
+			foreach (Country country in countries)
+			{
+				cmbCountry.Items.Add(country.Name);
+			}
+		}
+
+		private void LoadEnCountryToCmb()
+		{
+			List<Country> countries = Country.GetCountriesToEn();
 
 			foreach (Country country in countries)
 			{
@@ -73,9 +84,19 @@ namespace E_document.UI
 			}
 		}
 
-		private void LoadUnitsToCmb()
+		private void LoadDeUnitsToCmb()
 		{
-			List<MeasurementUnit> units = MeasurementUnit.GetUnits();
+			List<MeasurementUnit> units = MeasurementUnit.GetUnitsToDe();
+
+			foreach (MeasurementUnit unit in units)
+			{
+				cmbUnit.Items.Add(unit.Name);
+			}
+		}
+
+		private void LoadEnUnitsToCmb()
+		{
+			List<MeasurementUnit> units = MeasurementUnit.GetUnitsToEn();
 
 			foreach (MeasurementUnit unit in units)
 			{
@@ -86,11 +107,22 @@ namespace E_document.UI
 		{
 			lblEttnNo.Text = Guid.NewGuid().ToString();
 
+			var culture = Thread.CurrentThread.CurrentUICulture.ToString();
+
+			if (culture == "en")
+			{
+				LoadEnUnitsToCmb();
+				LoadEnCountryToCmb();
+			}
+			else if (culture == "de")
+			{
+				LoadDeUnitsToCmb();
+				LoadDeCountryToCmb();
+			}
+
 			DateTimePickerSetting();
 
-			LoadCountryToCmb();
 			LoadCurrenciesToCmb();
-			LoadUnitsToCmb();
 
 			ComboBoxItemSetting();
 
@@ -309,7 +341,8 @@ namespace E_document.UI
 			{
 				if (dtpWayBillDate.Text == " ")
 				{
-					MessageBox.Show("Please fill the WayBill Date");
+					//MessageBox.Show("Please fill the WayBill Date");
+					MessageBox.Show(lblWaybillVal.Text);
 				}
 				else
 				{
@@ -629,34 +662,42 @@ namespace E_document.UI
 		{
 			if (dtpOrder.Enabled == true && dtpOrder.Text == " ")
 			{
-				MessageBox.Show("Please fill for the Order Date");
+				//MessageBox.Show("Please fill for the Order Date");
+				MessageBox.Show(lblOrderVal.Text);
 			}
 			else if(dtpWayBillDate.Enabled == true && dtpWayBillDate.Text == " ")
 			{
-				MessageBox.Show("Please fill for the WayBill Date");
+				//MessageBox.Show("Please fill for the WayBill Date");
+				MessageBox.Show(lblWaybillVal.Text);
 			}
 
 			else if (String.IsNullOrEmpty(Settings.CompanyName))
 			{
-				MessageBox.Show("Please entry for the Sender Informations");
+				//MessageBox.Show("Please enter the Sender Informations");
+				MessageBox.Show(lblSenderVal.Text);
 			}
 
 			else if (!(chkCorporate.Checked || chkIndividual.Checked))
 			{
-				MessageBox.Show("Please select which customer type you want to add");
+				//MessageBox.Show("Please select which customer type you want to add");
+				//MessageBox.Show(lblcus)
 			}
 			else if ((chkCorporate.Checked == true) && (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtTitle.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text)))
 			{
-				MessageBox.Show("Please fill in the required fields for the corporate customer!");
+				//MessageBox.Show("Please fill in the required fields for the corporate customer!");
+				MessageBox.Show(lblCorporateVal.Text);
 			}
 			else if ((chkIndividual.Checked == true) && (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtFirstName.Text) || String.IsNullOrEmpty(txtLastName.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text)))
 			{
-				MessageBox.Show("Please fill in the required fields for the individual customer!");
+				//MessageBox.Show("Please fill in the required fields for the individual customer!");
+				MessageBox.Show(lblIndividualVal.Text);
+
 			}
 
 			else if (dgvAddedProducts.Rows.Count == 0)
 			{
-				MessageBox.Show("You must add at least one Item");
+				//MessageBox.Show("You must add at least one Item");
+				MessageBox.Show(lblItemVal.Text);
 			}
 			else
 			{

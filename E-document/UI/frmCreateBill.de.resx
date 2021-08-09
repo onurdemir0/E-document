@@ -157,6 +157,20 @@
   <data name="lblBillTitle.Text" xml:space="preserve">
     <value>Rechnungsinformation</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblOrderVal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblOrderVal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblOrderVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 13</value>
+  </data>
+  <data name="lblOrderVal.Text" xml:space="preserve">
+    <value>Bitte tragen Sie das Bestelldatum ein</value>
+  </data>
   <data name="lblOrderDa.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
   </data>
@@ -175,14 +189,24 @@
   <data name="lblOrderTitle.Text" xml:space="preserve">
     <value>Bestellinformation</value>
   </data>
+  <data name="lblIndividualVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 13</value>
+  </data>
+  <data name="lblIndividualVal.Text" xml:space="preserve">
+    <value>Bitte füllen Sie die angeforderten Felder für den Privatkunden aus.</value>
+  </data>
+  <data name="lblCorporateVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 13</value>
+  </data>
+  <data name="lblCorporateVal.Text" xml:space="preserve">
+    <value>Bitte füllen Sie die angeforderten Felder für den Firmenkunden aus.</value>
+  </data>
   <data name="txtApartNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 228</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtApartNo.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblApartNo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -324,6 +348,15 @@
   <data name="lblCustomerTitle.Text" xml:space="preserve">
     <value>Kundeninformation</value>
   </data>
+  <data name="lblWaybillVal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 7</value>
+  </data>
+  <data name="lblWaybillVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 13</value>
+  </data>
+  <data name="lblWaybillVal.Text" xml:space="preserve">
+    <value>Bitte tragen Sie das Frachtbriefdatum ein</value>
+  </data>
   <data name="lblWayBillDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 13</value>
   </data>
@@ -341,6 +374,15 @@
   </data>
   <data name="lblWaybillInfo.Text" xml:space="preserve">
     <value>Frachtbriefinformation</value>
+  </data>
+  <data name="lblItemVal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>245, 127</value>
+  </data>
+  <data name="lblItemVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 13</value>
+  </data>
+  <data name="lblItemVal.Text" xml:space="preserve">
+    <value>Sie müssen mindestens einen Artikel hinzufügen</value>
   </data>
   <data name="btnDelete.Text" xml:space="preserve">
     <value>LÖSCHEN</value>
@@ -396,6 +438,42 @@
   <data name="lblProductTitle.Text" xml:space="preserve">
     <value>Produktinformation</value>
   </data>
+  <data name="columnLineNo.HeaderText" xml:space="preserve">
+    <value>Zeilen Nr </value>
+  </data>
+  <data name="columnLineNo.Width" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="columnItemNo.HeaderText" xml:space="preserve">
+    <value>Artikel Nr</value>
+  </data>
+  <data name="columnItem.HeaderText" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="columnQuantity.HeaderText" xml:space="preserve">
+    <value>Stückzahl</value>
+  </data>
+  <data name="columnUnit.HeaderText" xml:space="preserve">
+    <value>Einheit</value>
+  </data>
+  <data name="columnUnitPrice.HeaderText" xml:space="preserve">
+    <value>Einheitspreis</value>
+  </data>
+  <data name="columnUnitPrice.Width" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="columnVatRate.HeaderText" xml:space="preserve">
+    <value>MwSt. %</value>
+  </data>
+  <data name="columnVatRate.Width" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="columnVatPrice.HeaderText" xml:space="preserve">
+    <value>MwSt. Preis</value>
+  </data>
+  <data name="columnTotal.HeaderText" xml:space="preserve">
+    <value>Gesamt</value>
+  </data>
   <data name="lblGridTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 15</value>
   </data>
@@ -444,6 +522,12 @@
   <data name="btnClear.Text" xml:space="preserve">
     <value>Aufheben</value>
   </data>
+  <data name="lblSenderVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 13</value>
+  </data>
+  <data name="lblSenderVal.Text" xml:space="preserve">
+    <value>Bitte tragen Sie die Absenderinformationen ein</value>
+  </data>
   <data name="lblSearchSender.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 13</value>
   </data>
@@ -470,42 +554,6 @@
   </data>
   <data name="lblPayeeInfo.Text" xml:space="preserve">
     <value>Zahlungsempfänger-Information</value>
-  </data>
-  <data name="columnLineNo.HeaderText" xml:space="preserve">
-    <value>Zeilen Nr </value>
-  </data>
-  <data name="columnLineNo.Width" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="columnItemNo.HeaderText" xml:space="preserve">
-    <value>Artikel Nr</value>
-  </data>
-  <data name="columnItem.HeaderText" xml:space="preserve">
-    <value>Artikel</value>
-  </data>
-  <data name="columnQuantity.HeaderText" xml:space="preserve">
-    <value>Stückzahl</value>
-  </data>
-  <data name="columnUnit.HeaderText" xml:space="preserve">
-    <value>Einheit</value>
-  </data>
-  <data name="columnUnitPrice.HeaderText" xml:space="preserve">
-    <value>Einheitspreis</value>
-  </data>
-  <data name="columnUnitPrice.Width" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="columnVatRate.HeaderText" xml:space="preserve">
-    <value>MwSt. %</value>
-  </data>
-  <data name="columnVatRate.Width" type="System.Int32, mscorlib">
-    <value>55</value>
-  </data>
-  <data name="columnVatPrice.HeaderText" xml:space="preserve">
-    <value>MwSt. Preis</value>
-  </data>
-  <data name="columnTotal.HeaderText" xml:space="preserve">
-    <value>Gesamt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Rechnung erstellen</value>

@@ -121,8 +121,8 @@
   <data name="txtNote.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
-    <value>pnlCustomer</value>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="btnAddToAddressBook.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -130,6 +130,9 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtTaxAuth.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
+  </data>
+  <data name="&gt;&gt;pnlDataGrid.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lblPayeeInfo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -140,14 +143,17 @@
   <data name="lblDistrict.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="comboBoxBillType.Items" xml:space="preserve">
-    <value>SALES</value>
+  <data name="&gt;&gt;txtStreet.Parent" xml:space="preserve">
+    <value>pnlCustomer</value>
   </data>
   <data name="txtPhone.Location" type="System.Drawing.Point, System.Drawing">
     <value>529, 200</value>
   </data>
   <data name="comboBoxBillType.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 21</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Payee Account:</value>
   </data>
   <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -156,16 +162,13 @@
     <value>txtStreet</value>
   </data>
   <data name="&gt;&gt;lblItemName.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
-  <data name="lblPayeeInfo.Text" xml:space="preserve">
-    <value>Payee Information</value>
+  <data name="lblSubTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
   </data>
   <data name="&gt;&gt;lblSubTotal.Name" xml:space="preserve">
     <value>lblSubTotal</value>
-  </data>
-  <data name="&gt;&gt;pnlBillinfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtApartNo.Name" xml:space="preserve">
     <value>txtApartNo</value>
@@ -191,14 +194,17 @@
   <data name="txtCalculatedVAT.Text" xml:space="preserve">
     <value>0,00</value>
   </data>
+  <data name="&gt;&gt;lblQuantity.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="lblLastName.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
   <data name="&gt;&gt;lblOrderTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
   </data>
   <data name="&gt;&gt;lblBillType.Name" xml:space="preserve">
     <value>lblBillType</value>
@@ -206,11 +212,20 @@
   <data name="lblSubTotal.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 29</value>
   </data>
+  <data name="lblUnitPrice.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;lblTaxAuth.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
   <data name="lblStreet.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 202</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblItemNo.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -220,6 +235,9 @@
   </data>
   <data name="txtTown.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="txtCalculatedVAT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 22</value>
   </data>
   <data name="lblWeb.Location" type="System.Drawing.Point, System.Drawing">
     <value>398, 287</value>
@@ -236,9 +254,6 @@
   <data name="&gt;&gt;lblOrderTitle.Name" xml:space="preserve">
     <value>lblOrderTitle</value>
   </data>
-  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
   <data name="lblDistrict.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
@@ -249,10 +264,13 @@
     <value>2</value>
   </data>
   <data name="&gt;&gt;txtFax.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
-  <data name="lblBillDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 13</value>
+  <data name="dtpOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 56</value>
+  </data>
+  <data name="lblWaybillVal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;lblEttn.Name" xml:space="preserve">
     <value>lblEttn</value>
@@ -261,19 +279,16 @@
     <value>398, 175</value>
   </data>
   <data name="&gt;&gt;lblDistrict.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>25</value>
   </data>
   <data name="&gt;&gt;txtItemNo.Name" xml:space="preserve">
     <value>txtItemNo</value>
   </data>
-  <data name="&gt;&gt;lblSearchCustomer.Parent" xml:space="preserve">
-    <value>pnlCustomer</value>
-  </data>
   <data name="lblCountry.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblBillType.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;pnlCalculation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblOrder.Text" xml:space="preserve">
     <value>Order No:</value>
@@ -290,26 +305,23 @@
   <data name="&gt;&gt;panel5.Name" xml:space="preserve">
     <value>panel5</value>
   </data>
-  <data name="&gt;&gt;pnl.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;txtItemName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblCountry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblDistrict.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
   </data>
-  <data name="lblQuantity.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
+  <data name="&gt;&gt;lblWeb.Name" xml:space="preserve">
+    <value>lblWeb</value>
   </data>
   <data name="lblWeb.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
   </data>
   <data name="lblEttn.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblWeb.ZOrder" xml:space="preserve">
-    <value>16</value>
   </data>
   <data name="&gt;&gt;txtApartName.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
@@ -329,8 +341,8 @@
   <data name="&gt;&gt;txtPhone.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
-  <data name="&gt;&gt;pnl.Name" xml:space="preserve">
-    <value>pnl</value>
+  <data name="&gt;&gt;lblVatRate.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="&gt;&gt;dtpBillDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -341,8 +353,14 @@
   <data name="lblCountry.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
+  <data name="&gt;&gt;txtUnitPrice.Name" xml:space="preserve">
+    <value>txtUnitPrice</value>
+  </data>
   <data name="&gt;&gt;lblEttnNo.Parent" xml:space="preserve">
     <value>pnlBillinfo</value>
+  </data>
+  <data name="&gt;&gt;txtIncludingTaxes.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -356,11 +374,8 @@
   <data name="lblTown.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 315</value>
   </data>
-  <data name="lblBillType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
-  </data>
-  <data name="txtCalculatedVAT.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
+  <data name="lblOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 31</value>
   </data>
   <data name="&gt;&gt;btnAdd.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -374,8 +389,8 @@
   <data name="lblStreet.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="&gt;&gt;lblVat.Name" xml:space="preserve">
-    <value>lblVat</value>
+  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 256</value>
   </data>
   <data name="&gt;&gt;txtIncludingTaxes.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -389,8 +404,8 @@
   <data name="lblFirstName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;txtTinNin.ZOrder" xml:space="preserve">
-    <value>31</value>
+  <data name="&gt;&gt;lblCountry.ZOrder" xml:space="preserve">
+    <value>22</value>
   </data>
   <data name="&gt;&gt;txtLastName.Name" xml:space="preserve">
     <value>txtLastName</value>
@@ -398,35 +413,26 @@
   <data name="&gt;&gt;txtSearchCustomer.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
-  <data name="&gt;&gt;lblCurrency.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;txtFax.Name" xml:space="preserve">
+    <value>txtFax</value>
   </data>
-  <data name="btnCreate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 33</value>
-  </data>
-  <data name="&gt;&gt;lblGridTitle.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;lblCorporateVal.Name" xml:space="preserve">
+    <value>lblCorporateVal</value>
   </data>
   <data name="lblWaybillInfo.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;lblTinNin.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>41</value>
   </data>
   <data name="lblEttnNo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="lblTinNin.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
   <data name="lblApartNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 13</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Payee Account:</value>
+  <data name="lblWaybillInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 15</value>
   </data>
   <data name="&gt;&gt;lblState.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -438,13 +444,13 @@
     <value>65</value>
   </data>
   <data name="&gt;&gt;txtDistrict.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="lblFloor.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;txtTitle.Parent" xml:space="preserve">
-    <value>pnlCustomer</value>
+  <data name="lblOrderVal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 8</value>
   </data>
   <data name="txtIncludingTaxes.Location" type="System.Drawing.Point, System.Drawing">
     <value>269, 82</value>
@@ -464,14 +470,26 @@
   <data name="lblPhone.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
   <data name="&gt;&gt;btnAddToAddressBook.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnLineNo.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;dtpBillDate.Parent" xml:space="preserve">
+    <value>pnlBillinfo</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 7</value>
   </data>
-  <data name="comboBoxScenario.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="lblBillType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="&gt;&gt;lblApartNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;comboBoxBillType.Name" xml:space="preserve">
     <value>comboBoxBillType</value>
@@ -479,8 +497,8 @@
   <data name="lblItemNo.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="lblProductTitle.Text" xml:space="preserve">
-    <value>Item Details</value>
+  <data name="lblBillType.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
   </data>
   <data name="lblTinNin.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -489,25 +507,31 @@
     <value>33</value>
   </data>
   <data name="&gt;&gt;txtWayBillNo.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblBillTitle.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;lblCalculationTitle.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="lblApartName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 231</value>
+  </data>
+  <data name="&gt;&gt;lblItemName.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="txtItemName.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
   </data>
-  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
-    <value>38</value>
-  </data>
   <data name="txtWayBillNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
   </data>
+  <data name="lblWaybillVal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 10</value>
+  </data>
   <data name="lblUnitPrice.Text" xml:space="preserve">
     <value>Unit Price*:</value>
+  </data>
+  <data name="lblSubTotal.Text" xml:space="preserve">
+    <value>Sub Total:</value>
   </data>
   <data name="&gt;&gt;comboBoxScenario.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -521,14 +545,20 @@
   <data name="lblWeb.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
   </data>
-  <data name="lblFloor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+  <data name="lblIndividualVal.Text" xml:space="preserve">
+    <value>Please fill in the required fields for the individual customer!</value>
   </data>
-  <data name="&gt;&gt;lblProductTitle.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;lblFloor.Parent" xml:space="preserve">
+    <value>pnlCustomer</value>
+  </data>
+  <data name="lblCalculationTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;txtEmail.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
+  </data>
+  <data name="btnCreate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 33</value>
   </data>
   <data name="lblState.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -542,14 +572,8 @@
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="lblCurrency.Text" xml:space="preserve">
-    <value>Currency:</value>
-  </data>
-  <data name="txtCalculatedVAT.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 22</value>
+  <data name="txtFloor.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
   <data name="lblFax.Location" type="System.Drawing.Point, System.Drawing">
     <value>398, 231</value>
@@ -569,23 +593,23 @@
   <data name="txtNote.Size" type="System.Drawing.Size, System.Drawing">
     <value>733, 72</value>
   </data>
-  <data name="lblCustomerTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
+  <data name="lblIndividualVal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 65</value>
   </data>
-  <data name="lblSearchSender.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lblZip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="pnl.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 717</value>
   </data>
-  <data name="chkCorporate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 65</value>
-  </data>
-  <data name="lblDistrict.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 13</value>
-  </data>
-  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblProductTitle.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;lblSubTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pnlCalculation.Name" xml:space="preserve">
     <value>pnlCalculation</value>
@@ -599,6 +623,9 @@
   <data name="&gt;&gt;txtDistrict.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="columnQuantity.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
   <data name="txtState.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
   </data>
@@ -608,14 +635,17 @@
   <data name="txtApartNo.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="&gt;&gt;txtSenderSearch.Parent" xml:space="preserve">
-    <value>panel5</value>
+  <data name="&gt;&gt;lblItemVal.Name" xml:space="preserve">
+    <value>lblItemVal</value>
   </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="txtItemNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
   </data>
   <data name="&gt;&gt;lblWayBillDate.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
+  </data>
+  <data name="lblSenderVal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lblApartNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 259</value>
@@ -626,14 +656,11 @@
   <data name="txtVatRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>529, 86</value>
   </data>
-  <data name="&gt;&gt;chkIndividual.Name" xml:space="preserve">
-    <value>chkIndividual</value>
+  <data name="&gt;&gt;lblEttn.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
-  <data name="&gt;&gt;txtQuantity.Name" xml:space="preserve">
-    <value>txtQuantity</value>
-  </data>
-  <data name="&gt;&gt;txtSubTotal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblApartNo.Text" xml:space="preserve">
+    <value>Apartment No:</value>
   </data>
   <data name="&gt;&gt;txtZip.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -641,17 +668,14 @@
   <data name="txtFirstName.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;txtFax.Name" xml:space="preserve">
-    <value>txtFax</value>
-  </data>
   <data name="dtpWayBillDate.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="&gt;&gt;txtState.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
-  <data name="&gt;&gt;lblWaybillInfo.Parent" xml:space="preserve">
-    <value>panel4</value>
+  <data name="txtUnitPrice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
   </data>
   <data name="lblFirstName.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 13</value>
@@ -659,32 +683,38 @@
   <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
-  <data name="txtPayeeAcc.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="lblZip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="&gt;&gt;txtTitle.Parent" xml:space="preserve">
+    <value>pnlCustomer</value>
+  </data>
+  <data name="lblItemVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 13</value>
   </data>
   <data name="pnlOrderInfo.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
+  </data>
+  <data name="lblPayeeInfo.Text" xml:space="preserve">
+    <value>Payee Information</value>
   </data>
   <data name="&gt;&gt;txtTinNin.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblLastName.ZOrder" xml:space="preserve">
-    <value>36</value>
-  </data>
-  <data name="lblCustomerTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>38</value>
   </data>
   <data name="lblWayBillDate.Text" xml:space="preserve">
     <value>WayBill Date:</value>
   </data>
-  <data name="lblTinNin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 91</value>
+  <data name="lblItemNo.Text" xml:space="preserve">
+    <value>Item No*:</value>
   </data>
   <data name="lblUnit.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 13</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;lblGridTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;comboBoxBillType.Parent" xml:space="preserve">
     <value>pnlBillinfo</value>
@@ -695,17 +725,23 @@
   <data name="&gt;&gt;lblItemNo.Name" xml:space="preserve">
     <value>lblItemNo</value>
   </data>
+  <data name="lblOrderVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblGridTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 15</value>
+  </data>
   <data name="&gt;&gt;columnVatPrice.Name" xml:space="preserve">
     <value>columnVatPrice</value>
   </data>
-  <data name="&gt;&gt;lblItemName.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="lblTown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
   </data>
   <data name="&gt;&gt;lblApartNo.Name" xml:space="preserve">
     <value>lblApartNo</value>
   </data>
   <data name="&gt;&gt;lblItemNo.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;lblFax.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -734,8 +770,11 @@
   <data name="lblSearchCustomer.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 13</value>
   </data>
-  <data name="&gt;&gt;txtPhone.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="lblOrderTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="&gt;&gt;lblWaybillVal.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
   <data name="comboBoxScenario.Items1" xml:space="preserve">
     <value>Commercial Invoice</value>
@@ -743,21 +782,15 @@
   <data name="&gt;&gt;lblBillTitle.Name" xml:space="preserve">
     <value>lblBillTitle</value>
   </data>
-  <data name="columnUnit.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
   <data name="&gt;&gt;btnAddToAddressBook.Name" xml:space="preserve">
     <value>btnAddToAddressBook</value>
-  </data>
-  <data name="&gt;&gt;txtWeb.Name" xml:space="preserve">
-    <value>txtWeb</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnAdd.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <data name="&gt;&gt;lblOrderTitle.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;chkCorporate.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -768,14 +801,17 @@
   <data name="&gt;&gt;txtSearchCustomer.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="txtTinNin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
   <data name="&gt;&gt;lblUnit.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
   <data name="lblWayBillDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblCorporateVal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;columnLineNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblEttnNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 13</value>
@@ -784,25 +820,28 @@
     <value>652, 120</value>
   </data>
   <data name="&gt;&gt;lblCustomerTitle.ZOrder" xml:space="preserve">
-    <value>41</value>
-  </data>
-  <data name="lblDistrict.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>43</value>
   </data>
   <data name="txtNote.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
+  </data>
+  <data name="lblWaybillVal.Text" xml:space="preserve">
+    <value>Please fill the WayBill Date</value>
   </data>
   <data name="lblOrderDa.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
   <data name="&gt;&gt;lblOrderDa.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnDelete.Text" xml:space="preserve">
     <value>DELETE</value>
   </data>
   <data name="&gt;&gt;lblZip.Name" xml:space="preserve">
     <value>lblZip</value>
+  </data>
+  <data name="comboBoxBillType.Items" xml:space="preserve">
+    <value>SALES</value>
   </data>
   <data name="columnUnit.HeaderText" xml:space="preserve">
     <value>Unit</value>
@@ -814,19 +853,28 @@
     <value>146, 17</value>
   </data>
   <data name="&gt;&gt;txtQuantity.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 35</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;lblVatRate.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;lblApartName.Parent" xml:space="preserve">
+    <value>pnlCustomer</value>
   </data>
   <data name="&gt;&gt;btnAddToAddressBook.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;cmbUnit.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblQuantity.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pnlCalculation.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;lblPayeeInfo.Parent" xml:space="preserve">
     <value>pnl</value>
@@ -849,17 +897,14 @@
   <data name="columnTotal.HeaderText" xml:space="preserve">
     <value>Total</value>
   </data>
-  <data name="&gt;&gt;lblGridTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 1475</value>
   </data>
   <data name="&gt;&gt;txtEmail.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblWayBillDate.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="&gt;&gt;txtApartName.ZOrder" xml:space="preserve">
-    <value>29</value>
+  <data name="lblFloor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
   </data>
   <data name="lblOrderTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -882,17 +927,20 @@
   <data name="cmbCountry.Location" type="System.Drawing.Point, System.Drawing">
     <value>529, 172</value>
   </data>
-  <data name="&gt;&gt;txtVatRate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;txtSearchCustomer.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;comboBoxCurrency.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="lblItemVal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>530, 120</value>
   </data>
   <data name="&gt;&gt;txtPayeeAcc.Name" xml:space="preserve">
     <value>txtPayeeAcc</value>
@@ -903,11 +951,8 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="lblBillType.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="&gt;&gt;pnlDataGrid.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;cmbUnit.Name" xml:space="preserve">
+    <value>cmbUnit</value>
   </data>
   <data name="&gt;&gt;txtTaxAuth.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -918,14 +963,14 @@
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="columnQuantity.HeaderText" xml:space="preserve">
-    <value>Quantity</value>
+  <data name="lblCorporateVal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 38</value>
   </data>
   <data name="lblGridTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 2</value>
   </data>
-  <data name="lblZip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="lblTown.Text" xml:space="preserve">
+    <value>Town:</value>
   </data>
   <data name="&gt;&gt;lblPhone.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
@@ -936,14 +981,14 @@
   <data name="lblQuantity.Location" type="System.Drawing.Point, System.Drawing">
     <value>399, 33</value>
   </data>
-  <data name="txtWayBillNo.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="txtZip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>529, 144</value>
+  <data name="&gt;&gt;lblTinNin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblEttn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblVatRate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -951,8 +996,11 @@
   <data name="&gt;&gt;txtTitle.Name" xml:space="preserve">
     <value>txtTitle</value>
   </data>
-  <data name="lblTaxAuth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 13</value>
+  <data name="txtFirstName.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;lblVat.Name" xml:space="preserve">
+    <value>lblVat</value>
   </data>
   <data name="txtLastName.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 172</value>
@@ -963,32 +1011,29 @@
   <data name="lblCalculationTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 15</value>
   </data>
-  <data name="lblApartName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 231</value>
+  <data name="comboBoxScenario.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;pnl.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lblWaybillInfo.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblSenderVal.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
   </data>
   <data name="txtIncludingTaxes.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="&gt;&gt;lblType.Parent" xml:space="preserve">
-    <value>pnlBillinfo</value>
-  </data>
   <data name="&gt;&gt;lblProductTitle.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 804</value>
   </data>
-  <data name="lblLastName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
   <data name="txtItemNo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="txtGrandTotal.Text" xml:space="preserve">
-    <value>0,00</value>
+  <data name="lblTaxAuth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 13</value>
   </data>
   <data name="lblUnit.Text" xml:space="preserve">
     <value>Unit*:</value>
@@ -999,8 +1044,8 @@
   <data name="lblTaxAuth.Text" xml:space="preserve">
     <value>Tax Authority*:</value>
   </data>
-  <data name="&gt;&gt;cmbCountry.Parent" xml:space="preserve">
-    <value>pnlCustomer</value>
+  <data name="&gt;&gt;txtSenderSearch.Parent" xml:space="preserve">
+    <value>panel5</value>
   </data>
   <data name="chkIndividual.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 17</value>
@@ -1008,17 +1053,26 @@
   <data name="btnAddToAddressBook.Text" xml:space="preserve">
     <value>Add to Address Book</value>
   </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 7</value>
+  </data>
   <data name="&gt;&gt;lblBillType.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cmbCountry.Name" xml:space="preserve">
     <value>cmbCountry</value>
   </data>
+  <data name="&gt;&gt;lblQuantity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="lblType.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="txtCalculatedVAT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 54</value>
+  <data name="txtIncludingTaxes.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="txtIncludingTaxes.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
   <data name="&gt;&gt;txtIncludingTaxes.Parent" xml:space="preserve">
     <value>pnlCalculation</value>
@@ -1032,11 +1086,8 @@
   <data name="&gt;&gt;lblTaxAuth.Name" xml:space="preserve">
     <value>lblTaxAuth</value>
   </data>
-  <data name="lblTown.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="lblGrandTotal.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;lblVatRate.Name" xml:space="preserve">
+    <value>lblVatRate</value>
   </data>
   <data name="&gt;&gt;btnCreate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1047,17 +1098,23 @@
   <data name="&gt;&gt;lblGridTitle.Name" xml:space="preserve">
     <value>lblGridTitle</value>
   </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
   <data name="lblType.Text" xml:space="preserve">
     <value>Scenario*:</value>
   </data>
-  <data name="cmbCountry.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 21</value>
+  <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="&gt;&gt;lblOrderVal.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;pnlBillinfo.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="lblZip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 13</value>
+  <data name="&gt;&gt;lblFloor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblUnit.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -1071,23 +1128,29 @@
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;lblCustomerTitle.Name" xml:space="preserve">
-    <value>lblCustomerTitle</value>
+  <data name="lblOrderTitle.Text" xml:space="preserve">
+    <value>Order Information</value>
   </data>
   <data name="txtStreet.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="&gt;&gt;txtCalculatedVAT.Parent" xml:space="preserve">
-    <value>pnlCalculation</value>
+  <data name="&gt;&gt;lblTown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtTown.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
   <data name="&gt;&gt;txtItemName.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="dtpOrder.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 20</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="txtSubTotal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 26</value>
+  </data>
+  <data name="&gt;&gt;lblGridTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="dgvAddedProducts.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 20</value>
@@ -1101,8 +1164,8 @@
   <data name="&gt;&gt;txtZip.Name" xml:space="preserve">
     <value>txtZip</value>
   </data>
-  <data name="lblItemName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="lblLastName.Text" xml:space="preserve">
+    <value>Last Name*:</value>
   </data>
   <data name="&gt;&gt;lblStreet.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
@@ -1110,17 +1173,20 @@
   <data name="txtTown.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
   </data>
-  <data name="&gt;&gt;txtFax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblOrderDa.Parent" xml:space="preserve">
-    <value>pnlOrderInfo</value>
+  <data name="lblOrderVal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="txtTinNin.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 88</value>
   </data>
+  <data name="&gt;&gt;lblSearchSender.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>766, 81</value>
+  </data>
+  <data name="lblCorporateVal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;lblGridTitle.Parent" xml:space="preserve">
     <value>pnlDataGrid</value>
@@ -1128,11 +1194,11 @@
   <data name="lblTaxAuth.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
-  <data name="lblBillType.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="txtPayeeAcc.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="txtGrandTotal.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
+  <data name="txtDistrict.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 88</value>
   </data>
   <data name="txtItemName.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -1140,14 +1206,11 @@
   <data name="chkCorporate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="txtState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>529, 116</value>
-  </data>
-  <data name="dtpWayBillDate.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="lblQuantity.Text" xml:space="preserve">
+    <value>Quantity*:</value>
   </data>
   <data name="&gt;&gt;cmbUnit.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;btnCreate.Name" xml:space="preserve">
     <value>btnCreate</value>
@@ -1158,11 +1221,11 @@
   <data name="comboBoxBillType.Items1" xml:space="preserve">
     <value>RETURN</value>
   </data>
-  <data name="&gt;&gt;pnlCalculation.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;dtpBillDate.Name" xml:space="preserve">
+    <value>dtpBillDate</value>
   </data>
   <data name="&gt;&gt;dtpWayBillDate.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblSearchSender.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 13</value>
@@ -1170,8 +1233,8 @@
   <data name="lblType.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
   </data>
-  <data name="&gt;&gt;lblApartNo.Parent" xml:space="preserve">
-    <value>pnlCustomer</value>
+  <data name="&gt;&gt;lblOrderVal.Name" xml:space="preserve">
+    <value>lblOrderVal</value>
   </data>
   <data name="lblBillType.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 147</value>
@@ -1182,29 +1245,35 @@
   <data name="comboBoxScenario.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 21</value>
   </data>
+  <data name="lblGrandTotal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;columnQuantity.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnLineNo.Name" xml:space="preserve">
     <value>columnLineNo</value>
   </data>
+  <data name="lblProductTitle.Text" xml:space="preserve">
+    <value>Item Details</value>
+  </data>
   <data name="&gt;&gt;columnItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>529, 256</value>
-  </data>
-  <data name="lblOrderTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 15</value>
+  <data name="lblDiscount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="&gt;&gt;lblTown.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>34</value>
   </data>
   <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
   <data name="txtTown.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
+  </data>
+  <data name="&gt;&gt;lblSearchCustomer.Name" xml:space="preserve">
+    <value>lblSearchCustomer</value>
   </data>
   <data name="&gt;&gt;chkCorporate.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
@@ -1215,20 +1284,26 @@
   <data name="txtLastName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
+  <data name="&gt;&gt;lblCorporateVal.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblCalculationTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;dgvAddedProducts.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnQuantity.Name" xml:space="preserve">
-    <value>columnQuantity</value>
+  <data name="txtOrder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;lblCorporateVal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="txtUnitPrice.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="lblVatRate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="&gt;&gt;comboBoxScenario.Parent" xml:space="preserve">
-    <value>pnlBillinfo</value>
+  <data name="chkIndividual.Text" xml:space="preserve">
+    <value>Individual Customer Entry</value>
   </data>
   <data name="&gt;&gt;txtTaxAuth.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
@@ -1236,11 +1311,8 @@
   <data name="btnDelete.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
-  <data name="&gt;&gt;txtItemNo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 147</value>
+  <data name="&gt;&gt;txtFloor.ZOrder" xml:space="preserve">
+    <value>27</value>
   </data>
   <data name="&gt;&gt;txtFirstName.Name" xml:space="preserve">
     <value>txtFirstName</value>
@@ -1251,17 +1323,23 @@
   <data name="lblSearchCustomer.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 15</value>
+  <data name="lblCurrency.Text" xml:space="preserve">
+    <value>Currency:</value>
   </data>
-  <data name="&gt;&gt;lblStreet.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblItemVal.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
   </data>
-  <data name="&gt;&gt;lblSearchSender.Name" xml:space="preserve">
-    <value>lblSearchSender</value>
+  <data name="lblItemVal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblQuantity.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
   </data>
   <data name="&gt;&gt;txtWeb.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;txtSubTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblBillTitle.Parent" xml:space="preserve">
     <value>pnlBillinfo</value>
@@ -1269,14 +1347,14 @@
   <data name="lblFax.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 13</value>
   </data>
-  <data name="txtTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+  <data name="txtZip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 144</value>
   </data>
-  <data name="&gt;&gt;lblWayBillDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblFirstName.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
   </data>
-  <data name="chkIndividual.Text" xml:space="preserve">
-    <value>Individual Customer Entry</value>
+  <data name="lblCorporateVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 13</value>
   </data>
   <data name="lblEttnNo.Text" xml:space="preserve">
     <value>1</value>
@@ -1285,7 +1363,7 @@
     <value>55, 13</value>
   </data>
   <data name="&gt;&gt;dtpOrder.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;lblBillType.Parent" xml:space="preserve">
     <value>pnlBillinfo</value>
@@ -1302,20 +1380,23 @@
   <data name="&gt;&gt;lblUnit.Name" xml:space="preserve">
     <value>lblUnit</value>
   </data>
+  <data name="&gt;&gt;txtItemName.Name" xml:space="preserve">
+    <value>txtItemName</value>
+  </data>
   <data name="dtpOrder.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="lblUnitPrice.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 89</value>
   </data>
-  <data name="&gt;&gt;txtGrandTotal.Name" xml:space="preserve">
-    <value>txtGrandTotal</value>
-  </data>
-  <data name="lblState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 13</value>
+  <data name="txtQuantity.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
   </data>
   <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
     <value>btnClear</value>
+  </data>
+  <data name="lblOrderVal.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
   </data>
   <data name="&gt;&gt;lblType.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -1326,20 +1407,26 @@
   <data name="&gt;&gt;txtUnitPrice.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
   <data name="lblPhone.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="cmbCountry.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
+  <data name="lblSenderVal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblEttn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="&gt;&gt;lblOrderDa.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;txtZip.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
-  <data name="txtFloor.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="lblZip.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="btnAddToAddressBook.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 34</value>
@@ -1349,6 +1436,9 @@
   </data>
   <data name="&gt;&gt;txtOrder.Name" xml:space="preserve">
     <value>txtOrder</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="txtZip.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -1362,11 +1452,14 @@
   <data name="lblEttn.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
+  <data name="lblSenderVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 13</value>
+  </data>
   <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lblOrderTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
+  <data name="cmbCountry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 21</value>
   </data>
   <data name="comboBoxScenario.Location" type="System.Drawing.Point, System.Drawing">
     <value>142, 91</value>
@@ -1374,32 +1467,41 @@
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>766, 121</value>
   </data>
+  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="pnl.Size" type="System.Drawing.Size, System.Drawing">
     <value>766, 81</value>
   </data>
-  <data name="txtQuantity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+  <data name="&gt;&gt;lblSearchCustomer.ZOrder" xml:space="preserve">
+    <value>42</value>
   </data>
-  <data name="&gt;&gt;columnTotal.Name" xml:space="preserve">
-    <value>columnTotal</value>
+  <data name="&gt;&gt;txtState.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="chkCorporate.Text" xml:space="preserve">
     <value>Corporate Customer Entry</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 15</value>
   </data>
   <data name="lblOrder.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="txtGrandTotal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 22</value>
+  <data name="lblTaxAuth.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lblQuantity.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 11</value>
+  </data>
   <data name="&gt;&gt;txtDistrict.Name" xml:space="preserve">
     <value>txtDistrict</value>
+  </data>
+  <data name="lblIndividualVal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;txtCalculatedVAT.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1425,8 +1527,8 @@
   <data name="lblTaxAuth.Location" type="System.Drawing.Point, System.Drawing">
     <value>398, 315</value>
   </data>
-  <data name="&gt;&gt;txtItemName.Name" xml:space="preserve">
-    <value>txtItemName</value>
+  <data name="lblBillType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;txtDistrict.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
@@ -1437,8 +1539,11 @@
   <data name="&gt;&gt;lblEttnNo.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;txtFax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnlBillinfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
   <data name="&gt;&gt;lblFax.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
@@ -1455,23 +1560,17 @@
   <data name="dtpOrder.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="lblPhone.Text" xml:space="preserve">
-    <value>Phone:</value>
-  </data>
   <data name="txtGrandTotal.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="lblBillTitle.Text" xml:space="preserve">
     <value>Invoice Information</value>
   </data>
-  <data name="&gt;&gt;lblCountry.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
   <data name="&gt;&gt;lblFax.Name" xml:space="preserve">
     <value>lblFax</value>
   </data>
-  <data name="lblProductTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 2</value>
+  <data name="&gt;&gt;lblCustomerTitle.Name" xml:space="preserve">
+    <value>lblCustomerTitle</value>
   </data>
   <data name="lblItemNo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1482,14 +1581,8 @@
   <data name="lblVat.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 85</value>
   </data>
-  <data name="lblCalculationTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblType.Name" xml:space="preserve">
-    <value>lblType</value>
-  </data>
-  <data name="lblOrderTitle.Text" xml:space="preserve">
-    <value>Order Information</value>
+  <data name="&gt;&gt;lblDistrict.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="txtOrder.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1500,11 +1593,14 @@
   <data name="lblDiscount.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 13</value>
   </data>
+  <data name="&gt;&gt;columnQuantity.Name" xml:space="preserve">
+    <value>columnQuantity</value>
+  </data>
   <data name="txtSearchCustomer.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 29</value>
   </data>
-  <data name="lblWaybillInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 15</value>
+  <data name="lblCountry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
   </data>
   <data name="&gt;&gt;lblState.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
@@ -1524,8 +1620,8 @@
   <data name="txtStreet.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="lblOrder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 31</value>
+  <data name="&gt;&gt;lblCurrency.Name" xml:space="preserve">
+    <value>lblCurrency</value>
   </data>
   <data name="lblEmail.Location" type="System.Drawing.Point, System.Drawing">
     <value>398, 259</value>
@@ -1533,8 +1629,8 @@
   <data name="&gt;&gt;lblUnitPrice.Name" xml:space="preserve">
     <value>lblUnitPrice</value>
   </data>
-  <data name="&gt;&gt;lblVat.Parent" xml:space="preserve">
-    <value>pnlCalculation</value>
+  <data name="txtWayBillNo.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="lblEttn.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 32</value>
@@ -1551,32 +1647,35 @@
   <data name="txtTitle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="&gt;&gt;txtFloor.ZOrder" xml:space="preserve">
-    <value>25</value>
+  <data name="&gt;&gt;txtGrandTotal.Name" xml:space="preserve">
+    <value>txtGrandTotal</value>
   </data>
   <data name="&gt;&gt;comboBoxScenario.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtUnitPrice.Name" xml:space="preserve">
-    <value>txtUnitPrice</value>
-  </data>
-  <data name="txtDistrict.Location" type="System.Drawing.Point, System.Drawing">
-    <value>529, 88</value>
+  <data name="&gt;&gt;lblItemVal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblTinNin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="lblOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
   </data>
   <data name="lblCustomerTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 15</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
-  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 11</value>
+  <data name="lblEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
   </data>
   <data name="&gt;&gt;columnUnit.Name" xml:space="preserve">
     <value>columnUnit</value>
+  </data>
+  <data name="txtSubTotal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="lblBillType.Text" xml:space="preserve">
     <value>Invoice Type*:</value>
@@ -1605,17 +1704,26 @@
   <data name="&gt;&gt;txtNote.Name" xml:space="preserve">
     <value>txtNote</value>
   </data>
+  <data name="&gt;&gt;lblCorporateVal.Parent" xml:space="preserve">
+    <value>pnlCustomer</value>
+  </data>
+  <data name="txtTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
   <data name="txtSenderSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="lblOrderTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 7</value>
+  <data name="&gt;&gt;pnlOrderInfo.Name" xml:space="preserve">
+    <value>pnlOrderInfo</value>
   </data>
-  <data name="&gt;&gt;lblWayBillNo.Name" xml:space="preserve">
-    <value>lblWayBillNo</value>
+  <data name="lblUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;txtQuantity.Name" xml:space="preserve">
+    <value>txtQuantity</value>
   </data>
   <data name="lblEttnNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>139, 32</value>
@@ -1644,26 +1752,29 @@
   <data name="lblState.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="lblWayBillNo.Text" xml:space="preserve">
-    <value>WayBill No:</value>
-  </data>
   <data name="&gt;&gt;lblGrandTotal.Name" xml:space="preserve">
     <value>lblGrandTotal</value>
   </data>
   <data name="&gt;&gt;lblBillDate.Parent" xml:space="preserve">
     <value>pnlBillinfo</value>
   </data>
+  <data name="&gt;&gt;pnl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="txtItemName.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 58</value>
   </data>
-  <data name="&gt;&gt;lblDiscount.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;txtItemNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblBillTitle.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;lblWeb.Name" xml:space="preserve">
-    <value>lblWeb</value>
+  <data name="&gt;&gt;btnAdd.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="txtIncludingTaxes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 22</value>
   </data>
   <data name="&gt;&gt;dtpOrder.Name" xml:space="preserve">
     <value>dtpOrder</value>
@@ -1671,14 +1782,17 @@
   <data name="lblVatRate.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 13</value>
   </data>
-  <data name="lblPayeeInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
+  <data name="txtNote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 35</value>
   </data>
   <data name="&gt;&gt;lblEmail.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblEmail.Text" xml:space="preserve">
     <value>E-Mail:</value>
+  </data>
+  <data name="lblWaybillVal.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
   </data>
   <data name="&gt;&gt;lblEttn.Parent" xml:space="preserve">
     <value>pnlBillinfo</value>
@@ -1689,8 +1803,14 @@
   <data name="txtSenderSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
   </data>
-  <data name="cmbUnit.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+  <data name="&gt;&gt;columnUnitPrice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblPayeeInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="txtTinNin.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -1701,8 +1821,11 @@
   <data name="lblQuantity.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
   </data>
-  <data name="dtpOrder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 56</value>
+  <data name="lblWeb.Text" xml:space="preserve">
+    <value>Web Site:</value>
+  </data>
+  <data name="&gt;&gt;txtPayeeAcc.Parent" xml:space="preserve">
+    <value>pnl</value>
   </data>
   <data name="txtTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 116</value>
@@ -1713,26 +1836,41 @@
   <data name="&gt;&gt;txtOrder.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblQuantity.Text" xml:space="preserve">
-    <value>Quantity*:</value>
+  <data name="lblEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;pnlCustomer.Name" xml:space="preserve">
+    <value>pnlCustomer</value>
   </data>
   <data name="lblCalculationTitle.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
+  <data name="&gt;&gt;lblCalculationTitle.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="lblPhone.Location" type="System.Drawing.Point, System.Drawing">
     <value>398, 202</value>
+  </data>
+  <data name="lblIndividualVal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Sender Information</value>
   </data>
+  <data name="lblIndividualVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 13</value>
+  </data>
   <data name="&gt;&gt;txtQuantity.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="btnAddToAddressBook.Location" type="System.Drawing.Point, System.Drawing">
-    <value>561, 340</value>
+  <data name="lblPayeeInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 7</value>
   </data>
-  <data name="lblFirstName.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+  <data name="&gt;&gt;pnl.Name" xml:space="preserve">
+    <value>pnl</value>
+  </data>
+  <data name="&gt;&gt;lblVat.Parent" xml:space="preserve">
+    <value>pnlCalculation</value>
   </data>
   <data name="txtQuantity.Location" type="System.Drawing.Point, System.Drawing">
     <value>529, 30</value>
@@ -1752,9 +1890,6 @@
   <data name="lblCurrency.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
   </data>
-  <data name="pnlCustomer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 332</value>
-  </data>
   <data name="&gt;&gt;lblWeb.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1764,8 +1899,8 @@
   <data name="lblBillDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;lblPayeeInfo.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="lblCalculationTitle.Text" xml:space="preserve">
+    <value>Calculation Details</value>
   </data>
   <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 33</value>
@@ -1779,11 +1914,23 @@
   <data name="lblVat.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 13</value>
   </data>
+  <data name="&gt;&gt;lblOrderVal.Parent" xml:space="preserve">
+    <value>pnlOrderInfo</value>
+  </data>
+  <data name="lblCorporateVal.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;lblDiscount.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="lblLastName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;txtTaxAuth.Name" xml:space="preserve">
     <value>txtTaxAuth</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;comboBoxCurrency.Parent" xml:space="preserve">
     <value>pnlBillinfo</value>
@@ -1791,17 +1938,17 @@
   <data name="txtFax.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="&gt;&gt;dtpWayBillDate.Name" xml:space="preserve">
-    <value>dtpWayBillDate</value>
+  <data name="&gt;&gt;columnTotal.Name" xml:space="preserve">
+    <value>columnTotal</value>
   </data>
-  <data name="lblZip.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
+  <data name="txtGrandTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 22</value>
   </data>
   <data name="&gt;&gt;lblApartName.Name" xml:space="preserve">
     <value>lblApartName</value>
   </data>
-  <data name="txtTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="&gt;&gt;lblWaybillInfo.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
   <data name="&gt;&gt;txtCalculatedVAT.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -1812,20 +1959,29 @@
   <data name="lblApartNo.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="lblFax.Text" xml:space="preserve">
-    <value>Fax:</value>
+  <data name="lblOrderTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;cmbCountry.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="lblGrandTotal.Text" xml:space="preserve">
     <value>Grand Total:</value>
+  </data>
+  <data name="txtPayeeAcc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>376, 22</value>
   </data>
   <data name="lblDistrict.Text" xml:space="preserve">
     <value>District/County*:</value>
   </data>
-  <data name="&gt;&gt;lblQuantity.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;chkIndividual.Name" xml:space="preserve">
+    <value>chkIndividual</value>
+  </data>
+  <data name="lblSubTotal.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
   </data>
   <data name="lblSearchCustomer.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 32</value>
@@ -1842,11 +1998,8 @@
   <data name="&gt;&gt;txtFax.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
-  <data name="txtPayeeAcc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 22</value>
-  </data>
-  <data name="lblState.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;chkCorporate.Name" xml:space="preserve">
+    <value>chkCorporate</value>
   </data>
   <data name="lblWaybillInfo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1860,17 +2013,23 @@
   <data name="txtWayBillNo.MaxLength" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="lblType.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
+  <data name="&gt;&gt;txtItemName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtWeb.Name" xml:space="preserve">
+    <value>txtWeb</value>
+  </data>
+  <data name="txtQuantity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
   </data>
   <data name="&gt;&gt;txtQuantity.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblDiscount.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="pnlCustomer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 332</value>
   </data>
   <data name="&gt;&gt;txtTitle.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>30</value>
   </data>
   <data name="&gt;&gt;lblOrderDa.Name" xml:space="preserve">
     <value>lblOrderDa</value>
@@ -1890,14 +2049,17 @@
   <data name="&gt;&gt;txtItemName.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
+  <data name="&gt;&gt;lblIndividualVal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;lblFirstName.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>39</value>
   </data>
   <data name="&gt;&gt;lblPhone.Name" xml:space="preserve">
     <value>lblPhone</value>
   </data>
-  <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="lblVat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lblFloor.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -1908,8 +2070,8 @@
   <data name="&gt;&gt;lblDistrict.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
-  <data name="lblPayeeInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 7</value>
+  <data name="&gt;&gt;lblOrderDa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1918,7 +2080,7 @@
     <value>11, 122</value>
   </data>
   <data name="&gt;&gt;lblApartNo.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="txtZip.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -1926,14 +2088,17 @@
   <data name="lblOrder.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
-  <data name="&gt;&gt;chkCorporate.Name" xml:space="preserve">
-    <value>chkCorporate</value>
+  <data name="&gt;&gt;pnlBillinfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblItemNo.Text" xml:space="preserve">
-    <value>Item No*:</value>
+  <data name="&gt;&gt;txtTinNin.ZOrder" xml:space="preserve">
+    <value>33</value>
   </data>
   <data name="columnItemNo.HeaderText" xml:space="preserve">
     <value>Item No</value>
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>374, 93</value>
   </data>
   <data name="&gt;&gt;txtPayeeAcc.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1944,8 +2109,8 @@
   <data name="lblTaxAuth.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="txtSubTotal.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
+    <value>lblTitle</value>
   </data>
   <data name="txtWayBillNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 28</value>
@@ -1953,14 +2118,20 @@
   <data name="lblVatRate.Text" xml:space="preserve">
     <value>VAT Rate %:</value>
   </data>
+  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
+    <value>btnAdd</value>
+  </data>
   <data name="&gt;&gt;lblCountry.Name" xml:space="preserve">
     <value>lblCountry</value>
   </data>
-  <data name="lblVat.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="columnUnit.Width" type="System.Int32, mscorlib">
+    <value>65</value>
   </data>
   <data name="&gt;&gt;lblPhone.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;lblWaybillVal.Name" xml:space="preserve">
+    <value>lblWaybillVal</value>
   </data>
   <data name="lblDistrict.Location" type="System.Drawing.Point, System.Drawing">
     <value>398, 91</value>
@@ -1974,14 +2145,14 @@
   <data name="txtWeb.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
   </data>
-  <data name="&gt;&gt;lblSearchSender.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblEttnNo.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
   </data>
   <data name="&gt;&gt;txtGrandTotal.Parent" xml:space="preserve">
     <value>pnlCalculation</value>
   </data>
-  <data name="txtFax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>529, 228</value>
+  <data name="&gt;&gt;lblItemVal.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;lblOrder.Name" xml:space="preserve">
     <value>lblOrder</value>
@@ -1989,11 +2160,8 @@
   <data name="cmbUnit.Location" type="System.Drawing.Point, System.Drawing">
     <value>529, 58</value>
   </data>
-  <data name="pnlBillinfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
-    <value>lblTitle</value>
+  <data name="lblFax.Text" xml:space="preserve">
+    <value>Fax:</value>
   </data>
   <data name="&gt;&gt;lblBillDate.Name" xml:space="preserve">
     <value>lblBillDate</value>
@@ -2001,14 +2169,17 @@
   <data name="&gt;&gt;txtTinNin.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
+  <data name="&gt;&gt;lblSenderVal.Name" xml:space="preserve">
+    <value>lblSenderVal</value>
+  </data>
   <data name="&gt;&gt;txtOrder.Parent" xml:space="preserve">
     <value>pnlOrderInfo</value>
   </data>
-  <data name="&gt;&gt;lblTinNin.Parent" xml:space="preserve">
-    <value>pnlCustomer</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Create Invoice</value>
   </data>
   <data name="&gt;&gt;txtLastName.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>28</value>
   </data>
   <data name="&gt;&gt;lblOrderTitle.Parent" xml:space="preserve">
     <value>pnlOrderInfo</value>
@@ -2022,8 +2193,8 @@
   <data name="&gt;&gt;txtTinNin.Name" xml:space="preserve">
     <value>txtTinNin</value>
   </data>
-  <data name="&gt;&gt;lblSubTotal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblStreet.Text" xml:space="preserve">
+    <value>Road/Street:</value>
   </data>
   <data name="txtLastName.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2043,14 +2214,20 @@
   <data name="pnl.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
   </data>
+  <data name="lblBillTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>766, 158</value>
+  </data>
+  <data name="lblIndividualVal.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
   </data>
   <data name="txtApartName.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 228</value>
   </data>
   <data name="&gt;&gt;lblTaxAuth.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="lblBillDate.Text" xml:space="preserve">
     <value>Invoice Date</value>
@@ -2058,8 +2235,8 @@
   <data name="txtPayeeAcc.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Note</value>
+  <data name="lblTinNin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="lblUnit.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2079,23 +2256,29 @@
   <data name="&gt;&gt;pnlBillinfo.Name" xml:space="preserve">
     <value>pnlBillinfo</value>
   </data>
+  <data name="txtGrandTotal.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
   <data name="lblFloor.Text" xml:space="preserve">
     <value>Floor:</value>
   </data>
-  <data name="lblTown.Text" xml:space="preserve">
-    <value>Town:</value>
-  </data>
   <data name="&gt;&gt;txtOrder.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblState.Text" xml:space="preserve">
     <value>State/Province*:</value>
   </data>
-  <data name="dtpBillDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 20</value>
+  <data name="txtTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="&gt;&gt;dtpWayBillDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPayeeInfo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblSearchSender.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;txtPhone.Name" xml:space="preserve">
     <value>txtPhone</value>
@@ -2109,20 +2292,26 @@
   <data name="&gt;&gt;columnVatRate.Name" xml:space="preserve">
     <value>columnVatRate</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
+  <data name="lblSenderVal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 32</value>
+  </data>
+  <data name="&gt;&gt;txtPhone.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblZip.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
-  <data name="lblEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="&gt;&gt;lblBillDate.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="lblApartName.Text" xml:space="preserve">
     <value>Apartment  Name:</value>
   </data>
-  <data name="&gt;&gt;txtIncludingTaxes.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="lblLastName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 175</value>
   </data>
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
@@ -2132,6 +2321,9 @@
   </data>
   <data name="&gt;&gt;lblType.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnDelete.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="&gt;&gt;pnlOrderInfo.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -2145,9 +2337,6 @@
   <data name="&gt;&gt;txtTown.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
-  <data name="txtNote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 35</value>
-  </data>
   <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -2158,10 +2347,10 @@
     <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="&gt;&gt;txtTaxAuth.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;lblSearchSender.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;pnl.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2169,20 +2358,14 @@
   <data name="&gt;&gt;lblTown.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
-  <data name="lblTinNin.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblCountry.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="&gt;&gt;txtNote.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 1475</value>
-  </data>
-  <data name="lblGridTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 15</value>
-  </data>
-  <data name="&gt;&gt;cmbUnit.Name" xml:space="preserve">
-    <value>cmbUnit</value>
+  <data name="txtState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 116</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -2193,29 +2376,38 @@
   <data name="lblSearchSender.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="lblWeb.Text" xml:space="preserve">
-    <value>Web Site:</value>
+  <data name="lblFirstName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 147</value>
   </data>
   <data name="&gt;&gt;cmbCountry.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="dgvAddedProducts.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="&gt;&gt;lblCalculationTitle.Name" xml:space="preserve">
-    <value>lblCalculationTitle</value>
+  <data name="&gt;&gt;lblIndividualVal.Name" xml:space="preserve">
+    <value>lblIndividualVal</value>
   </data>
   <data name="lblVatRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>399, 89</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 35</value>
+  <data name="columnUnitPrice.HeaderText" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+  <data name="&gt;&gt;pnl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblSubTotal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtLastName.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
   <data name="&gt;&gt;txtItemNo.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
-  <data name="lblSubTotal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
+  <data name="chkIndividual.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 65</value>
   </data>
   <data name="lblProductTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2226,14 +2418,11 @@
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 15</value>
   </data>
-  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblFloor.ZOrder" xml:space="preserve">
+    <value>35</value>
   </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="&gt;&gt;lblVatRate.Name" xml:space="preserve">
-    <value>lblVatRate</value>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
   </data>
   <data name="lblTown.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2253,20 +2442,20 @@
   <data name="txtTinNin.MaxLength" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
-    <value>btnAdd</value>
+  <data name="lblTinNin.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
   </data>
   <data name="&gt;&gt;lblSubTotal.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="lblSubTotal.Text" xml:space="preserve">
-    <value>Sub Total:</value>
+  <data name="lblZip.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
   </data>
   <data name="txtApartNo.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 256</value>
   </data>
-  <data name="lblUnitPrice.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;txtWeb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblEttnNo.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -2277,8 +2466,8 @@
   <data name="txtSubTotal.Text" xml:space="preserve">
     <value>0,00</value>
   </data>
-  <data name="lblSubTotal.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
+  <data name="&gt;&gt;lblStreet.Name" xml:space="preserve">
+    <value>lblStreet</value>
   </data>
   <data name="pnlCalculation.Size" type="System.Drawing.Size, System.Drawing">
     <value>766, 146</value>
@@ -2286,14 +2475,23 @@
   <data name="columnVatRate.Width" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
-  <data name="lblSubTotal.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lblBillDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblWayBillNo.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;columnLineNo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;txtCalculatedVAT.Parent" xml:space="preserve">
+    <value>pnlCalculation</value>
+  </data>
+  <data name="txtCalculatedVAT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 54</value>
+  </data>
+  <data name="lblProductTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 2</value>
   </data>
   <data name="&gt;&gt;lblOrder.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2304,8 +2502,11 @@
   <data name="&gt;&gt;lblPhone.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="txtItemNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+  <data name="lblSearchSender.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblZip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 147</value>
   </data>
   <data name="txtUnitPrice.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 86</value>
@@ -2313,8 +2514,8 @@
   <data name="lblOrderDa.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblBillTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
+  <data name="dtpWayBillDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 56</value>
   </data>
   <data name="&gt;&gt;dtpOrder.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2322,20 +2523,17 @@
   <data name="pnlDataGrid.Size" type="System.Drawing.Size, System.Drawing">
     <value>766, 222</value>
   </data>
-  <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+  <data name="&gt;&gt;lblSearchCustomer.Parent" xml:space="preserve">
+    <value>pnlCustomer</value>
   </data>
   <data name="&gt;&gt;txtVatRate.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lblProductTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 15</value>
   </data>
-  <data name="&gt;&gt;lblFloor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>851, 617</value>
+    <value>830, 617</value>
   </data>
   <data name="&gt;&gt;lblDiscount.Parent" xml:space="preserve">
     <value>pnlCalculation</value>
@@ -2346,11 +2544,8 @@
   <data name="&gt;&gt;lblSearchSender.Parent" xml:space="preserve">
     <value>panel5</value>
   </data>
-  <data name="lblCurrency.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
   <data name="&gt;&gt;lblEmail.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -2361,35 +2556,35 @@
   <data name="txtOrder.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 28</value>
   </data>
+  <data name="lblSenderVal.Text" xml:space="preserve">
+    <value>Please enter the Sender Informations</value>
+  </data>
   <data name="lblDiscount.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
   <data name="comboBoxCurrency.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="lblEttnNo.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
+  <data name="lblDistrict.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;txtFloor.Name" xml:space="preserve">
     <value>txtFloor</value>
   </data>
   <data name="&gt;&gt;lblUnit.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="txtUnitPrice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtFirstName.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
+  </data>
+  <data name="txtFax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>529, 228</value>
+  </data>
+  <data name="lblCorporateVal.Text" xml:space="preserve">
+    <value>Please fill in the required fields for the corporate customer!</value>
   </data>
   <data name="&gt;&gt;pnlBillinfo.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="txtVatRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtIncludingTaxes.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
+  <data name="lblCorporateVal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;txtApartNo.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2409,17 +2604,17 @@
   <data name="btnAdd.Text" xml:space="preserve">
     <value>ADD</value>
   </data>
-  <data name="lblSearchCustomer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="&gt;&gt;lblWaybillVal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="columnLineNo.Width" type="System.Int32, mscorlib">
-    <value>40</value>
+  <data name="lblTinNin.Text" xml:space="preserve">
+    <value>TIN / NIN*:</value>
   </data>
-  <data name="&gt;&gt;lblFloor.ZOrder" xml:space="preserve">
-    <value>33</value>
+  <data name="&gt;&gt;lblApartNo.Parent" xml:space="preserve">
+    <value>pnlCustomer</value>
   </data>
-  <data name="lblVat.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="lblItemNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 33</value>
   </data>
   <data name="txtFloor.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -2445,11 +2640,14 @@
   <data name="lblVatRate.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
   </data>
-  <data name="txtOrder.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="&gt;&gt;lblTinNin.Parent" xml:space="preserve">
+    <value>pnlCustomer</value>
   </data>
   <data name="&gt;&gt;lblOrder.Parent" xml:space="preserve">
     <value>pnlOrderInfo</value>
+  </data>
+  <data name="pnlCustomer.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="txtApartName.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -2458,10 +2656,13 @@
     <value>label1</value>
   </data>
   <data name="&gt;&gt;txtSenderSearch.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblPhone.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="lblItemVal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>319, 120</value>
   </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
@@ -2469,26 +2670,26 @@
   <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>766, 56</value>
+  </data>
   <data name="txtSubTotal.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="&gt;&gt;txtLastName.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
+  <data name="&gt;&gt;chkCorporate.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
-  <data name="btnDelete.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;lblState.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;pnlCalculation.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblTinNin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblState.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="lblApartNo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;lblVatRate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2499,14 +2700,20 @@
   <data name="&gt;&gt;pnlCustomer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;lblSenderVal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;txtStreet.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblStreet.Text" xml:space="preserve">
-    <value>Road/Street:</value>
+  <data name="&gt;&gt;lblLastName.Name" xml:space="preserve">
+    <value>lblLastName</value>
   </data>
-  <data name="txtQuantity.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
+  <data name="&gt;&gt;lblCalculationTitle.Name" xml:space="preserve">
+    <value>lblCalculationTitle</value>
+  </data>
+  <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="&gt;&gt;lblCurrency.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2514,14 +2721,14 @@
   <data name="lblSubTotal.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="lblUnit.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
+  <data name="&gt;&gt;lblUnitPrice.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;lblPayeeInfo.Name" xml:space="preserve">
     <value>lblPayeeInfo</value>
   </data>
   <data name="&gt;&gt;chkIndividual.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;lblTown.Name" xml:space="preserve">
     <value>lblTown</value>
@@ -2531,9 +2738,6 @@
   </data>
   <data name="&gt;&gt;columnVatPrice.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblEttn.ZOrder" xml:space="preserve">
-    <value>9</value>
   </data>
   <data name="&gt;&gt;lblCalculationTitle.Parent" xml:space="preserve">
     <value>pnlCalculation</value>
@@ -2547,29 +2751,20 @@
   <data name="comboBoxBillType.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 144</value>
   </data>
-  <data name="&gt;&gt;txtState.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
   <data name="lblItemNo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 7</value>
+  <data name="columnQuantity.HeaderText" xml:space="preserve">
+    <value>Quantity</value>
   </data>
   <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtTown.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="lblZip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>398, 147</value>
+    <value>5</value>
   </data>
   <data name="txtCalculatedVAT.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="lblCountry.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
+  <data name="&gt;&gt;lblWeb.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
   <data name="&gt;&gt;lblUnit.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2586,26 +2781,23 @@
   <data name="&gt;&gt;lblPayeeInfo.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblCurrency.Name" xml:space="preserve">
-    <value>lblCurrency</value>
-  </data>
   <data name="&gt;&gt;lblOrder.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblBillDate.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lblTaxAuth.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="pnlBillinfo.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="lblTown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="btnAdd.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="txtTaxAuth.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblWaybillVal.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblIndividualVal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblDistrict.Name" xml:space="preserve">
     <value>lblDistrict</value>
@@ -2616,17 +2808,14 @@
   <data name="pnlDataGrid.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 968</value>
   </data>
-  <data name="&gt;&gt;txtZip.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;columnUnitPrice.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtApartNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
   </data>
   <data name="&gt;&gt;pnlCustomer.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtPayeeAcc.Parent" xml:space="preserve">
-    <value>pnl</value>
+  <data name="txtItemNo.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
   </data>
   <data name="txtGrandTotal.Location" type="System.Drawing.Point, System.Drawing">
     <value>269, 110</value>
@@ -2640,16 +2829,13 @@
   <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
-  <data name="lblApartNo.Text" xml:space="preserve">
-    <value>Apartment No:</value>
+  <data name="&gt;&gt;lblWayBillNo.Name" xml:space="preserve">
+    <value>lblWayBillNo</value>
   </data>
   <data name="lblOrderDa.Text" xml:space="preserve">
     <value>Order Date:</value>
   </data>
-  <data name="&gt;&gt;lblSearchCustomer.Name" xml:space="preserve">
-    <value>lblSearchCustomer</value>
-  </data>
-  <data name="lblCountry.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblLastName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="&gt;&gt;lblCustomerTitle.Type" xml:space="preserve">
@@ -2658,20 +2844,23 @@
   <data name="btnClear.Text" xml:space="preserve">
     <value>Clear</value>
   </data>
-  <data name="columnUnitPrice.HeaderText" xml:space="preserve">
-    <value>Unit Price</value>
+  <data name="lblTinNin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 91</value>
   </data>
   <data name="&gt;&gt;txtApartName.Name" xml:space="preserve">
     <value>txtApartName</value>
   </data>
-  <data name="txtItemNo.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
+  <data name="&gt;&gt;lblOrderVal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblItemNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 33</value>
+  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+    <value>pnlCustomer</value>
   </data>
   <data name="lblBillDate.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
+  </data>
+  <data name="lblVat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="&gt;&gt;txtApartName.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2682,26 +2871,29 @@
   <data name="lblSearchCustomer.Text" xml:space="preserve">
     <value>Search Customer:</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
   </data>
-  <data name="lblOrder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
+  <data name="cmbUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
   </data>
-  <data name="columnQuantity.Width" type="System.Int32, mscorlib">
-    <value>65</value>
+  <data name="dtpWayBillDate.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblType.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblItemName.Text" xml:space="preserve">
     <value>Item Name*:</value>
   </data>
-  <data name="txtApartNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
+  <data name="lblPhone.Text" xml:space="preserve">
+    <value>Phone:</value>
   </data>
   <data name="lblZip.Text" xml:space="preserve">
     <value>ZIP/Postal Code:</value>
@@ -2709,17 +2901,20 @@
   <data name="&gt;&gt;columnTotal.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblApartName.Parent" xml:space="preserve">
-    <value>pnlCustomer</value>
+  <data name="&gt;&gt;dtpWayBillDate.Name" xml:space="preserve">
+    <value>dtpWayBillDate</value>
   </data>
-  <data name="txtVatRate.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="lblUnitPrice.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 13</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtCalculatedVAT.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="dtpBillDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 20</value>
   </data>
   <data name="lblApartName.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 13</value>
@@ -2739,11 +2934,14 @@
   <data name="&gt;&gt;lblVat.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
+  <data name="&gt;&gt;txtItemNo.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="lblWeb.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="&gt;&gt;txtWeb.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
@@ -2751,8 +2949,8 @@
   <data name="txtSearchCustomer.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>766, 56</value>
+  <data name="&gt;&gt;cmbCountry.Parent" xml:space="preserve">
+    <value>pnlCustomer</value>
   </data>
   <data name="txtTitle.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2760,32 +2958,23 @@
   <data name="lblFloor.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 287</value>
   </data>
-  <data name="lblTown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
-  </data>
   <data name="lblDiscount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;lblSenderVal.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;lblDiscount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;comboBoxBillType.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;chkCorporate.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="lblBillTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 15</value>
   </data>
-  <data name="lblZip.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;lblCalculationTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblLastName.Text" xml:space="preserve">
-    <value>Last Name*:</value>
   </data>
   <data name="dtpBillDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 118</value>
@@ -2796,8 +2985,8 @@
   <data name="&gt;&gt;lblQuantity.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>374, 93</value>
+  <data name="lblSearchCustomer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="&gt;&gt;lblSearchCustomer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2820,17 +3009,14 @@
   <data name="lblCalculationTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 7</value>
   </data>
-  <data name="lblCalculationTitle.Text" xml:space="preserve">
-    <value>Calculation Details</value>
+  <data name="txtVatRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
   </data>
-  <data name="&gt;&gt;pnlOrderInfo.Name" xml:space="preserve">
-    <value>pnlOrderInfo</value>
+  <data name="&gt;&gt;lblIndividualVal.Parent" xml:space="preserve">
+    <value>pnlCustomer</value>
   </data>
-  <data name="&gt;&gt;lblQuantity.Name" xml:space="preserve">
-    <value>lblQuantity</value>
-  </data>
-  <data name="txtSubTotal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 26</value>
+  <data name="chkCorporate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 65</value>
   </data>
   <data name="btnCreate.Location" type="System.Drawing.Point, System.Drawing">
     <value>401, 11</value>
@@ -2847,17 +3033,14 @@
   <data name="lblGridTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;lblLastName.Name" xml:space="preserve">
-    <value>lblLastName</value>
+  <data name="btnAddToAddressBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>561, 340</value>
   </data>
   <data name="chkIndividual.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;lblZip.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="chkIndividual.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 65</value>
+    <value>23</value>
   </data>
   <data name="txtUnitPrice.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -2868,8 +3051,8 @@
   <data name="pnlBillinfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>386, 227</value>
   </data>
-  <data name="&gt;&gt;txtStreet.Parent" xml:space="preserve">
-    <value>pnlCustomer</value>
+  <data name="lblOrderTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 15</value>
   </data>
   <data name="&gt;&gt;txtTown.Name" xml:space="preserve">
     <value>txtTown</value>
@@ -2877,8 +3060,8 @@
   <data name="lblType.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 91</value>
   </data>
-  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>530, 120</value>
+  <data name="lblState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
   </data>
   <data name="lblOrder.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -2889,41 +3072,44 @@
   <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 27</value>
   </data>
-  <data name="lblCalculationTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
+  <data name="&gt;&gt;txtVatRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtWayBillNo.Parent" xml:space="preserve">
     <value>panel4</value>
   </data>
-  <data name="&gt;&gt;lblTown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
+    <value>40</value>
   </data>
   <data name="&gt;&gt;txtStreet.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>32</value>
   </data>
-  <data name="lblEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 13</value>
+  <data name="lblCustomerTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="txtDistrict.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
+  <data name="lblWaybillVal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 13</value>
+  </data>
+  <data name="&gt;&gt;lblSenderVal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;dgvAddedProducts.Parent" xml:space="preserve">
     <value>pnlDataGrid</value>
+  </data>
+  <data name="lblCustomerTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;columnItemNo.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 175</value>
-  </data>
-  <data name="lblSearchSender.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="&gt;&gt;lblSearchCustomer.ZOrder" xml:space="preserve">
-    <value>40</value>
+  <data name="&gt;&gt;lblType.Parent" xml:space="preserve">
+    <value>pnlBillinfo</value>
   </data>
   <data name="&gt;&gt;lblFax.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="&gt;&gt;panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2935,10 +3121,10 @@
     <value>141, 30</value>
   </data>
   <data name="&gt;&gt;txtFirstName.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>29</value>
   </data>
   <data name="&gt;&gt;lblStreet.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>37</value>
   </data>
   <data name="lblPayeeInfo.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2949,23 +3135,20 @@
   <data name="&gt;&gt;txtZip.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
   </data>
-  <data name="&gt;&gt;lblQuantity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCountry.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="&gt;&gt;columnUnitPrice.Name" xml:space="preserve">
     <value>columnUnitPrice</value>
   </data>
-  <data name="txtLastName.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="&gt;&gt;lblCurrency.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;lblDistrict.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblItemVal.Text" xml:space="preserve">
+    <value>You must add at least one Item</value>
   </data>
   <data name="&gt;&gt;lblVatRate.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;lblVat.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2986,16 +3169,19 @@
     <value>9</value>
   </data>
   <data name="&gt;&gt;lblApartName.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>36</value>
   </data>
-  <data name="&gt;&gt;lblUnitPrice.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="&gt;&gt;lblQuantity.Name" xml:space="preserve">
+    <value>lblQuantity</value>
   </data>
   <data name="lblTown.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
   <data name="&gt;&gt;txtUnitPrice.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;lblWaybillVal.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="txtSubTotal.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 22</value>
@@ -3006,14 +3192,17 @@
   <data name="&gt;&gt;lblFirstName.Name" xml:space="preserve">
     <value>lblFirstName</value>
   </data>
-  <data name="&gt;&gt;btnAdd.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="pnlBillinfo.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="dtpWayBillDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 20</value>
   </data>
   <data name="&gt;&gt;txtApartNo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
+  </data>
+  <data name="lblStreet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 245</value>
@@ -3030,44 +3219,44 @@
   <data name="lblWayBillNo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+  <data name="lblWayBillDate.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
   <data name="txtStreet.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
   </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblItemName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="pnlDataGrid.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
   </data>
-  <data name="lblSearchSender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 35</value>
+  <data name="lblItemName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 61</value>
   </data>
   <data name="pnlCalculation.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
   </data>
-  <data name="txtIncludingTaxes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 22</value>
+  <data name="txtGrandTotal.Text" xml:space="preserve">
+    <value>0,00</value>
   </data>
-  <data name="lblTinNin.Text" xml:space="preserve">
-    <value>TIN / NIN*:</value>
+  <data name="&gt;&gt;lblStreet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblFloor.Parent" xml:space="preserve">
-    <value>pnlCustomer</value>
+  <data name="&gt;&gt;txtApartName.ZOrder" xml:space="preserve">
+    <value>31</value>
   </data>
-  <data name="lblQuantity.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="txtTinNin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
   </data>
   <data name="lblCurrency.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="&gt;&gt;lblWaybillInfo.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;lblType.Name" xml:space="preserve">
+    <value>lblType</value>
   </data>
-  <data name="&gt;&gt;lblDiscount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtVatRate.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
   </data>
   <data name="&gt;&gt;lblBillType.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -3075,8 +3264,8 @@
   <data name="&gt;&gt;txtFirstName.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblApartNo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblState.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;comboBoxBillType.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3090,8 +3279,8 @@
   <data name="lblState.Location" type="System.Drawing.Point, System.Drawing">
     <value>398, 119</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Create Invoice</value>
+  <data name="lblBillType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="txtGrandTotal.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -3102,17 +3291,17 @@
   <data name="txtApartName.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
   </data>
-  <data name="&gt;&gt;dtpBillDate.Name" xml:space="preserve">
-    <value>dtpBillDate</value>
+  <data name="lblSearchSender.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 35</value>
   </data>
   <data name="&gt;&gt;lblUnitPrice.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="dtpWayBillDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 56</value>
+  <data name="&gt;&gt;lblSearchSender.Name" xml:space="preserve">
+    <value>lblSearchSender</value>
   </data>
-  <data name="&gt;&gt;lblStreet.Name" xml:space="preserve">
-    <value>lblStreet</value>
+  <data name="&gt;&gt;lblItemVal.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="&gt;&gt;txtTown.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3126,23 +3315,20 @@
   <data name="&gt;&gt;columnItem.Name" xml:space="preserve">
     <value>columnItem</value>
   </data>
-  <data name="lblApartNo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="lblOrderDa.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 59</value>
   </data>
-  <data name="pnlCustomer.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="lblWayBillNo.Text" xml:space="preserve">
+    <value>WayBill No:</value>
   </data>
-  <data name="txtIncludingTaxes.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
+  <data name="&gt;&gt;comboBoxScenario.Parent" xml:space="preserve">
+    <value>pnlBillinfo</value>
   </data>
   <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 119</value>
   </data>
-  <data name="&gt;&gt;dtpBillDate.Parent" xml:space="preserve">
-    <value>pnlBillinfo</value>
+  <data name="lblIndividualVal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="comboBoxCurrency.Location" type="System.Drawing.Point, System.Drawing">
     <value>141, 171</value>
@@ -3158,9 +3344,6 @@
   </data>
   <data name="&gt;&gt;txtState.Name" xml:space="preserve">
     <value>txtState</value>
-  </data>
-  <data name="&gt;&gt;txtWeb.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dtpBillDate.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -3183,17 +3366,14 @@
   <data name="&gt;&gt;pnlDataGrid.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;txtItemNo.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
   <data name="&gt;&gt;txtPayeeAcc.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;cmbUnit.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="lblStreet.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="&gt;&gt;lblWayBillDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblCustomerTitle.Parent" xml:space="preserve">
     <value>pnlCustomer</value>
@@ -3204,14 +3384,14 @@
   <data name="columnLineNo.HeaderText" xml:space="preserve">
     <value>Line No</value>
   </data>
-  <data name="&gt;&gt;pnlCustomer.Name" xml:space="preserve">
-    <value>pnlCustomer</value>
+  <data name="&gt;&gt;lblOrderDa.Parent" xml:space="preserve">
+    <value>pnlOrderInfo</value>
   </data>
   <data name="comboBoxBillType.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="lblItemName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 61</value>
+  <data name="lblCurrency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
   </data>
   <metadata name="columnVatPrice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

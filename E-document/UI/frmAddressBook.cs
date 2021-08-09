@@ -9,6 +9,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -118,12 +119,14 @@ namespace E_document.UI
 					
 					if (success)
 					{
-						MessageBox.Show("Successfully Created to Address Book!");
+						//MessageBox.Show("Successfully Created to Address Book!");
+						MessageBox.Show(lblSuccess.Text);
 						ClearText();
 					}
 					else
 					{
-						MessageBox.Show("Failed!");
+						//MessageBox.Show("Failed!");
+						MessageBox.Show(lblFail.Text);
 					}
 
 					LabelVisibleFalse();
@@ -134,7 +137,8 @@ namespace E_document.UI
 			{
 				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtFirstName.Text) || String.IsNullOrEmpty(txtLastName.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
 				{
-					MessageBox.Show("Please fill in the required fields!");
+					//MessageBox.Show("Please fill in the required fields!");
+					MessageBox.Show(lblReq.Text);
 				}
 				else
 				{
@@ -142,12 +146,14 @@ namespace E_document.UI
 
 					if (success)
 					{
-						MessageBox.Show("Successfully Created to Address Book!");
+						//MessageBox.Show("Successfully Created to Address Book!");
+						MessageBox.Show(lblSuccess.Text);
 						ClearText();
 					}
 					else
 					{
-						MessageBox.Show("Failed!");
+						//MessageBox.Show("Failed!");
+						MessageBox.Show(lblFail.Text);
 					}
 
 					LabelVisibleFalse();
@@ -156,7 +162,8 @@ namespace E_document.UI
 			}
 			else
 			{
-				MessageBox.Show("Please select which customer type you want to add");
+				//MessageBox.Show("Please select which customer type you want to add");
+				MessageBox.Show(lblCustomerType.Text);
 			}
 		}
 
@@ -169,7 +176,8 @@ namespace E_document.UI
 			{
 				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtTitle.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
 				{
-					MessageBox.Show("Please fill in the required fields!");
+					//MessageBox.Show("Please fill in the required fields!");
+					MessageBox.Show(lblReq.Text);
 				}
 				else
 				{
@@ -179,12 +187,14 @@ namespace E_document.UI
 
 					if (success)
 					{
-						MessageBox.Show("Successfully Updated to Address Book!");
+						//MessageBox.Show("Successfully Updated to Address Book!");
+						MessageBox.Show(lblUpdate.Text);
 						ClearText();
 					}
 					else
 					{
-						MessageBox.Show("Failed!");
+						//MessageBox.Show("Failed!");
+						MessageBox.Show(lblFail.Text);
 					}
 
 					LabelVisibleFalse();
@@ -196,7 +206,8 @@ namespace E_document.UI
 			{
 				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtFirstName.Text) || String.IsNullOrEmpty(txtLastName.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
 				{
-					MessageBox.Show("Please fill in the required fields!");
+					//MessageBox.Show("Please fill in the required fields!");
+					MessageBox.Show(lblReq.Text);
 				}
 				else
 				{
@@ -204,12 +215,14 @@ namespace E_document.UI
 
 					if (success)
 					{
-						MessageBox.Show("Successfully Updated to Address Book!");
+						//MessageBox.Show("Successfully Updated to Address Book!");
+						MessageBox.Show(lblUpdate.Text);
 						ClearText();
 					}
 					else
 					{
-						MessageBox.Show("Failed!");
+						//MessageBox.Show("Failed!");
+						MessageBox.Show(lblFail.Text);
 					}
 
 					LabelVisibleFalse();
@@ -240,11 +253,13 @@ namespace E_document.UI
 
 			if (success)
 			{
-				MessageBox.Show("Successfully Deleted to Address Book!");
+				//MessageBox.Show("Successfully Deleted to Address Book!");
+				MessageBox.Show(lblDelete.Text);
 			}
 			else
 			{
-				MessageBox.Show("Failed!");
+				//MessageBox.Show("Failed!");
+				MessageBox.Show(lblFail.Text);
 			}
 
 			ClearText();
@@ -252,9 +267,19 @@ namespace E_document.UI
 			LoadData();
 		}
 
-		private void LoadCountryToCmb()
+		private void LoadDeCountryToCmb()
 		{
-			List<Country> countries = Country.GetCountries();
+			List<Country> countries = Country.GetCountriesToDe();
+
+			foreach (Country country in countries)
+			{
+				cmbCountry.Items.Add(country.Name);
+			}
+		}
+
+		private void LoadEnCountryToCmb()
+		{
+			List<Country> countries = Country.GetCountriesToEn();
 
 			foreach (Country country in countries)
 			{
@@ -265,7 +290,17 @@ namespace E_document.UI
 		private void frmAddressBook_Load(object sender, EventArgs e)
 		{
 			LoadData();
-			LoadCountryToCmb();
+
+			var culture = Thread.CurrentThread.CurrentUICulture.ToString();
+
+			if (culture == "en")
+			{
+				LoadEnCountryToCmb();
+			}
+			else if (culture == "de")
+			{
+				LoadDeCountryToCmb();
+			}
 		}
 
 		private void dataGridAddressBook_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -345,6 +380,11 @@ namespace E_document.UI
 			{
 				e.Handled = true;
 			}
+		}
+
+		private void pnlCustomer_Paint(object sender, PaintEventArgs e)
+		{
+
 		}
 	}
 }

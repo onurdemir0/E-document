@@ -41,6 +41,7 @@ namespace E_document.UI
 			this.BtnSettings = new E_document.ButtonControls.RJButton();
 			this.btnAddressBook = new E_document.ButtonControls.RJButton();
 			this.btnCreateInvoice = new E_document.ButtonControls.RJButton();
+			this.btnInvoices = new E_document.ButtonControls.RJButton();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -139,11 +140,27 @@ namespace E_document.UI
 			this.btnCreateInvoice.UseVisualStyleBackColor = false;
 			this.btnCreateInvoice.Click += new System.EventHandler(this.btnCreateInvoice_Click);
 			// 
+			// btnInvoices
+			// 
+			resources.ApplyResources(this.btnInvoices, "btnInvoices");
+			this.btnInvoices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+			this.btnInvoices.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+			this.btnInvoices.BorderColor = System.Drawing.Color.PaleVioletRed;
+			this.btnInvoices.BorderRadius = 15;
+			this.btnInvoices.BorderSize = 0;
+			this.btnInvoices.FlatAppearance.BorderSize = 0;
+			this.btnInvoices.ForeColor = System.Drawing.Color.White;
+			this.btnInvoices.Name = "btnInvoices";
+			this.btnInvoices.TextColor = System.Drawing.Color.White;
+			this.btnInvoices.UseVisualStyleBackColor = false;
+			this.btnInvoices.Click += new System.EventHandler(this.btnInvoices_Click);
+			// 
 			// Main
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
+			this.Controls.Add(this.btnInvoices);
 			this.Controls.Add(this.lblMinimized);
 			this.Controls.Add(this.lblExit);
 			this.Controls.Add(this.BtnSettings);
@@ -176,5 +193,6 @@ namespace E_document.UI
 		private System.Windows.Forms.Label lblExit;
 		private System.Data.SQLite.SQLiteCommandBuilder sqLiteCommandBuilder1;
 		private System.Windows.Forms.Label lblMinimized;
+		private ButtonControls.RJButton btnInvoices;
 	}
 }
