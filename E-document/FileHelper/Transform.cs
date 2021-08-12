@@ -9,8 +9,8 @@ using System.Xml.Xsl;
 
 namespace E_document.FileHelper
 {
-	public class Transform
-	{
+    public class Transform
+    {
         public static string TransformXMLToHTML(string inputXml, string xsltString)
         {
             XslCompiledTransform transform = new XslCompiledTransform();
@@ -29,7 +29,9 @@ namespace E_document.FileHelper
         public static string Base64Decode(string base64)
         {
             var bytes = Convert.FromBase64String(base64);
+            //var xslt = Convert.ToBase64String
             return Encoding.UTF8.GetString(bytes);
         }
     }
+
 }

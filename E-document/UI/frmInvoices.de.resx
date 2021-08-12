@@ -127,6 +127,31 @@
   <data name="btnView.Text" xml:space="preserve">
     <value>Rechnung ansehen</value>
   </data>
+  <data name="lblViewCheck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 416</value>
+  </data>
+  <data name="lblViewCheck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 13</value>
+  </data>
+  <data name="lblViewCheck.Text" xml:space="preserve">
+    <value>Bitte wählen  Sie die Rechnung aus, die Sie einsehen möchten.</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblViewCheck.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblNotValid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 416</value>
+  </data>
+  <data name="lblNotValid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 13</value>
+  </data>
+  <data name="lblNotValid.Text" xml:space="preserve">
+    <value>Bitte wählen Sie eine gültige Rechnung aus</value>
+  </data>
+  <data name="lblNotValid.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Rechnungen</value>
   </data>

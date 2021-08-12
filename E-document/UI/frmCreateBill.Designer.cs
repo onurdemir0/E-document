@@ -51,6 +51,9 @@ namespace E_document.UI
 			this.lblOrder = new System.Windows.Forms.Label();
 			this.lblOrderTitle = new System.Windows.Forms.Label();
 			this.pnlCustomer = new System.Windows.Forms.Panel();
+			this.lblCustomerType = new System.Windows.Forms.Label();
+			this.lblFail = new System.Windows.Forms.Label();
+			this.lblSuccess = new System.Windows.Forms.Label();
 			this.lblIndividualVal = new System.Windows.Forms.Label();
 			this.lblCorporateVal = new System.Windows.Forms.Label();
 			this.txtApartNo = new System.Windows.Forms.TextBox();
@@ -102,6 +105,7 @@ namespace E_document.UI
 			this.lblWayBillNo = new System.Windows.Forms.Label();
 			this.lblWaybillInfo = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.lblReq = new System.Windows.Forms.Label();
 			this.lblItemVal = new System.Windows.Forms.Label();
 			this.cmbUnit = new System.Windows.Forms.ComboBox();
 			this.btnDelete = new System.Windows.Forms.Button();
@@ -171,7 +175,6 @@ namespace E_document.UI
 			// 
 			// pnlBillinfo
 			// 
-			resources.ApplyResources(this.pnlBillinfo, "pnlBillinfo");
 			this.pnlBillinfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.pnlBillinfo.Controls.Add(this.comboBoxCurrency);
 			this.pnlBillinfo.Controls.Add(this.lblCurrency);
@@ -184,12 +187,13 @@ namespace E_document.UI
 			this.pnlBillinfo.Controls.Add(this.lblType);
 			this.pnlBillinfo.Controls.Add(this.lblEttn);
 			this.pnlBillinfo.Controls.Add(this.lblBillTitle);
+			resources.ApplyResources(this.pnlBillinfo, "pnlBillinfo");
 			this.pnlBillinfo.Name = "pnlBillinfo";
 			// 
 			// comboBoxCurrency
 			// 
-			resources.ApplyResources(this.comboBoxCurrency, "comboBoxCurrency");
 			this.comboBoxCurrency.FormattingEnabled = true;
+			resources.ApplyResources(this.comboBoxCurrency, "comboBoxCurrency");
 			this.comboBoxCurrency.Name = "comboBoxCurrency";
 			// 
 			// lblCurrency
@@ -199,11 +203,11 @@ namespace E_document.UI
 			// 
 			// comboBoxBillType
 			// 
-			resources.ApplyResources(this.comboBoxBillType, "comboBoxBillType");
 			this.comboBoxBillType.FormattingEnabled = true;
 			this.comboBoxBillType.Items.AddRange(new object[] {
             resources.GetString("comboBoxBillType.Items"),
             resources.GetString("comboBoxBillType.Items1")});
+			resources.ApplyResources(this.comboBoxBillType, "comboBoxBillType");
 			this.comboBoxBillType.Name = "comboBoxBillType";
 			// 
 			// lblBillType
@@ -223,11 +227,11 @@ namespace E_document.UI
 			// 
 			// comboBoxScenario
 			// 
-			resources.ApplyResources(this.comboBoxScenario, "comboBoxScenario");
 			this.comboBoxScenario.FormattingEnabled = true;
 			this.comboBoxScenario.Items.AddRange(new object[] {
             resources.GetString("comboBoxScenario.Items"),
             resources.GetString("comboBoxScenario.Items1")});
+			resources.ApplyResources(this.comboBoxScenario, "comboBoxScenario");
 			this.comboBoxScenario.Name = "comboBoxScenario";
 			// 
 			// lblEttnNo
@@ -252,13 +256,12 @@ namespace E_document.UI
 			// 
 			// cmbCountry
 			// 
-			resources.ApplyResources(this.cmbCountry, "cmbCountry");
 			this.cmbCountry.FormattingEnabled = true;
+			resources.ApplyResources(this.cmbCountry, "cmbCountry");
 			this.cmbCountry.Name = "cmbCountry";
 			// 
 			// pnlOrderInfo
 			// 
-			resources.ApplyResources(this.pnlOrderInfo, "pnlOrderInfo");
 			this.pnlOrderInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.pnlOrderInfo.Controls.Add(this.lblOrderVal);
 			this.pnlOrderInfo.Controls.Add(this.dtpOrder);
@@ -266,6 +269,7 @@ namespace E_document.UI
 			this.pnlOrderInfo.Controls.Add(this.lblOrderDa);
 			this.pnlOrderInfo.Controls.Add(this.lblOrder);
 			this.pnlOrderInfo.Controls.Add(this.lblOrderTitle);
+			resources.ApplyResources(this.pnlOrderInfo, "pnlOrderInfo");
 			this.pnlOrderInfo.Name = "pnlOrderInfo";
 			// 
 			// lblOrderVal
@@ -278,7 +282,7 @@ namespace E_document.UI
 			resources.ApplyResources(this.dtpOrder, "dtpOrder");
 			this.dtpOrder.MaxDate = new System.DateTime(2239, 12, 31, 0, 0, 0, 0);
 			this.dtpOrder.Name = "dtpOrder";
-			this.dtpOrder.Value = new System.DateTime(2021, 7, 12, 0, 0, 0, 0);
+			this.dtpOrder.Value = new System.DateTime(2021, 8, 11, 0, 0, 0, 0);
 			this.dtpOrder.ValueChanged += new System.EventHandler(this.dtpOrder_ValueChanged);
 			// 
 			// txtOrder
@@ -305,8 +309,10 @@ namespace E_document.UI
 			// 
 			// pnlCustomer
 			// 
-			resources.ApplyResources(this.pnlCustomer, "pnlCustomer");
 			this.pnlCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.pnlCustomer.Controls.Add(this.lblCustomerType);
+			this.pnlCustomer.Controls.Add(this.lblFail);
+			this.pnlCustomer.Controls.Add(this.lblSuccess);
 			this.pnlCustomer.Controls.Add(this.lblIndividualVal);
 			this.pnlCustomer.Controls.Add(this.lblCorporateVal);
 			this.pnlCustomer.Controls.Add(this.txtApartNo);
@@ -351,7 +357,23 @@ namespace E_document.UI
 			this.pnlCustomer.Controls.Add(this.lblTinNin);
 			this.pnlCustomer.Controls.Add(this.lblSearchCustomer);
 			this.pnlCustomer.Controls.Add(this.lblCustomerTitle);
+			resources.ApplyResources(this.pnlCustomer, "pnlCustomer");
 			this.pnlCustomer.Name = "pnlCustomer";
+			// 
+			// lblCustomerType
+			// 
+			resources.ApplyResources(this.lblCustomerType, "lblCustomerType");
+			this.lblCustomerType.Name = "lblCustomerType";
+			// 
+			// lblFail
+			// 
+			resources.ApplyResources(this.lblFail, "lblFail");
+			this.lblFail.Name = "lblFail";
+			// 
+			// lblSuccess
+			// 
+			resources.ApplyResources(this.lblSuccess, "lblSuccess");
+			this.lblSuccess.Name = "lblSuccess";
 			// 
 			// lblIndividualVal
 			// 
@@ -396,9 +418,9 @@ namespace E_document.UI
 			// 
 			// txtSearchCustomer
 			// 
-			resources.ApplyResources(this.txtSearchCustomer, "txtSearchCustomer");
 			this.txtSearchCustomer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
 			this.txtSearchCustomer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+			resources.ApplyResources(this.txtSearchCustomer, "txtSearchCustomer");
 			this.txtSearchCustomer.Name = "txtSearchCustomer";
 			this.txtSearchCustomer.TextChanged += new System.EventHandler(this.txtSearchCustomer_TextChanged);
 			// 
@@ -581,7 +603,6 @@ namespace E_document.UI
 			// 
 			// panel4
 			// 
-			resources.ApplyResources(this.panel4, "panel4");
 			this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.panel4.Controls.Add(this.lblWaybillVal);
 			this.panel4.Controls.Add(this.dtpWayBillDate);
@@ -589,6 +610,7 @@ namespace E_document.UI
 			this.panel4.Controls.Add(this.lblWayBillDate);
 			this.panel4.Controls.Add(this.lblWayBillNo);
 			this.panel4.Controls.Add(this.lblWaybillInfo);
+			resources.ApplyResources(this.panel4, "panel4");
 			this.panel4.Name = "panel4";
 			// 
 			// lblWaybillVal
@@ -626,8 +648,8 @@ namespace E_document.UI
 			// 
 			// panel2
 			// 
-			resources.ApplyResources(this.panel2, "panel2");
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel2.Controls.Add(this.lblReq);
 			this.panel2.Controls.Add(this.lblItemVal);
 			this.panel2.Controls.Add(this.cmbUnit);
 			this.panel2.Controls.Add(this.btnDelete);
@@ -644,7 +666,13 @@ namespace E_document.UI
 			this.panel2.Controls.Add(this.lblUnit);
 			this.panel2.Controls.Add(this.lblItemNo);
 			this.panel2.Controls.Add(this.lblProductTitle);
+			resources.ApplyResources(this.panel2, "panel2");
 			this.panel2.Name = "panel2";
+			// 
+			// lblReq
+			// 
+			resources.ApplyResources(this.lblReq, "lblReq");
+			this.lblReq.Name = "lblReq";
 			// 
 			// lblItemVal
 			// 
@@ -653,14 +681,14 @@ namespace E_document.UI
 			// 
 			// cmbUnit
 			// 
-			resources.ApplyResources(this.cmbUnit, "cmbUnit");
 			this.cmbUnit.FormattingEnabled = true;
+			resources.ApplyResources(this.cmbUnit, "cmbUnit");
 			this.cmbUnit.Name = "cmbUnit";
 			// 
 			// btnDelete
 			// 
-			resources.ApplyResources(this.btnDelete, "btnDelete");
 			this.btnDelete.BackColor = System.Drawing.Color.Red;
+			resources.ApplyResources(this.btnDelete, "btnDelete");
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.UseVisualStyleBackColor = false;
 			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -679,8 +707,8 @@ namespace E_document.UI
 			// 
 			// btnAdd
 			// 
-			resources.ApplyResources(this.btnAdd, "btnAdd");
 			this.btnAdd.BackColor = System.Drawing.Color.SpringGreen;
+			resources.ApplyResources(this.btnAdd, "btnAdd");
 			this.btnAdd.Name = "btnAdd";
 			this.btnAdd.UseVisualStyleBackColor = false;
 			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -739,15 +767,14 @@ namespace E_document.UI
 			// 
 			// pnlDataGrid
 			// 
-			resources.ApplyResources(this.pnlDataGrid, "pnlDataGrid");
 			this.pnlDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.pnlDataGrid.Controls.Add(this.dgvAddedProducts);
 			this.pnlDataGrid.Controls.Add(this.lblGridTitle);
+			resources.ApplyResources(this.pnlDataGrid, "pnlDataGrid");
 			this.pnlDataGrid.Name = "pnlDataGrid";
 			// 
 			// dgvAddedProducts
 			// 
-			resources.ApplyResources(this.dgvAddedProducts, "dgvAddedProducts");
 			this.dgvAddedProducts.AllowUserToAddRows = false;
 			this.dgvAddedProducts.AllowUserToDeleteRows = false;
 			this.dgvAddedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -761,6 +788,7 @@ namespace E_document.UI
             this.columnVatRate,
             this.columnVatPrice,
             this.columnTotal});
+			resources.ApplyResources(this.dgvAddedProducts, "dgvAddedProducts");
 			this.dgvAddedProducts.Name = "dgvAddedProducts";
 			this.dgvAddedProducts.ReadOnly = true;
 			this.dgvAddedProducts.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvAddedProducts_RowPostPaint);
@@ -826,7 +854,6 @@ namespace E_document.UI
 			// 
 			// pnlCalculation
 			// 
-			resources.ApplyResources(this.pnlCalculation, "pnlCalculation");
 			this.pnlCalculation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.pnlCalculation.Controls.Add(this.txtGrandTotal);
 			this.pnlCalculation.Controls.Add(this.lblGrandTotal);
@@ -837,6 +864,7 @@ namespace E_document.UI
 			this.pnlCalculation.Controls.Add(this.txtSubTotal);
 			this.pnlCalculation.Controls.Add(this.lblSubTotal);
 			this.pnlCalculation.Controls.Add(this.lblCalculationTitle);
+			resources.ApplyResources(this.pnlCalculation, "pnlCalculation");
 			this.pnlCalculation.Name = "pnlCalculation";
 			// 
 			// txtGrandTotal
@@ -890,10 +918,10 @@ namespace E_document.UI
 			// 
 			// panel1
 			// 
-			resources.ApplyResources(this.panel1, "panel1");
 			this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.panel1.Controls.Add(this.txtNote);
 			this.panel1.Controls.Add(this.label5);
+			resources.ApplyResources(this.panel1, "panel1");
 			this.panel1.Name = "panel1";
 			// 
 			// txtNote
@@ -908,9 +936,9 @@ namespace E_document.UI
 			// 
 			// panel3
 			// 
-			resources.ApplyResources(this.panel3, "panel3");
 			this.panel3.Controls.Add(this.btnCreate);
 			this.panel3.Controls.Add(this.btnClear);
+			resources.ApplyResources(this.panel3, "panel3");
 			this.panel3.Name = "panel3";
 			// 
 			// btnCreate
@@ -929,12 +957,12 @@ namespace E_document.UI
 			// 
 			// panel5
 			// 
-			resources.ApplyResources(this.panel5, "panel5");
 			this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.panel5.Controls.Add(this.lblSenderVal);
 			this.panel5.Controls.Add(this.txtSenderSearch);
 			this.panel5.Controls.Add(this.lblSearchSender);
 			this.panel5.Controls.Add(this.label1);
+			resources.ApplyResources(this.panel5, "panel5");
 			this.panel5.Name = "panel5";
 			// 
 			// lblSenderVal
@@ -944,9 +972,9 @@ namespace E_document.UI
 			// 
 			// txtSenderSearch
 			// 
-			resources.ApplyResources(this.txtSenderSearch, "txtSenderSearch");
 			this.txtSenderSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
 			this.txtSenderSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+			resources.ApplyResources(this.txtSenderSearch, "txtSenderSearch");
 			this.txtSenderSearch.Name = "txtSenderSearch";
 			this.txtSenderSearch.TextChanged += new System.EventHandler(this.txtSenderSearch_TextChanged);
 			// 
@@ -962,18 +990,18 @@ namespace E_document.UI
 			// 
 			// pnl
 			// 
-			resources.ApplyResources(this.pnl, "pnl");
 			this.pnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.pnl.Controls.Add(this.txtPayeeAcc);
 			this.pnl.Controls.Add(this.label2);
 			this.pnl.Controls.Add(this.lblPayeeInfo);
+			resources.ApplyResources(this.pnl, "pnl");
 			this.pnl.Name = "pnl";
 			// 
 			// txtPayeeAcc
 			// 
-			resources.ApplyResources(this.txtPayeeAcc, "txtPayeeAcc");
 			this.txtPayeeAcc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
 			this.txtPayeeAcc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+			resources.ApplyResources(this.txtPayeeAcc, "txtPayeeAcc");
 			this.txtPayeeAcc.Name = "txtPayeeAcc";
 			// 
 			// label2
@@ -1156,5 +1184,9 @@ namespace E_document.UI
 		private System.Windows.Forms.Label lblCorporateVal;
 		private System.Windows.Forms.Label lblIndividualVal;
 		private System.Windows.Forms.Label lblItemVal;
+		private System.Windows.Forms.Label lblReq;
+		private System.Windows.Forms.Label lblSuccess;
+		private System.Windows.Forms.Label lblFail;
+		private System.Windows.Forms.Label lblCustomerType;
 	}
 }

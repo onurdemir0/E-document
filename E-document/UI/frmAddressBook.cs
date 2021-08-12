@@ -229,21 +229,6 @@ namespace E_document.UI
 					LoadData();
 				}
 			}
-
-			//bool success = dal.Update(addressBook);
-
-			//if (success)
-			//{
-			//	MessageBox.Show("Successfully Updated to Address Book!");
-			//}
-			//else
-			//{
-			//	MessageBox.Show("Failed!");
-			//}
-
-			//ClearText();
-			//LabelVisibleFalse();
-			//LoadData();
 		}
 
 		private void btnDeleteCustomer_Click(object sender, EventArgs e)
@@ -380,11 +365,6 @@ namespace E_document.UI
 			{
 				e.Handled = true;
 			}
-		}
-
-		private void pnlCustomer_Paint(object sender, PaintEventArgs e)
-		{
-
 		}
 	}
 }

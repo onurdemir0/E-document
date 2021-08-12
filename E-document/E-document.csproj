@@ -69,6 +69,9 @@
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.7.10\lib\net45\NLog.dll</HintPath>
     </Reference>
+    <Reference Include="saxon9he-api, Version=9.5.1.1, Culture=neutral, PublicKeyToken=e1fdd002d5083fe6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Saxon-HE.9.5.1.1\lib\net35\saxon9he-api.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -118,9 +121,10 @@
     <Compile Include="Entities\SelectOption.cs" />
     <Compile Include="Entities\Settings.cs" />
     <Compile Include="Entities\MeasurementUnit.cs" />
+    <Compile Include="FileHelper\Transform.cs" />
+    <Compile Include="FileHelper\XmlHelper.cs" />
     <Compile Include="FileHelper\Operations.cs" />
     <Compile Include="FileHelper\PdfGenerator.cs" />
-    <Compile Include="FileHelper\Transform.cs" />
     <Compile Include="FileHelper\UBL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -230,6 +234,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XSLT\sablon.xslt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

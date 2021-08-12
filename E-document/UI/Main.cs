@@ -35,23 +35,7 @@ namespace E_document.UI
 		//public static string DefaultLanguage = "en";
 		private void Main_Load(object sender, EventArgs e)
 		{
-			//if (Thread.CurrentThread.CurrentUICulture.Name == "de")
-			//{
-			//	MessageBox.Show("hi");
-			//}
-			//if (Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName == "de")
-			//{
-			//	MessageBox.Show("hi");
-			//}
-
-			//string language = Properties.Settings.Default.DefaultLanguage;
-			//if (language == "German")
-			//{
-			//	MessageBox.Show("hi");
-			//}
-
 			Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
-
 		}
 
 		private void btnDe_Click(object sender, EventArgs e)

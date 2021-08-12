@@ -91,6 +91,7 @@ namespace E_document.UI
 			// 
 			// pnlCustomer
 			// 
+			resources.ApplyResources(this.pnlCustomer, "pnlCustomer");
 			this.pnlCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.pnlCustomer.Controls.Add(this.lblDelete);
 			this.pnlCustomer.Controls.Add(this.lblFail);
@@ -137,9 +138,7 @@ namespace E_document.UI
 			this.pnlCustomer.Controls.Add(this.lblTitle);
 			this.pnlCustomer.Controls.Add(this.lblTinNin);
 			this.pnlCustomer.Controls.Add(this.lblCustomerTitle);
-			resources.ApplyResources(this.pnlCustomer, "pnlCustomer");
 			this.pnlCustomer.Name = "pnlCustomer";
-			this.pnlCustomer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCustomer_Paint);
 			// 
 			// lblDelete
 			// 
@@ -193,8 +192,8 @@ namespace E_document.UI
 			// 
 			// cmbCountry
 			// 
-			this.cmbCountry.FormattingEnabled = true;
 			resources.ApplyResources(this.cmbCountry, "cmbCountry");
+			this.cmbCountry.FormattingEnabled = true;
 			this.cmbCountry.Name = "cmbCountry";
 			// 
 			// chkIndividual
@@ -396,14 +395,14 @@ namespace E_document.UI
 			// 
 			// panel1
 			// 
-			this.panel1.Controls.Add(this.dataGridAddressBook);
 			resources.ApplyResources(this.panel1, "panel1");
+			this.panel1.Controls.Add(this.dataGridAddressBook);
 			this.panel1.Name = "panel1";
 			// 
 			// dataGridAddressBook
 			// 
-			this.dataGridAddressBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			resources.ApplyResources(this.dataGridAddressBook, "dataGridAddressBook");
+			this.dataGridAddressBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridAddressBook.Name = "dataGridAddressBook";
 			this.dataGridAddressBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAddressBook_CellClick);
 			// 

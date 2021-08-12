@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using static E_document.FileHelper.Invoice;
 
 namespace E_document.FileHelper
 {
@@ -57,6 +58,7 @@ namespace E_document.FileHelper
 
         private List<InvoiceLine> invoiceLineField;
 
+
         public Invoice()
         {
             idField = new ID();
@@ -98,6 +100,116 @@ namespace E_document.FileHelper
             {
                 this.customizationIDField = value;
             }
+        }
+
+        /// <remarks/>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.33440")]
+        [System.SerializableAttribute()]
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.ComponentModel.DesignerCategoryAttribute("code")]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+        [System.Xml.Serialization.XmlRootAttribute("AdditionalDocumentReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+        public partial class DocumentReferenceType
+        {
+            private AttachmentType attachmentField;
+
+            /// <remarks/>
+            public AttachmentType Attachment { get { return this.attachmentField; } set { this.attachmentField = value; } }
+        }      
+
+        /// <remarks/>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.33440")]
+        [System.SerializableAttribute()]
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.ComponentModel.DesignerCategoryAttribute("code")]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+        [System.Xml.Serialization.XmlRootAttribute("Attachment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+        public partial class AttachmentType
+        {
+            private EmbeddedDocumentBinaryObjectType embeddedDocumentBinaryObjectField;
+
+            /// <remarks/>
+            [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+            public EmbeddedDocumentBinaryObjectType EmbeddedDocumentBinaryObject 
+            { 
+                get 
+                { 
+                    return this.embeddedDocumentBinaryObjectField; 
+                } 
+                set 
+                { 
+                    this.embeddedDocumentBinaryObjectField = value; 
+                } 
+            }
+        }
+
+        /// <remarks/>
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.33440")]
+        [System.SerializableAttribute()]
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.ComponentModel.DesignerCategoryAttribute("code")]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+        [System.Xml.Serialization.XmlRootAttribute("EmbeddedDocumentBinaryObject", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2", IsNullable = false)]
+        public partial class EmbeddedDocumentBinaryObjectType : BinaryObjectType1
+        {
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIncludeAttribute(typeof(EmbeddedDocumentBinaryObjectType))]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.33440")]
+        [System.SerializableAttribute()]
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.ComponentModel.DesignerCategoryAttribute("code")]
+        [System.Xml.Serialization.XmlTypeAttribute(TypeName = "BinaryObjectType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2")]
+        public partial class BinaryObjectType1 : BinaryObjectType
+        {
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIncludeAttribute(typeof(BinaryObjectType1))]
+        [System.Xml.Serialization.XmlIncludeAttribute(typeof(EmbeddedDocumentBinaryObjectType))]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.33440")]
+        [System.SerializableAttribute()]
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.ComponentModel.DesignerCategoryAttribute("code")]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
+        public partial class BinaryObjectType
+        {
+            private string formatField;
+            private string mimeCodeField;
+            private string encodingCodeField;
+            private string characterSetCodeField;
+            private string uriField;
+            private string filenameField;
+            private byte[] valueField;
+
+            /// <remarks/>
+            [System.Xml.Serialization.XmlAttributeAttribute()]
+            public string format { get { return this.formatField; } set { this.formatField = value; } }
+
+            /// <remarks/>
+            [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
+            public string mimeCode { get { return this.mimeCodeField; } set { this.mimeCodeField = value; } }
+
+            /// <remarks/>
+            [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
+            public string encodingCode { get { return this.encodingCodeField; } set { this.encodingCodeField = value; } }
+
+            /// <remarks/>
+            [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
+            public string characterSetCode { get { return this.characterSetCodeField; } set { this.characterSetCodeField = value; } }
+
+            /// <remarks/>
+            [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
+            public string uri { get { return this.uriField; } set { this.uriField = value; } }
+
+            /// <remarks/>
+            [System.Xml.Serialization.XmlAttributeAttribute()]
+            public string filename { get { return this.filenameField; } set { this.filenameField = value; } }
+
+            /// <remarks/>
+            [System.Xml.Serialization.XmlTextAttribute(DataType = "base64Binary")]
+            public byte[] Value { get { return this.valueField; } set { this.valueField = value; } }
         }
 
         /// <remarks/>
@@ -479,10 +591,23 @@ namespace E_document.FileHelper
     {
 
         private BillingReferenceInvoiceDocumentReference invoiceDocumentReferenceField;
+        private DocumentReferenceType additionalDocumentReferenceField;
 
         public BillingReference()
         {
             invoiceDocumentReferenceField = new BillingReferenceInvoiceDocumentReference();
+        }
+
+        public DocumentReferenceType AdditionalDocumentReference 
+        {
+            get 
+            { 
+                return this.additionalDocumentReferenceField; 
+            } 
+            set 
+            { 
+                this.additionalDocumentReferenceField = value; 
+            } 
         }
 
         /// <remarks/>
@@ -551,7 +676,6 @@ namespace E_document.FileHelper
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
     public partial class ContractDocumentReference
     {
-
         private ID idField;
 
         public ContractDocumentReference()

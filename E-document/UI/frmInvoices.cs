@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,12 @@ namespace E_document.UI
 		BaseDal baseDal = new BaseDal();
 		Bill bill = new Bill();
 
+		string box = "";
+		Boolean encoded = false;
+		bool removePreambles = true;
+		string barcode = "";
+		bool showAttachments = true;
+
 		public frmInvoices()
 		{
 			InitializeComponent();
@@ -29,6 +36,7 @@ namespace E_document.UI
 			dgvInvoices.DataSource = dt;
 			//dgvInvoices.Columns[1].HeaderText = lblBillId.Text;
 		}
+
 		private void frmInvoices_Load(object sender, EventArgs e)
 		{
 			LoadData();
@@ -39,25 +47,30 @@ namespace E_document.UI
 			bill.XmlString = dgvInvoices.SelectedRows[0].Cells[44].Value.ToString();
 		}
 
+
+
 		private void btnView_Click(object sender, EventArgs e)
 		{
-			//const string xsltString = @" ";
+			string xmlString = bill.XmlString;
+			string xsltString = File.ReadAllText("sablon.xslt");
 
-			//Transform.TransformXMLToHTML(bill.XmlString, xsltString);
+			xsltString = Transformer.EncodeTo64(xsltString);
 
 			if (bill.XmlString == null)
 			{
-				MessageBox.Show("Please select the invoice you want to view");
-
+				MessageBox.Show(lblViewCheck.Text);
 			}
 			else if (bill.XmlString == "")
 			{
-				MessageBox.Show("Please select a valid invoice");
+				//MessageBox.Show("Please select a valid invoice");
+				MessageBox.Show(lblNotValid.Text);
 			}
 			else
 			{
-				MessageBox.Show(bill.XmlString);
-			}
+				//MessageBox.Show(bill.XmlString);
+				string htmlString = Transformer.TransformXMLToHTML(xmlString, box, encoded, removePreambles, barcode, showAttachments);
+				MessageBox.Show(htmlString);
+			}			
 		}
 	}
 }

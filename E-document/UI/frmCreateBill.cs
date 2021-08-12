@@ -38,7 +38,7 @@ namespace E_document.UI
 		{
 			dtpOrder.Format = DateTimePickerFormat.Custom;
 			dtpOrder.CustomFormat = " ";			
-			dtpOrder.MaxDate = DateTime.Now;
+			//dtpOrder.MaxDate = DateTime.Now;
 
 			dtpWayBillDate.Format = DateTimePickerFormat.Custom;
 			dtpWayBillDate.CustomFormat = " ";
@@ -74,9 +74,19 @@ namespace E_document.UI
 			}
 		}
 
-		private void LoadCurrenciesToCmb()
+		private void LoadDeCurrenciesToCmb()
 		{
-			List<Currency> currencies = Currency.GetCurrencies();
+			List<Currency> currencies = Currency.GetCurrenciesToDe();
+
+			foreach (Currency currency in currencies)
+			{
+				comboBoxCurrency.Items.Add(currency.Name);
+			}
+		}
+
+		private void LoadEnCurrenciesToCmb()
+		{
+			List<Currency> currencies = Currency.GetCurrenciesToEn();
 
 			foreach (Currency currency in currencies)
 			{
@@ -113,16 +123,16 @@ namespace E_document.UI
 			{
 				LoadEnUnitsToCmb();
 				LoadEnCountryToCmb();
+				LoadEnCurrenciesToCmb();
 			}
 			else if (culture == "de")
 			{
 				LoadDeUnitsToCmb();
 				LoadDeCountryToCmb();
+				LoadDeCurrenciesToCmb();
 			}
 
 			DateTimePickerSetting();
-
-			LoadCurrenciesToCmb();
 
 			ComboBoxItemSetting();
 
@@ -253,7 +263,8 @@ namespace E_document.UI
 
 			if (String.IsNullOrEmpty(txtItemNo.Text) || String.IsNullOrEmpty(txtItemName.Text) || String.IsNullOrEmpty(txtUnitPrice.Text) || String.IsNullOrEmpty(txtQuantity.Text) || String.IsNullOrEmpty(cmbUnit.Text))
 			{
-				MessageBox.Show("Please fill in the required fields!");
+				//MessageBox.Show("Please fill in the required fields!");
+				MessageBox.Show(lblReq.Text);
 			}
 			else
 			{
@@ -341,7 +352,6 @@ namespace E_document.UI
 			{
 				if (dtpWayBillDate.Text == " ")
 				{
-					//MessageBox.Show("Please fill the WayBill Date");
 					MessageBox.Show(lblWaybillVal.Text);
 				}
 				else
@@ -432,7 +442,8 @@ namespace E_document.UI
 			{
 				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtTitle.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
 				{
-					MessageBox.Show("Please fill in the required fields!");
+					//MessageBox.Show("Please fill in the required fields!");
+					MessageBox.Show(lblReq.Text);
 				}
 				else
 				{
@@ -440,11 +451,11 @@ namespace E_document.UI
 
 					if (success)
 					{
-						MessageBox.Show("Successfully Created to Address Book!");
+						MessageBox.Show(lblSuccess.Text);
 					}
 					else
 					{
-						MessageBox.Show("Failed!");
+						MessageBox.Show(lblFail.Text);
 					}
 				}
 			}
@@ -452,7 +463,8 @@ namespace E_document.UI
 			{
 				if (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtFirstName.Text) || String.IsNullOrEmpty(txtLastName.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text))
 				{
-					MessageBox.Show("Please fill in the required fields!");
+					//MessageBox.Show("Please fill in the required fields!");
+					MessageBox.Show(lblReq.Text);
 				}
 				else
 				{
@@ -460,17 +472,17 @@ namespace E_document.UI
 
 					if (success)
 					{
-						MessageBox.Show("Successfully Created to Address Book!");
+						MessageBox.Show(lblSuccess.Text);
 					}
 					else
 					{
-						MessageBox.Show("Failed!");
+						MessageBox.Show(lblFail.Text);
 					}
 				}
 			}
 			else
 			{
-				MessageBox.Show("Please select which customer type you want to add");
+				MessageBox.Show(lblCustomerType.Text);
 			}
 		}
 
@@ -490,6 +502,10 @@ namespace E_document.UI
 
 		private void CreateXML()
 		{
+			string xsltString = File.ReadAllText("sablon.xslt");
+			xsltString = Transformer.EncodeTo64(xsltString);
+			byte[] examp = { };
+
 			//XML OLUŞTUR
 			Invoice invoice = new Invoice();
 			invoice.ID = new ID() { Value = bill.BillId.ToString() };
@@ -618,14 +634,32 @@ namespace E_document.UI
 			invoice.BillingReference = new BillingReference()
 			{
 				InvoiceDocumentReference =
+				{
+					ID =
 					{
-						ID =
-						{
 
-						},
-						IssueDate = bill.BillDate
+					},
+					IssueDate = bill.BillDate,
+				},
+				AdditionalDocumentReference =
+				{
+					Attachment =
+					{
+						EmbeddedDocumentBinaryObject =
+						{
+							encodingCode = "Base64",
+							mimeCode = "application/xml",
+							characterSetCode = "UTF-8",
+							format = xsltString,
+							filename = "sablon.xslt",
+							uri = " ",
+							Value = examp
+						}
 					}
+				}
 			};
+
+			
 
 			//invoice.CustomizationID = ??
 			//invoice.DocumentCurrencyCode = ??
@@ -654,6 +688,10 @@ namespace E_document.UI
 				streamWriter.WriteLine(xmlString);
 				MessageBox.Show("Successfully Created!");
 
+				ClearText();
+				dgvAddedProducts.Rows.Clear();
+				CalculatedDetails();
+
 				streamWriter.Close();
 			}
 		}
@@ -667,36 +705,31 @@ namespace E_document.UI
 			}
 			else if(dtpWayBillDate.Enabled == true && dtpWayBillDate.Text == " ")
 			{
-				//MessageBox.Show("Please fill for the WayBill Date");
 				MessageBox.Show(lblWaybillVal.Text);
 			}
 
 			else if (String.IsNullOrEmpty(Settings.CompanyName))
 			{
-				//MessageBox.Show("Please enter the Sender Informations");
 				MessageBox.Show(lblSenderVal.Text);
 			}
 
 			else if (!(chkCorporate.Checked || chkIndividual.Checked))
 			{
 				//MessageBox.Show("Please select which customer type you want to add");
-				//MessageBox.Show(lblcus)
+				MessageBox.Show(lblCustomerType.Text);
 			}
 			else if ((chkCorporate.Checked == true) && (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtTitle.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text)))
 			{
-				//MessageBox.Show("Please fill in the required fields for the corporate customer!");
 				MessageBox.Show(lblCorporateVal.Text);
 			}
 			else if ((chkIndividual.Checked == true) && (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtFirstName.Text) || String.IsNullOrEmpty(txtLastName.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text)))
 			{
-				//MessageBox.Show("Please fill in the required fields for the individual customer!");
 				MessageBox.Show(lblIndividualVal.Text);
 
 			}
 
 			else if (dgvAddedProducts.Rows.Count == 0)
 			{
-				//MessageBox.Show("You must add at least one Item");
 				MessageBox.Show(lblItemVal.Text);
 			}
 			else
@@ -818,6 +851,7 @@ namespace E_document.UI
 
 		private void btnClear_Click(object sender, EventArgs e)
 		{
+			ClearText();
 			dgvAddedProducts.Rows.Clear();
 			CalculatedDetails();
 		}

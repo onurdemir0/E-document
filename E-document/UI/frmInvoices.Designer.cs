@@ -31,32 +31,44 @@ namespace E_document.UI
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInvoices));
 			this.dgvInvoices = new System.Windows.Forms.DataGridView();
-			this.lblBillId = new System.Windows.Forms.Label();
+			this.lblViewCheck = new System.Windows.Forms.Label();
+			this.lblNotValid = new System.Windows.Forms.Label();
+			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
 			this.btnView = new E_document.ButtonControls.RJButton();
 			((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dgvInvoices
 			// 
-			resources.ApplyResources(this.dgvInvoices, "dgvInvoices");
 			this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			resources.ApplyResources(this.dgvInvoices, "dgvInvoices");
 			this.dgvInvoices.Name = "dgvInvoices";
 			this.dgvInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoices_CellClick);
 			// 
-			// lblBillId
+			// lblViewCheck
 			// 
-			resources.ApplyResources(this.lblBillId, "lblBillId");
-			this.lblBillId.Name = "lblBillId";
+			resources.ApplyResources(this.lblViewCheck, "lblViewCheck");
+			this.lblViewCheck.Name = "lblViewCheck";
+			// 
+			// lblNotValid
+			// 
+			resources.ApplyResources(this.lblNotValid, "lblNotValid");
+			this.lblNotValid.Name = "lblNotValid";
+			// 
+			// richTextBox1
+			// 
+			resources.ApplyResources(this.richTextBox1, "richTextBox1");
+			this.richTextBox1.Name = "richTextBox1";
 			// 
 			// btnView
 			// 
-			resources.ApplyResources(this.btnView, "btnView");
 			this.btnView.BackColor = System.Drawing.Color.LightSeaGreen;
 			this.btnView.BackgroundColor = System.Drawing.Color.LightSeaGreen;
 			this.btnView.BorderColor = System.Drawing.Color.PaleVioletRed;
 			this.btnView.BorderRadius = 10;
 			this.btnView.BorderSize = 0;
 			this.btnView.FlatAppearance.BorderSize = 0;
+			resources.ApplyResources(this.btnView, "btnView");
 			this.btnView.ForeColor = System.Drawing.Color.White;
 			this.btnView.Name = "btnView";
 			this.btnView.TextColor = System.Drawing.Color.White;
@@ -67,8 +79,10 @@ namespace E_document.UI
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.richTextBox1);
+			this.Controls.Add(this.lblNotValid);
+			this.Controls.Add(this.lblViewCheck);
 			this.Controls.Add(this.btnView);
-			this.Controls.Add(this.lblBillId);
 			this.Controls.Add(this.dgvInvoices);
 			this.Name = "frmInvoices";
 			this.Load += new System.EventHandler(this.frmInvoices_Load);
@@ -81,7 +95,9 @@ namespace E_document.UI
 		#endregion
 
 		private System.Windows.Forms.DataGridView dgvInvoices;
-		private System.Windows.Forms.Label lblBillId;
 		private ButtonControls.RJButton btnView;
+		private System.Windows.Forms.Label lblViewCheck;
+		private System.Windows.Forms.Label lblNotValid;
+		private System.Windows.Forms.RichTextBox richTextBox1;
 	}
 }
