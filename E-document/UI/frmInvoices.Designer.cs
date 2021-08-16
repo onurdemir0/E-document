@@ -40,9 +40,13 @@ namespace E_document.UI
 			// 
 			// dgvInvoices
 			// 
+			this.dgvInvoices.AllowUserToAddRows = false;
+			this.dgvInvoices.AllowUserToDeleteRows = false;
 			this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			resources.ApplyResources(this.dgvInvoices, "dgvInvoices");
 			this.dgvInvoices.Name = "dgvInvoices";
+			this.dgvInvoices.ReadOnly = true;
+			this.dgvInvoices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoices_CellClick);
 			// 
 			// lblViewCheck

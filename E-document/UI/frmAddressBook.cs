@@ -291,28 +291,58 @@ namespace E_document.UI
 		private void dataGridAddressBook_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			LabelVisibleTrue();
-			
-			lblCurrentId.Text = dataGridAddressBook.SelectedRows[0].Cells[0].Value.ToString();
-			txtTinNin.Text = dataGridAddressBook.SelectedRows[0].Cells[1].Value.ToString();
-			txtTitle.Text = dataGridAddressBook.SelectedRows[0].Cells[2].Value.ToString();
-			txtFirstName.Text = dataGridAddressBook.SelectedRows[0].Cells[3].Value.ToString();
-			txtLastName.Text = dataGridAddressBook.SelectedRows[0].Cells[4].Value.ToString();
-			txtStreet.Text = dataGridAddressBook.SelectedRows[0].Cells[5].Value.ToString();
-			txtApartName.Text = dataGridAddressBook.SelectedRows[0].Cells[6].Value.ToString();
 
-			txtApartNo.Text = dataGridAddressBook.SelectedRows[0].Cells[7].Value.ToString();
-			txtFloor.Text = dataGridAddressBook.SelectedRows[0].Cells[8].Value.ToString();
-			txtTown.Text = dataGridAddressBook.SelectedRows[0].Cells[9].Value.ToString();
-			txtDistrict.Text = dataGridAddressBook.SelectedRows[0].Cells[10].Value.ToString();
-			txtState.Text = dataGridAddressBook.SelectedRows[0].Cells[11].Value.ToString();
-			txtZip.Text = dataGridAddressBook.SelectedRows[0].Cells[12].Value.ToString();
+			//int indexRow = e.RowIndex;
+			//int indexColumn = e.ColumnIndex;
 
-			cmbCountry.Text = dataGridAddressBook.SelectedRows[0].Cells[13].Value.ToString();
-			txtPhone.Text = dataGridAddressBook.SelectedRows[0].Cells[14].Value.ToString();
-			txtFax.Text = dataGridAddressBook.SelectedRows[0].Cells[15].Value.ToString();
-			txtEmail.Text = dataGridAddressBook.SelectedRows[0].Cells[16].Value.ToString();
-			txtWeb.Text = dataGridAddressBook.SelectedRows[0].Cells[17].Value.ToString();
-			txtTaxAuth.Text = dataGridAddressBook.SelectedRows[0].Cells[18].Value.ToString();
+			//if (indexRow > 0 && indexColumn > 0)
+			//{
+			//	lblCurrentId.Text = dataGridAddressBook.SelectedRows[0].Cells[0].Value.ToString();
+			//	txtTinNin.Text = dataGridAddressBook.SelectedRows[0].Cells[1].Value.ToString();
+			//	txtTitle.Text = dataGridAddressBook.SelectedRows[0].Cells[2].Value.ToString();
+			//	txtFirstName.Text = dataGridAddressBook.SelectedRows[0].Cells[3].Value.ToString();
+			//	txtLastName.Text = dataGridAddressBook.SelectedRows[0].Cells[4].Value.ToString();
+			//	txtStreet.Text = dataGridAddressBook.SelectedRows[0].Cells[5].Value.ToString();
+			//	txtApartName.Text = dataGridAddressBook.SelectedRows[0].Cells[6].Value.ToString();
+
+			//	txtApartNo.Text = dataGridAddressBook.SelectedRows[0].Cells[7].Value.ToString();
+			//	txtFloor.Text = dataGridAddressBook.SelectedRows[0].Cells[8].Value.ToString();
+			//	txtTown.Text = dataGridAddressBook.SelectedRows[0].Cells[9].Value.ToString();
+			//	txtDistrict.Text = dataGridAddressBook.SelectedRows[0].Cells[10].Value.ToString();
+			//	txtState.Text = dataGridAddressBook.SelectedRows[0].Cells[11].Value.ToString();
+			//	txtZip.Text = dataGridAddressBook.SelectedRows[0].Cells[12].Value.ToString();
+
+			//	cmbCountry.Text = dataGridAddressBook.SelectedRows[0].Cells[13].Value.ToString();
+			//	txtPhone.Text = dataGridAddressBook.SelectedRows[0].Cells[14].Value.ToString();
+			//	txtFax.Text = dataGridAddressBook.SelectedRows[0].Cells[15].Value.ToString();
+			//	txtEmail.Text = dataGridAddressBook.SelectedRows[0].Cells[16].Value.ToString();
+			//	txtWeb.Text = dataGridAddressBook.SelectedRows[0].Cells[17].Value.ToString();
+			//	txtTaxAuth.Text = dataGridAddressBook.SelectedRows[0].Cells[18].Value.ToString();
+			//}
+
+			//dataGridAddressBook.CurrentCell.Selected = true;
+
+			lblCurrentId.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[0].Value.ToString();
+			txtTinNin.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[1].Value.ToString();
+			txtTitle.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[2].Value.ToString();
+			txtFirstName.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[3].Value.ToString();
+			txtLastName.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[4].Value.ToString();
+			txtStreet.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[5].Value.ToString();
+			txtApartName.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[6].Value.ToString();
+
+			txtApartNo.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[7].Value.ToString();
+			txtFloor.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[8].Value.ToString();
+			txtTown.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[9].Value.ToString();
+			txtDistrict.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[10].Value.ToString();
+			txtState.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[11].Value.ToString();
+			txtZip.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[12].Value.ToString();
+
+			cmbCountry.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[13].Value.ToString();
+			txtPhone.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[14].Value.ToString();
+			txtFax.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[15].Value.ToString();
+			txtEmail.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[16].Value.ToString();
+			txtWeb.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[17].Value.ToString();
+			txtTaxAuth.Text = dataGridAddressBook.Rows[e.RowIndex].Cells[18].Value.ToString();
 		}
 
 		private void chkIndividual_CheckedChanged(object sender, EventArgs e)
@@ -321,6 +351,8 @@ namespace E_document.UI
 			{
 				chkCorporate.Checked = false;
 				txtTitle.Enabled = false;
+
+
 				txtFirstName.Enabled = true;
 				txtLastName.Enabled = true;
 			}

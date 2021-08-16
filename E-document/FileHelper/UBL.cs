@@ -58,6 +58,8 @@ namespace E_document.FileHelper
 
         private List<InvoiceLine> invoiceLineField;
 
+        private DocumentReferenceType additionalDocumentReferenceField;
+
 
         public Invoice()
         {
@@ -74,6 +76,7 @@ namespace E_document.FileHelper
             taxTotalField = new TaxTotal();
             legalMonetaryTotalField = new LegalMonetaryTotal();
             invoiceLineField = new List<InvoiceLine>();
+            additionalDocumentReferenceField = new DocumentReferenceType();
         }
 
         public string Serialize()
@@ -83,12 +86,13 @@ namespace E_document.FileHelper
             serializer.Serialize(sr, this);
             return sr.ToString();
         }
+
         public void CreateXmlString(Invoice invoice)
 		{
             string xmlString = invoice.Serialize();
             File.WriteAllText("deneme.xml", xmlString, Encoding.UTF8);
 		}
-       
+        
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
         public string CustomizationID
         {
@@ -113,9 +117,16 @@ namespace E_document.FileHelper
         {
             private AttachmentType attachmentField;
 
-            /// <remarks/>
-            public AttachmentType Attachment { get { return this.attachmentField; } set { this.attachmentField = value; } }
-        }      
+			public DocumentReferenceType()
+			{
+				//additionalDocumentReferenceField = new DocumentReferenceType();
+                attachmentField = new AttachmentType();
+			}
+
+			/// <remarks/>
+			public AttachmentType Attachment { get { return this.attachmentField; } set { this.attachmentField = value; } }
+        }
+        
 
         /// <remarks/>
         [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.33440")]
@@ -210,6 +221,18 @@ namespace E_document.FileHelper
             /// <remarks/>
             [System.Xml.Serialization.XmlTextAttribute(DataType = "base64Binary")]
             public byte[] Value { get { return this.valueField; } set { this.valueField = value; } }
+        }
+
+        public DocumentReferenceType AdditionalDocumentReference
+        {
+            get
+            {
+                return this.additionalDocumentReferenceField;
+            }
+            set
+            {
+                this.additionalDocumentReferenceField = value;
+            }
         }
 
         /// <remarks/>
@@ -591,23 +614,10 @@ namespace E_document.FileHelper
     {
 
         private BillingReferenceInvoiceDocumentReference invoiceDocumentReferenceField;
-        private DocumentReferenceType additionalDocumentReferenceField;
 
         public BillingReference()
         {
             invoiceDocumentReferenceField = new BillingReferenceInvoiceDocumentReference();
-        }
-
-        public DocumentReferenceType AdditionalDocumentReference 
-        {
-            get 
-            { 
-                return this.additionalDocumentReferenceField; 
-            } 
-            set 
-            { 
-                this.additionalDocumentReferenceField = value; 
-            } 
         }
 
         /// <remarks/>

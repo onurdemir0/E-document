@@ -91,7 +91,6 @@ namespace E_document.UI
 			// 
 			// pnlCustomer
 			// 
-			resources.ApplyResources(this.pnlCustomer, "pnlCustomer");
 			this.pnlCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.pnlCustomer.Controls.Add(this.lblDelete);
 			this.pnlCustomer.Controls.Add(this.lblFail);
@@ -138,6 +137,7 @@ namespace E_document.UI
 			this.pnlCustomer.Controls.Add(this.lblTitle);
 			this.pnlCustomer.Controls.Add(this.lblTinNin);
 			this.pnlCustomer.Controls.Add(this.lblCustomerTitle);
+			resources.ApplyResources(this.pnlCustomer, "pnlCustomer");
 			this.pnlCustomer.Name = "pnlCustomer";
 			// 
 			// lblDelete
@@ -192,8 +192,8 @@ namespace E_document.UI
 			// 
 			// cmbCountry
 			// 
-			resources.ApplyResources(this.cmbCountry, "cmbCountry");
 			this.cmbCountry.FormattingEnabled = true;
+			resources.ApplyResources(this.cmbCountry, "cmbCountry");
 			this.cmbCountry.Name = "cmbCountry";
 			// 
 			// chkIndividual
@@ -395,15 +395,19 @@ namespace E_document.UI
 			// 
 			// panel1
 			// 
-			resources.ApplyResources(this.panel1, "panel1");
 			this.panel1.Controls.Add(this.dataGridAddressBook);
+			resources.ApplyResources(this.panel1, "panel1");
 			this.panel1.Name = "panel1";
 			// 
 			// dataGridAddressBook
 			// 
-			resources.ApplyResources(this.dataGridAddressBook, "dataGridAddressBook");
+			this.dataGridAddressBook.AllowUserToAddRows = false;
+			this.dataGridAddressBook.AllowUserToDeleteRows = false;
 			this.dataGridAddressBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			resources.ApplyResources(this.dataGridAddressBook, "dataGridAddressBook");
 			this.dataGridAddressBook.Name = "dataGridAddressBook";
+			this.dataGridAddressBook.ReadOnly = true;
+			this.dataGridAddressBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridAddressBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAddressBook_CellClick);
 			// 
 			// sqLiteCommandBuilder1

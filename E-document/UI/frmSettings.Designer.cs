@@ -319,9 +319,13 @@ namespace E_document.UI
 			// 
 			// dataGridSettings
 			// 
+			this.dataGridSettings.AllowUserToAddRows = false;
+			this.dataGridSettings.AllowUserToDeleteRows = false;
 			this.dataGridSettings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			resources.ApplyResources(this.dataGridSettings, "dataGridSettings");
 			this.dataGridSettings.Name = "dataGridSettings";
+			this.dataGridSettings.ReadOnly = true;
+			this.dataGridSettings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridSettings.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSettings_CellClick);
 			// 
 			// btnDelete

@@ -43,8 +43,10 @@ namespace E_document.UI
 			dtpWayBillDate.Format = DateTimePickerFormat.Custom;
 			dtpWayBillDate.CustomFormat = " ";
 			dtpWayBillDate.MaxDate = DateTime.Now;
+			dtpWayBillDate.MinDate = DateTime.Today.AddDays(-7);
 
 			dtpBillDate.MaxDate = DateTime.Now;
+			dtpBillDate.MinDate = DateTime.Today.AddDays(-7);
 		}
 
 		private void ComboBoxItemSetting()
@@ -504,7 +506,7 @@ namespace E_document.UI
 		{
 			string xsltString = File.ReadAllText("sablon.xslt");
 			xsltString = Transformer.EncodeTo64(xsltString);
-			byte[] examp = { };
+			byte[] examp = { 1, 2, 3 };
 
 			//XML OLUŞTUR
 			Invoice invoice = new Invoice();
@@ -631,6 +633,23 @@ namespace E_document.UI
 				TaxSubtotal = new List<TaxTotalTaxSubtotal>() { }
 			};
 
+			invoice.AdditionalDocumentReference = new Invoice.DocumentReferenceType
+			{
+				Attachment =
+				{
+					EmbeddedDocumentBinaryObject =
+					{
+						encodingCode = "Base64",
+						mimeCode = "application/xml",
+						characterSetCode = "UTF-8",
+						format = xsltString,
+						filename = "sablon.xslt",
+						uri = "abc",
+						Value = examp
+					}
+				}
+			};
+
 			invoice.BillingReference = new BillingReference()
 			{
 				InvoiceDocumentReference =
@@ -641,25 +660,23 @@ namespace E_document.UI
 					},
 					IssueDate = bill.BillDate,
 				},
-				AdditionalDocumentReference =
-				{
-					Attachment =
-					{
-						EmbeddedDocumentBinaryObject =
-						{
-							encodingCode = "Base64",
-							mimeCode = "application/xml",
-							characterSetCode = "UTF-8",
-							format = xsltString,
-							filename = "sablon.xslt",
-							uri = " ",
-							Value = examp
-						}
-					}
-				}
+				//AdditionalDocumentReference =
+				//{
+				//	Attachment =
+				//	{
+				//		EmbeddedDocumentBinaryObject =
+				//		{
+				//			encodingCode = "Base64",
+				//			mimeCode = "application/xml",
+				//			characterSetCode = "UTF-8",
+				//			format = xsltString,
+				//			filename = "sablon.xslt",
+				//			uri = " ",
+				//			Value = examp
+				//		}
+				//	}
+				//}
 			};
-
-			
 
 			//invoice.CustomizationID = ??
 			//invoice.DocumentCurrencyCode = ??

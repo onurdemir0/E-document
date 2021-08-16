@@ -221,20 +221,36 @@ namespace E_document.UI
 			TextBoxEnableTrue();
 			//txtCompanyId.Text = dataGridSettings.SelectedRows[0].Cells[0].Value.ToString();
 			LabelVisibleTrue();
-			lblCurrentId.Text = dataGridSettings.SelectedRows[0].Cells[0].Value.ToString();
-			txtCompanyName.Text = dataGridSettings.SelectedRows[0].Cells[1].Value.ToString();
-			txtEmail.Text = dataGridSettings.SelectedRows[0].Cells[2].Value.ToString();
-			txtMobile.Text = dataGridSettings.SelectedRows[0].Cells[3].Value.ToString();
-			txtWeb.Text = dataGridSettings.SelectedRows[0].Cells[4].Value.ToString();
-			txtTaxAuth.Text = dataGridSettings.SelectedRows[0].Cells[5].Value.ToString();
-			txtTaxIdentity.Text = dataGridSettings.SelectedRows[0].Cells[6].Value.ToString();
 
-			txtAddress1.Text = dataGridSettings.SelectedRows[0].Cells[7].Value.ToString();
-			txtAddress2.Text = dataGridSettings.SelectedRows[0].Cells[8].Value.ToString();
-			txtCity.Text = dataGridSettings.SelectedRows[0].Cells[9].Value.ToString();
-			txtState.Text = dataGridSettings.SelectedRows[0].Cells[10].Value.ToString();
-			txtZip.Text = dataGridSettings.SelectedRows[0].Cells[11].Value.ToString();
-			cmbCountry.Text = dataGridSettings.SelectedRows[0].Cells[12].Value.ToString();
+			//lblCurrentId.Text = dataGridSettings.SelectedRows[0].Cells[0].Value.ToString();
+			//txtCompanyName.Text = dataGridSettings.SelectedRows[0].Cells[1].Value.ToString();
+			//txtEmail.Text = dataGridSettings.SelectedRows[0].Cells[2].Value.ToString();
+			//txtMobile.Text = dataGridSettings.SelectedRows[0].Cells[3].Value.ToString();
+			//txtWeb.Text = dataGridSettings.SelectedRows[0].Cells[4].Value.ToString();
+			//txtTaxAuth.Text = dataGridSettings.SelectedRows[0].Cells[5].Value.ToString();
+			//txtTaxIdentity.Text = dataGridSettings.SelectedRows[0].Cells[6].Value.ToString();
+
+			//txtAddress1.Text = dataGridSettings.SelectedRows[0].Cells[7].Value.ToString();
+			//txtAddress2.Text = dataGridSettings.SelectedRows[0].Cells[8].Value.ToString();
+			//txtCity.Text = dataGridSettings.SelectedRows[0].Cells[9].Value.ToString();
+			//txtState.Text = dataGridSettings.SelectedRows[0].Cells[10].Value.ToString();
+			//txtZip.Text = dataGridSettings.SelectedRows[0].Cells[11].Value.ToString();
+			//cmbCountry.Text = dataGridSettings.SelectedRows[0].Cells[12].Value.ToString();
+
+			lblCurrentId.Text = dataGridSettings.Rows[e.RowIndex].Cells[0].Value.ToString();
+			txtCompanyName.Text = dataGridSettings.Rows[e.RowIndex].Cells[1].Value.ToString();
+			txtEmail.Text = dataGridSettings.Rows[e.RowIndex].Cells[2].Value.ToString();
+			txtMobile.Text = dataGridSettings.Rows[e.RowIndex].Cells[3].Value.ToString();
+			txtWeb.Text = dataGridSettings.Rows[e.RowIndex].Cells[4].Value.ToString();
+			txtTaxAuth.Text = dataGridSettings.Rows[e.RowIndex].Cells[5].Value.ToString();
+			txtTaxIdentity.Text = dataGridSettings.Rows[e.RowIndex].Cells[6].Value.ToString();
+
+			txtAddress1.Text = dataGridSettings.Rows[e.RowIndex].Cells[7].Value.ToString();
+			txtAddress2.Text = dataGridSettings.Rows[e.RowIndex].Cells[8].Value.ToString();
+			txtCity.Text = dataGridSettings.Rows[e.RowIndex].Cells[9].Value.ToString();
+			txtState.Text = dataGridSettings.Rows[e.RowIndex].Cells[10].Value.ToString();
+			txtZip.Text = dataGridSettings.Rows[e.RowIndex].Cells[11].Value.ToString();
+			cmbCountry.Text = dataGridSettings.Rows[e.RowIndex].Cells[12].Value.ToString();
 		}
 
 		private void btnUpdate_Click(object sender, EventArgs e)
