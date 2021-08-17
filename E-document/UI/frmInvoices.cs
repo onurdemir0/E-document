@@ -65,9 +65,9 @@ namespace E_document.UI
 			}
 			else
 			{
-				//MessageBox.Show(bill.XmlString);
-				string htmlString = Transformer.TransformXMLToHTML(xmlString, box, encoded, removePreambles, barcode, showAttachments);
-				MessageBox.Show(htmlString);
+				MessageBox.Show(bill.XmlString);
+				//string htmlString = Transformer.TransformXMLToHTML(xmlString, box, encoded, removePreambles, barcode, showAttachments);
+				//MessageBox.Show(htmlString);
 			}			
 		}
 	}

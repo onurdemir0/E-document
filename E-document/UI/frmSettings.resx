@@ -117,352 +117,989 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBoxClose.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBoxClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        LD0hgpdP4AsAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="pictureBoxClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>630, 0</value>
-  </data>
-  <data name="pictureBoxClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 30</value>
-  </data>
-  <data name="pictureBoxClose.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBoxClose.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxClose.Name" xml:space="preserve">
-    <value>pictureBoxClose</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxClose.Parent" xml:space="preserve">
-    <value>pnlTop</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxClose.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblTop.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblTop.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="lblTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 3</value>
-  </data>
-  <data name="lblTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 21</value>
-  </data>
-  <data name="lblTop.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblTop.Text" xml:space="preserve">
-    <value>SETTINGS</value>
-  </data>
-  <data name="&gt;&gt;lblTop.Name" xml:space="preserve">
-    <value>lblTop</value>
-  </data>
-  <data name="&gt;&gt;lblTop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTop.Parent" xml:space="preserve">
-    <value>pnlTop</value>
-  </data>
-  <data name="&gt;&gt;lblTop.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pnlTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="pnlTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnlTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>665, 30</value>
-  </data>
-  <data name="pnlTop.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pnlTop.Name" xml:space="preserve">
-    <value>pnlTop</value>
-  </data>
-  <data name="&gt;&gt;pnlTop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlTop.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlTop.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lblUpdate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 9</value>
-  </data>
-  <data name="lblUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 13</value>
-  </data>
-  <data name="lblUpdate.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="lblUpdate.Text" xml:space="preserve">
-    <value>Successfully Updated!</value>
-  </data>
-  <data name="lblUpdate.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblUpdate.Name" xml:space="preserve">
-    <value>lblUpdate</value>
-  </data>
-  <data name="&gt;&gt;lblUpdate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblUpdate.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblUpdate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblTax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>486, 8</value>
-  </data>
-  <data name="lblTax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 23</value>
-  </data>
-  <data name="lblTax.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="lblTax.Text" xml:space="preserve">
-    <value>Please fill in the required fields!</value>
-  </data>
-  <data name="lblTax.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblTax.Name" xml:space="preserve">
-    <value>lblTax</value>
-  </data>
-  <data name="&gt;&gt;lblTax.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTax.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblTax.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblReq.Location" type="System.Drawing.Point, System.Drawing">
-    <value>486, 10</value>
-  </data>
-  <data name="lblReq.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="lblReq.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="&gt;&gt;lblReq.Name" xml:space="preserve">
-    <value>lblReq</value>
-  </data>
-  <data name="&gt;&gt;lblReq.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblReq.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblReq.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="cmbCountry.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 222</value>
-  </data>
-  <data name="cmbCountry.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 21</value>
-  </data>
-  <data name="cmbCountry.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
-  </data>
-  <data name="&gt;&gt;cmbCountry.Name" xml:space="preserve">
-    <value>cmbCountry</value>
-  </data>
-  <data name="&gt;&gt;cmbCountry.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbCountry.Parent" xml:space="preserve">
-    <value>pnlContent</value>
+  <data name="txtZip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
   </data>
   <data name="&gt;&gt;cmbCountry.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblTitle.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="lblCompanyId.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTaxIdentity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="lblAddress1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 41</value>
+  </data>
+  <data name="txtMobile.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblEmail.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCompanyId.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblAddress1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblFail.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;lblMobile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtMobile.Name" xml:space="preserve">
+    <value>txtMobile</value>
+  </data>
+  <data name="&gt;&gt;pnlContent.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cmbCountry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 21</value>
+  </data>
+  <data name="lblCountry.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;lblUpdate.Name" xml:space="preserve">
+    <value>lblUpdate</value>
+  </data>
+  <data name="txtCity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblTaxAuth.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblCompanyName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 13</value>
+  </data>
+  <data name="&gt;&gt;lblMobile.Name" xml:space="preserve">
+    <value>lblMobile</value>
+  </data>
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 15</value>
+  </data>
+  <data name="lblZip.Text" xml:space="preserve">
+    <value>ZIP/Postal Code:</value>
+  </data>
+  <data name="cmbCountry.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTaxAuth.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblCountry.Text" xml:space="preserve">
+    <value>Country*:</value>
+  </data>
+  <data name="lblTaxIdentity.Text" xml:space="preserve">
+    <value>Tax Identity*:</value>
+  </data>
+  <data name="&gt;&gt;pnlDataGrid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtWeb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sqLiteCommandBuilder1.Type" xml:space="preserve">
+    <value>System.Data.SQLite.SQLiteCommandBuilder, System.Data.SQLite, Version=1.0.114.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139</value>
+  </data>
+  <data name="&gt;&gt;lblZip.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="txtAddress2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="&gt;&gt;lblSuccess.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbCountry.Name" xml:space="preserve">
+    <value>cmbCountry</value>
+  </data>
+  <data name="&gt;&gt;txtMobile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblZip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtAddress1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="pnlDataGrid.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtZip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblCurrentId.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblWeb.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;lblAddress2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtAddress2.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtWeb.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;txtAddress2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lblWeb.Name" xml:space="preserve">
+    <value>lblWeb</value>
+  </data>
+  <data name="txtWeb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="txtZip.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCompanyId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 13</value>
+  </data>
+  <data name="lblTax.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblCountry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="lblEmail.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblCompanyName.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSuccess.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="lblWeb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtCompanyName.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSave.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblSuccess.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblTaxAuth.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 77</value>
+  </data>
+  <data name="txtWeb.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblZip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtTaxIdentity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="txtMobile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 111</value>
+  </data>
+  <data name="lblAddress1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblZip.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dataGridSettings.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblCurrentId.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblWeb.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 278</value>
+  </data>
+  <data name="&gt;&gt;txtState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTaxIdentity.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;lblCompanyName.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="lblReq.Location" type="System.Drawing.Point, System.Drawing">
+    <value>486, 10</value>
+  </data>
+  <data name="btnUpdate.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridSettings.Name" xml:space="preserve">
+    <value>dataGridSettings</value>
+  </data>
+  <data name="lblEmail.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblZip.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="txtState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="lblFail.Text" xml:space="preserve">
+    <value>Failed!</value>
+  </data>
+  <data name="lblWeb.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtTaxAuth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 183</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentId.Name" xml:space="preserve">
+    <value>lblCurrentId</value>
+  </data>
+  <data name="&gt;&gt;lblState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAddress1.Name" xml:space="preserve">
+    <value>txtAddress1</value>
+  </data>
+  <data name="&gt;&gt;lblTaxIdentity.Name" xml:space="preserve">
+    <value>lblTaxIdentity</value>
+  </data>
+  <data name="lblAddress2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 77</value>
+  </data>
+  <data name="btnUpdate.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtTaxAuth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cmbCountry.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 222</value>
+  </data>
+  <data name="txtMobile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="&gt;&gt;txtMobile.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="txtCity.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblAddress1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblCompanyName.Name" xml:space="preserve">
+    <value>lblCompanyName</value>
+  </data>
+  <data name="lblCurrentId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtCompanyName.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="lblSuccess.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="lblFail.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblCity.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblUpdate.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblCompanyName.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="dataGridSettings.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtAddress2.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="txtTaxAuth.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblReq.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblAddress1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCountry.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 225</value>
+  </data>
+  <data name="txtAddress1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 38</value>
+  </data>
+  <data name="&gt;&gt;lblCity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblAddress2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="&gt;&gt;txtCity.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>DELETE</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentId.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="&gt;&gt;pnlDataGrid.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="lblWeb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 150</value>
+  </data>
+  <data name="btnUpdate.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 283</value>
+  </data>
+  <data name="lblFail.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblAddress1.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="cmbCountry.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;pnlContent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblAddress2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtCity.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTaxAuth.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblTaxIdentity.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="btnSave.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtAddress1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lblTaxAuth.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="pnlDataGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 309</value>
+  </data>
+  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 74</value>
+  </data>
+  <data name="&gt;&gt;txtZip.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;pnlDataGrid.Name" xml:space="preserve">
+    <value>pnlDataGrid</value>
+  </data>
+  <data name="lblState.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblCountry.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblState.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblWeb.Text" xml:space="preserve">
+    <value>Web Site:</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 278</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtTaxIdentity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="txtCompanyName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;lblWeb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblState.Name" xml:space="preserve">
+    <value>lblState</value>
+  </data>
+  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;txtWeb.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblCompanyId.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblTax.Text" xml:space="preserve">
+    <value>Please fill in the required fields!</value>
+  </data>
+  <data name="&gt;&gt;lblFail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 147</value>
+  </data>
+  <data name="lblTaxAuth.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblWeb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="&gt;&gt;lblZip.Name" xml:space="preserve">
+    <value>lblZip</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCompanyId.Name" xml:space="preserve">
+    <value>lblCompanyId</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lblFail.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblFail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="&gt;&gt;lblCountry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="txtAddress1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtCompanyName.Name" xml:space="preserve">
+    <value>txtCompanyName</value>
+  </data>
+  <data name="&gt;&gt;lblAddress2.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lblSuccess.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtTaxIdentity.Name" xml:space="preserve">
+    <value>txtTaxIdentity</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="lblMobile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 8</value>
+  </data>
+  <data name="lblUpdate.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblTaxAuth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCompanyId.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>SAVE</value>
+  </data>
+  <data name="lblUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="txtMobile.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtZip.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="lblTaxIdentity.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblDelete.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblCity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="lblCurrentId.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="lblFail.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="lblTaxAuth.Text" xml:space="preserve">
+    <value>Tax Authority*:</value>
+  </data>
+  <data name="txtZip.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtAddress1.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="&gt;&gt;lblReq.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblCompanyName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblTaxIdentity.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblTax.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDelete.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCompanyId.Text" xml:space="preserve">
+    <value>ID:</value>
+  </data>
+  <data name="lblZip.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;txtZip.Name" xml:space="preserve">
+    <value>txtZip</value>
+  </data>
+  <data name="&gt;&gt;lblReq.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="&gt;&gt;lblTaxAuth.Name" xml:space="preserve">
+    <value>lblTaxAuth</value>
+  </data>
+  <data name="&gt;&gt;lblTaxIdentity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSuccess.Text" xml:space="preserve">
+    <value>Successfully Created!</value>
+  </data>
+  <data name="txtState.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="txtAddress1.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="pnlContent.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtTaxAuth.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="lblTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtCompanyName.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>486, 8</value>
+  </data>
+  <data name="&gt;&gt;lblTax.Name" xml:space="preserve">
+    <value>lblTax</value>
+  </data>
+  <data name="txtWeb.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtCompanyName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAddress1.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="lblTaxIdentity.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblEmail.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblCompanyName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMobile.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblZip.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblZip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 186</value>
+  </data>
+  <data name="&gt;&gt;lblCompanyId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblState.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="lblZip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblReq.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>642, 260</value>
+  </data>
+  <data name="lblState.Text" xml:space="preserve">
+    <value>State/Province*:</value>
+  </data>
+  <data name="lblTax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 23</value>
+  </data>
+  <data name="&gt;&gt;lblCountry.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;pnlContent.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblCompanyName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 41</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblCountry.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;lblZip.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="&gt;&gt;pnlDataGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblMobile.Text" xml:space="preserve">
+    <value>Mobile:</value>
+  </data>
+  <data name="lblCity.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblCurrentId.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;txtCity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtAddress2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
   <data name="lblCurrentId.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblTaxAuth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="txtTaxAuth.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;txtCity.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="txtCity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 111</value>
+  </data>
+  <data name="dataGridSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtMobile.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;lblAddress2.Name" xml:space="preserve">
+    <value>lblAddress2</value>
+  </data>
+  <data name="lblUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 9</value>
+  </data>
+  <data name="lblAddress2.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="btnDelete.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtZip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtWeb.Name" xml:space="preserve">
+    <value>txtWeb</value>
+  </data>
+  <data name="&gt;&gt;lblAddress2.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="&gt;&gt;lblFail.Name" xml:space="preserve">
+    <value>lblFail</value>
+  </data>
+  <data name="&gt;&gt;lblCountry.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="lblTaxAuth.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblTaxAuth.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="&gt;&gt;txtTaxIdentity.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="lblReq.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="lblState.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblTitle.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblState.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCompanyName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="pnlContent.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="pnlContent.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridSettings.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblReq.Name" xml:space="preserve">
+    <value>lblReq</value>
+  </data>
+  <data name="lblSuccess.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblUpdate.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="lblAddress1.Text" xml:space="preserve">
+    <value>Address Line 1:</value>
+  </data>
+  <data name="lblDelete.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEmail.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtMobile.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;lblState.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtTaxIdentity.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblCountry.Name" xml:space="preserve">
+    <value>lblCountry</value>
+  </data>
+  <data name="cmbCountry.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtEmail.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="lblTaxIdentity.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;cmbCountry.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="txtCompanyName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="&gt;&gt;lblCity.Name" xml:space="preserve">
+    <value>lblCity</value>
+  </data>
+  <data name="pnlDataGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>642, 142</value>
+  </data>
+  <data name="&gt;&gt;dataGridSettings.Parent" xml:space="preserve">
+    <value>pnlDataGrid</value>
+  </data>
+  <data name="lblMobile.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="txtState.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblCity.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;lblMobile.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="lblSuccess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 13</value>
+  </data>
+  <data name="txtCity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="lblCity.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="lblMobile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;txtAddress2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblTax.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="lblCity.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCity.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtTaxIdentity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblTaxIdentity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 225</value>
+  </data>
+  <data name="lblCity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 114</value>
+  </data>
+  <data name="lblDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 283</value>
+  </data>
+  <data name="txtCompanyName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 38</value>
+  </data>
+  <data name="&gt;&gt;lblCompanyName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtAddress1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblWeb.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnDelete.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblAddress2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblDelete.Name" xml:space="preserve">
+    <value>lblDelete</value>
+  </data>
+  <data name="lblTitle.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblTaxIdentity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblDelete.Text" xml:space="preserve">
+    <value>Successfully Deleted!</value>
   </data>
   <data name="lblCurrentId.Location" type="System.Drawing.Point, System.Drawing">
     <value>439, 10</value>
@@ -470,773 +1107,395 @@
   <data name="lblCurrentId.Size" type="System.Drawing.Size, System.Drawing">
     <value>13, 13</value>
   </data>
-  <data name="lblCurrentId.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
+  <data name="lblFail.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="lblCurrentId.Text" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblCurrentId.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblCurrentId.Name" xml:space="preserve">
-    <value>lblCurrentId</value>
-  </data>
-  <data name="&gt;&gt;lblCurrentId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCurrentId.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblTax.Parent" xml:space="preserve">
     <value>pnlContent</value>
   </data>
-  <data name="&gt;&gt;lblCurrentId.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
+    <value>btnUpdate</value>
   </data>
-  <data name="lblCompanyId.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="txtCity.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
-  <data name="lblCompanyId.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="lblCompanyId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 10</value>
-  </data>
-  <data name="lblCompanyId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 13</value>
-  </data>
-  <data name="lblCompanyId.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="lblCompanyId.Text" xml:space="preserve">
-    <value>ID:</value>
-  </data>
-  <data name="&gt;&gt;lblCompanyId.Name" xml:space="preserve">
-    <value>lblCompanyId</value>
-  </data>
-  <data name="&gt;&gt;lblCompanyId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCompanyId.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblCompanyId.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="txtState.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="txtState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 147</value>
-  </data>
-  <data name="txtState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtState.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;txtState.Name" xml:space="preserve">
-    <value>txtState</value>
-  </data>
-  <data name="&gt;&gt;txtState.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtState.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;txtState.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lblState.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblState.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="lblState.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 150</value>
-  </data>
-  <data name="lblState.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 13</value>
-  </data>
-  <data name="lblState.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="lblState.Text" xml:space="preserve">
-    <value>State/Province*:</value>
-  </data>
-  <data name="&gt;&gt;lblState.Name" xml:space="preserve">
-    <value>lblState</value>
-  </data>
-  <data name="&gt;&gt;lblState.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblState.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblState.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="txtCity.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="txtCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 111</value>
-  </data>
-  <data name="txtCity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtCity.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;txtCity.Name" xml:space="preserve">
-    <value>txtCity</value>
-  </data>
-  <data name="&gt;&gt;txtCity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtCity.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;txtCity.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="txtAddress2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="txtAddress2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 74</value>
-  </data>
-  <data name="txtAddress2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtAddress2.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;txtAddress2.Name" xml:space="preserve">
-    <value>txtAddress2</value>
-  </data>
-  <data name="&gt;&gt;txtAddress2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtAddress2.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;txtAddress2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="txtZip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="txtZip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 183</value>
-  </data>
-  <data name="txtZip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtZip.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;txtZip.Name" xml:space="preserve">
-    <value>txtZip</value>
-  </data>
-  <data name="&gt;&gt;txtZip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtZip.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;txtZip.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="txtAddress1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="txtAddress1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 38</value>
-  </data>
-  <data name="txtAddress1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtAddress1.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;txtAddress1.Name" xml:space="preserve">
-    <value>txtAddress1</value>
-  </data>
-  <data name="&gt;&gt;txtAddress1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtAddress1.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;txtAddress1.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lblCity.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblCity.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="lblCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 114</value>
-  </data>
-  <data name="lblCity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="lblCity.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="lblCity.Text" xml:space="preserve">
-    <value>City*:</value>
-  </data>
-  <data name="&gt;&gt;lblCity.Name" xml:space="preserve">
-    <value>lblCity</value>
-  </data>
-  <data name="&gt;&gt;lblCity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCity.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblCity.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="lblAddress2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblAddress2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="lblAddress2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 77</value>
-  </data>
-  <data name="lblAddress2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
-  </data>
-  <data name="lblAddress2.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="lblAddress2.Text" xml:space="preserve">
-    <value>Address Line 2:</value>
-  </data>
-  <data name="&gt;&gt;lblAddress2.Name" xml:space="preserve">
-    <value>lblAddress2</value>
-  </data>
-  <data name="&gt;&gt;lblAddress2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAddress2.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblAddress2.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="lblCountry.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblCountry.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="lblCountry.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 225</value>
-  </data>
-  <data name="lblCountry.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
-  </data>
-  <data name="lblCountry.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="lblCountry.Text" xml:space="preserve">
-    <value>Country*:</value>
-  </data>
-  <data name="&gt;&gt;lblCountry.Name" xml:space="preserve">
-    <value>lblCountry</value>
-  </data>
-  <data name="&gt;&gt;lblCountry.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCountry.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblCountry.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="lblZip.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblZip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="lblZip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 186</value>
-  </data>
-  <data name="lblZip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 13</value>
-  </data>
-  <data name="lblZip.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="lblZip.Text" xml:space="preserve">
-    <value>ZIP/Postal Code:</value>
-  </data>
-  <data name="&gt;&gt;lblZip.Name" xml:space="preserve">
-    <value>lblZip</value>
-  </data>
-  <data name="&gt;&gt;lblZip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblZip.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblZip.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="lblAddress1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblAddress1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="lblAddress1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 41</value>
-  </data>
-  <data name="lblAddress1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
-  </data>
-  <data name="lblAddress1.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="lblAddress1.Text" xml:space="preserve">
-    <value>Address Line 1:</value>
-  </data>
-  <data name="&gt;&gt;lblAddress1.Name" xml:space="preserve">
-    <value>lblAddress1</value>
-  </data>
-  <data name="&gt;&gt;lblAddress1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAddress1.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblAddress1.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="txtWeb.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="txtWeb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 147</value>
-  </data>
-  <data name="txtWeb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtWeb.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;txtWeb.Name" xml:space="preserve">
-    <value>txtWeb</value>
-  </data>
-  <data name="&gt;&gt;txtWeb.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtWeb.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;txtWeb.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="lblWeb.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblWeb.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="lblWeb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 150</value>
-  </data>
-  <data name="lblWeb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
-  </data>
-  <data name="lblWeb.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="lblWeb.Text" xml:space="preserve">
-    <value>Web Site:</value>
-  </data>
-  <data name="&gt;&gt;lblWeb.Name" xml:space="preserve">
-    <value>lblWeb</value>
-  </data>
-  <data name="&gt;&gt;lblWeb.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblWeb.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblWeb.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="txtMobile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="txtMobile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 111</value>
-  </data>
-  <data name="txtMobile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtMobile.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;txtMobile.Name" xml:space="preserve">
-    <value>txtMobile</value>
-  </data>
-  <data name="&gt;&gt;txtMobile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtMobile.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;txtMobile.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 74</value>
-  </data>
-  <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;txtEmail.Name" xml:space="preserve">
-    <value>txtEmail</value>
-  </data>
-  <data name="&gt;&gt;txtEmail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtEmail.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="txtTaxIdentity.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="txtTaxIdentity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 222</value>
-  </data>
-  <data name="txtTaxIdentity.MaxLength" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="txtTaxIdentity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtTaxIdentity.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;txtTaxIdentity.Name" xml:space="preserve">
-    <value>txtTaxIdentity</value>
-  </data>
-  <data name="&gt;&gt;txtTaxIdentity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtTaxIdentity.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;txtTaxIdentity.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="txtTaxAuth.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="txtTaxAuth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 183</value>
-  </data>
-  <data name="txtTaxAuth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtTaxAuth.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;txtTaxAuth.Name" xml:space="preserve">
-    <value>txtTaxAuth</value>
-  </data>
-  <data name="&gt;&gt;txtTaxAuth.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtTaxAuth.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;txtTaxAuth.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="txtCompanyName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="txtCompanyName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 38</value>
-  </data>
-  <data name="txtCompanyName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="txtCompanyName.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;txtCompanyName.Name" xml:space="preserve">
-    <value>txtCompanyName</value>
-  </data>
-  <data name="&gt;&gt;txtCompanyName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtCompanyName.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;txtCompanyName.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="lblMobile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMobile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="&gt;&gt;lblReq.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="lblMobile.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 114</value>
   </data>
-  <data name="lblMobile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
+  <data name="pnlContent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 11</value>
   </data>
-  <data name="lblMobile.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+  <data name="dataGridSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>595, 134</value>
   </data>
-  <data name="lblMobile.Text" xml:space="preserve">
-    <value>Mobile:</value>
+  <data name="lblAddress2.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;lblMobile.Name" xml:space="preserve">
-    <value>lblMobile</value>
+  <data name="txtAddress2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;lblMobile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtTaxIdentity.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;lblMobile.Parent" xml:space="preserve">
-    <value>pnlContent</value>
+  <data name="&gt;&gt;lblUpdate.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;lblMobile.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="lblEmail.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblMobile.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="lblCountry.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="lblEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 77</value>
-  </data>
-  <data name="lblEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 13</value>
-  </data>
-  <data name="lblEmail.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="lblEmail.Text" xml:space="preserve">
-    <value>E-Mail:</value>
+  <data name="txtTaxIdentity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 222</value>
   </data>
   <data name="&gt;&gt;lblEmail.Name" xml:space="preserve">
     <value>lblEmail</value>
   </data>
-  <data name="&gt;&gt;lblEmail.Type" xml:space="preserve">
+  <data name="txtCompanyName.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtTaxIdentity.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblCity.Text" xml:space="preserve">
+    <value>City*:</value>
+  </data>
+  <data name="btnSave.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtCompanyName.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Name" xml:space="preserve">
+    <value>txtEmail</value>
+  </data>
+  <data name="lblTaxIdentity.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAddress2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblTax.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblEmail.Parent" xml:space="preserve">
-    <value>pnlContent</value>
+  <data name="lblSuccess.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 283</value>
   </data>
-  <data name="&gt;&gt;lblEmail.ZOrder" xml:space="preserve">
-    <value>25</value>
+  <data name="&gt;&gt;txtCompanyName.ZOrder" xml:space="preserve">
+    <value>23</value>
   </data>
-  <data name="lblTaxIdentity.AutoSize" type="System.Boolean, mscorlib">
+  <data name="txtAddress2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 74</value>
+  </data>
+  <data name="lblUpdate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblTaxIdentity.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
+  <data name="lblState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 150</value>
   </data>
-  <data name="lblTaxIdentity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 225</value>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="lblTaxIdentity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 13</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmSettings</value>
   </data>
-  <data name="lblTaxIdentity.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+  <data name="lblZip.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="lblTaxIdentity.Text" xml:space="preserve">
-    <value>Tax Identity*:</value>
-  </data>
-  <data name="&gt;&gt;lblTaxIdentity.Name" xml:space="preserve">
-    <value>lblTaxIdentity</value>
-  </data>
-  <data name="&gt;&gt;lblTaxIdentity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTaxIdentity.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblTaxIdentity.ZOrder" xml:space="preserve">
+  <data name="txtWeb.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
   </data>
-  <data name="lblTaxAuth.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblDelete.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblTaxAuth.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="dataGridSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
+    <value>lblTitle</value>
+  </data>
+  <data name="lblState.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtState.Name" xml:space="preserve">
+    <value>txtState</value>
+  </data>
+  <data name="txtEmail.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblSuccess.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtMobile.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="lblTaxAuth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 186</value>
-  </data>
-  <data name="lblTaxAuth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 13</value>
-  </data>
-  <data name="lblTaxAuth.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="lblTaxAuth.Text" xml:space="preserve">
-    <value>Tax Authority*:</value>
-  </data>
-  <data name="&gt;&gt;lblTaxAuth.Name" xml:space="preserve">
-    <value>lblTaxAuth</value>
-  </data>
-  <data name="&gt;&gt;lblTaxAuth.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTaxAuth.Parent" xml:space="preserve">
-    <value>pnlContent</value>
-  </data>
-  <data name="&gt;&gt;lblTaxAuth.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="lblCompanyName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblCompanyName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt</value>
-  </data>
-  <data name="lblCompanyName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 41</value>
-  </data>
-  <data name="lblCompanyName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 13</value>
+  <data name="lblState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
   </data>
   <data name="lblCompanyName.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="lblCompanyName.Text" xml:space="preserve">
-    <value>Company Name*:</value>
+  <data name="lblCompanyName.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;lblCompanyName.Name" xml:space="preserve">
-    <value>lblCompanyName</value>
+  <data name="txtAddress1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;lblCompanyName.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblFail.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblCompanyName.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblDelete.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtState.Parent" xml:space="preserve">
     <value>pnlContent</value>
   </data>
-  <data name="&gt;&gt;lblCompanyName.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;sqLiteCommandBuilder1.Name" xml:space="preserve">
+    <value>sqLiteCommandBuilder1</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblTaxAuth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 186</value>
+  </data>
+  <data name="&gt;&gt;lblMobile.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="txtWeb.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;dataGridSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtTaxAuth.Name" xml:space="preserve">
+    <value>txtTaxAuth</value>
+  </data>
+  <data name="txtTaxAuth.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblTax.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblTax.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblTaxAuth.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="lblUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
+  </data>
+  <data name="lblCurrentId.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="lblCompanyId.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;txtCity.Name" xml:space="preserve">
+    <value>txtCity</value>
+  </data>
+  <data name="lblCompanyId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 10</value>
+  </data>
+  <data name="&gt;&gt;txtZip.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="txtCity.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="lblDelete.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblWeb.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblCountry.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblTax.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblState.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="lblEmail.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="lblTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lblAddress1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
   </data>
-  <data name="lblTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
-  </data>
-  <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 8</value>
-  </data>
-  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 15</value>
-  </data>
-  <data name="lblTitle.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblReq.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="lblTitle.Text" xml:space="preserve">
     <value>Save Company Information</value>
   </data>
-  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
-    <value>lblTitle</value>
+  <data name="lblAddress2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtState.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtAddress2.Name" xml:space="preserve">
+    <value>txtAddress2</value>
+  </data>
+  <data name="lblReq.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblAddress2.Text" xml:space="preserve">
+    <value>Address Line 2:</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="cmbCountry.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="txtZip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 183</value>
+  </data>
+  <data name="lblCompanyName.Text" xml:space="preserve">
+    <value>Company Name*:</value>
+  </data>
+  <data name="pnlDataGrid.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>665, 458</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentId.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtMobile.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCompanyId.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtTaxIdentity.Parent" xml:space="preserve">
     <value>pnlContent</value>
   </data>
-  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
-    <value>29</value>
+  <data name="lblDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 13</value>
   </data>
-  <data name="pnlContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 36</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>SETTINGS</value>
   </data>
-  <data name="pnlContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>642, 260</value>
+  <data name="&gt;&gt;cmbCountry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="pnlContent.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="txtTaxIdentity.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
   </data>
-  <data name="&gt;&gt;pnlContent.Name" xml:space="preserve">
-    <value>pnlContent</value>
+  <data name="&gt;&gt;lblAddress1.Name" xml:space="preserve">
+    <value>lblAddress1</value>
   </data>
-  <data name="&gt;&gt;pnlContent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblSuccess.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;pnlContent.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lblDelete.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;pnlContent.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="txtZip.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblMobile.Error" xml:space="preserve">
+    <value />
   </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>547, 301</value>
+    <value>547, 278</value>
   </data>
-  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>SAVE</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
-    <value>btnSave</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblDelete.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="txtTaxAuth.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
   </data>
-  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>440, 301</value>
+  <data name="&gt;&gt;lblCompanyId.Parent" xml:space="preserve">
+    <value>pnlContent</value>
   </data>
-  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="lblAddress1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
   </data>
-  <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
+  <data name="txtWeb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 147</value>
+  </data>
+  <data name="lblFail.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblWeb.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;lblWeb.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="&gt;&gt;lblSuccess.Name" xml:space="preserve">
+    <value>lblSuccess</value>
+  </data>
+  <data name="lblEmail.Text" xml:space="preserve">
+    <value>E-Mail:</value>
   </data>
   <data name="btnUpdate.Text" xml:space="preserve">
     <value>UPDATE</value>
   </data>
-  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
-    <value>btnUpdate</value>
+  <data name="txtAddress1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="lblDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="txtState.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtWeb.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pnlDataGrid.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtTaxIdentity.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;lblDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblUpdate.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtState.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblUpdate.Text" xml:space="preserve">
+    <value>Successfully Updated!</value>
+  </data>
+  <data name="&gt;&gt;txtAddress1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnlDataGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;txtState.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1244,8 +1503,44 @@
   <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="txtAddress2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt</value>
+  </data>
+  <data name="txtAddress2.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;txtTaxAuth.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="lblAddress1.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;lblSuccess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAddress1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblUpdate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblCompanyId.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;pnlContent.Name" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="lblCountry.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblCity.Parent" xml:space="preserve">
+    <value>pnlContent</value>
+  </data>
+  <data name="lblMobile.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtTaxAuth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -1253,192 +1548,6 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>665, 492</value>
-  </data>
-  <data name="lblDelete.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 306</value>
-  </data>
-  <data name="lblDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 13</value>
-  </data>
-  <data name="lblDelete.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="lblDelete.Text" xml:space="preserve">
-    <value>Successfully Deleted!</value>
-  </data>
-  <data name="lblDelete.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblDelete.Name" xml:space="preserve">
-    <value>lblDelete</value>
-  </data>
-  <data name="&gt;&gt;lblDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDelete.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblDelete.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblFail.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblFail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 306</value>
-  </data>
-  <data name="lblFail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
-  </data>
-  <data name="lblFail.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="lblFail.Text" xml:space="preserve">
-    <value>Failed!</value>
-  </data>
-  <data name="lblFail.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblFail.Name" xml:space="preserve">
-    <value>lblFail</value>
-  </data>
-  <data name="&gt;&gt;lblFail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblFail.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblFail.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblSuccess.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblSuccess.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 306</value>
-  </data>
-  <data name="lblSuccess.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 13</value>
-  </data>
-  <data name="lblSuccess.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="lblSuccess.Text" xml:space="preserve">
-    <value>Successfully Created!</value>
-  </data>
-  <data name="lblSuccess.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblSuccess.Name" xml:space="preserve">
-    <value>lblSuccess</value>
-  </data>
-  <data name="&gt;&gt;lblSuccess.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSuccess.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblSuccess.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 301</value>
-  </data>
-  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="btnDelete.Text" xml:space="preserve">
-    <value>DELETE</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
-    <value>btnDelete</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="dataGridSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="dataGridSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>595, 133</value>
-  </data>
-  <data name="dataGridSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridSettings.Name" xml:space="preserve">
-    <value>dataGridSettings</value>
-  </data>
-  <data name="&gt;&gt;dataGridSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridSettings.Parent" xml:space="preserve">
-    <value>pnlDataGrid</value>
-  </data>
-  <data name="&gt;&gt;dataGridSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pnlDataGrid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 331</value>
-  </data>
-  <data name="pnlDataGrid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>642, 139</value>
-  </data>
-  <data name="pnlDataGrid.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="&gt;&gt;pnlDataGrid.Name" xml:space="preserve">
-    <value>pnlDataGrid</value>
-  </data>
-  <data name="&gt;&gt;pnlDataGrid.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlDataGrid.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlDataGrid.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>SETTINGS</value>
-  </data>
-  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
-    <value>errorProvider1</value>
-  </data>
-  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sqLiteCommandBuilder1.Name" xml:space="preserve">
-    <value>sqLiteCommandBuilder1</value>
-  </data>
-  <data name="&gt;&gt;sqLiteCommandBuilder1.Type" xml:space="preserve">
-    <value>System.Data.SQLite.SQLiteCommandBuilder, System.Data.SQLite, Version=1.0.114.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmSettings</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <metadata name="sqLiteCommandBuilder1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>147, 17</value>
   </metadata>

@@ -71,10 +71,6 @@ namespace E_document.UI
 			txtZip.Text = "";
 			cmbCountry.Text = "";
 		}
-		private void pictureBoxClose_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
 
 		private void LabelVisibleFalse()
 		{

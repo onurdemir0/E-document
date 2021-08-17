@@ -145,6 +145,7 @@ namespace E_document.UI
 
 			sql_con.Open();
 			SQLiteDataReader dr = sql_cmd.ExecuteReader();
+
 			AutoCompleteStringCollection myCollection = new AutoCompleteStringCollection();
 
 			while (dr.Read())

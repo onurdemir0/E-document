@@ -16,6 +16,12 @@ namespace E_document.UI
 {
 	public partial class Main : Form
 	{
+		frmCreateBill createBill;
+		frmAddressBook addressBook;
+		frmSettings settings;
+		frmInvoices invoices;
+
+
 		[DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 		private static extern IntPtr CreateRoundRectRgn
 		(
@@ -56,28 +62,99 @@ namespace E_document.UI
 			InitializeComponent();
 		}
 
+		private bool CheckOpened(string formName)
+		{
+			FormCollection formCollection = Application.OpenForms;
+
+			foreach (Form form in formCollection)
+			{
+				if (form.Text == formName)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
+		private void FormSet(Form form)
+		{
+			form.WindowState = FormWindowState.Normal;
+			form.Dock = DockStyle.Fill;
+			form.Show();
+			form.Focus();
+		}
+
+		//private void OpenForm(Form form)
+		//{
+		//	if (form == null || form.Text == "")
+		//	{
+		//		form = new Form();
+		//		form.Show();
+		//	}
+
+		//	else if (CheckOpened(form.Text))
+		//	{
+		//		form.WindowState = FormWindowState.Normal;
+		//		form.Dock = DockStyle.Fill;
+		//		form.Show();
+		//		form.Focus();
+		//	}
+		//}
+
 		private void btnCreateInvoice_Click(object sender, EventArgs e)
 		{
-			frmCreateBill createBill = new frmCreateBill();
-			createBill.Show();
+			if (createBill == null || createBill.Text == "")
+			{
+				createBill = new frmCreateBill();
+				createBill.Show();
+			}
+
+			else if (CheckOpened(createBill.Text))
+			{
+				FormSet(createBill);
+			}
+
+			//OpenForm(createBill);
 		}
 
 		private void btnAddressBook_Click(object sender, EventArgs e)
 		{
-			frmAddressBook addressBook = new frmAddressBook();
-			addressBook.Show();
+			if (addressBook == null || addressBook.Text == "")
+			{
+				addressBook = new frmAddressBook();
+				addressBook.Show();
+			}
+
+			else if (CheckOpened(addressBook.Text))
+			{
+				FormSet(addressBook);
+			}
 		}
 
 		private void BtnSettings_Click(object sender, EventArgs e)
 		{
-			frmSettings settings = new frmSettings();
-			settings.Show();
+			if (settings == null || settings.Text == "")
+			{
+				settings = new frmSettings();
+				settings.Show();
+			}
+			else if (CheckOpened(settings.Text))
+			{
+				FormSet(settings);
+			}
 		}
 
 		private void btnInvoices_Click(object sender, EventArgs e)
 		{
-			frmInvoices invoices = new frmInvoices();
-			invoices.Show();
+			if (invoices == null || invoices.Text == "")
+			{
+				invoices = new frmInvoices();
+				invoices.Show();
+			}
+			else if (CheckOpened(invoices.Text))
+			{
+				FormSet(invoices);
+			}
 		}
 
 		private void lblExit_Click(object sender, EventArgs e)
