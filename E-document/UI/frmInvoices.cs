@@ -44,7 +44,14 @@ namespace E_document.UI
 
 		private void dgvInvoices_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
-			bill.XmlString = dgvInvoices.Rows[e.RowIndex].Cells[44].Value.ToString();
+			try
+			{
+				bill.XmlString = dgvInvoices.Rows[e.RowIndex].Cells[44].Value.ToString();
+			}
+			catch (Exception)
+			{
+				return;
+			}
 		}
 
 		private void btnView_Click(object sender, EventArgs e)

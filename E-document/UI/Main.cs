@@ -161,11 +161,11 @@ namespace E_document.UI
 		{
 			Application.Exit();
 		}
+
 		private void lblMinimized_Click(object sender, EventArgs e)
 		{
 			this.WindowState = FormWindowState.Minimized;
 		}
-
 
 		Point lastPoint;
 		private void Main_MouseMove(object sender, MouseEventArgs e)

@@ -233,20 +233,27 @@ namespace E_document.UI
 			//txtZip.Text = dataGridSettings.SelectedRows[0].Cells[11].Value.ToString();
 			//cmbCountry.Text = dataGridSettings.SelectedRows[0].Cells[12].Value.ToString();
 
-			lblCurrentId.Text = dataGridSettings.Rows[e.RowIndex].Cells[0].Value.ToString();
-			txtCompanyName.Text = dataGridSettings.Rows[e.RowIndex].Cells[1].Value.ToString();
-			txtEmail.Text = dataGridSettings.Rows[e.RowIndex].Cells[2].Value.ToString();
-			txtMobile.Text = dataGridSettings.Rows[e.RowIndex].Cells[3].Value.ToString();
-			txtWeb.Text = dataGridSettings.Rows[e.RowIndex].Cells[4].Value.ToString();
-			txtTaxAuth.Text = dataGridSettings.Rows[e.RowIndex].Cells[5].Value.ToString();
-			txtTaxIdentity.Text = dataGridSettings.Rows[e.RowIndex].Cells[6].Value.ToString();
+			try
+			{
+				lblCurrentId.Text = dataGridSettings.Rows[e.RowIndex].Cells[0].Value.ToString();
+				txtCompanyName.Text = dataGridSettings.Rows[e.RowIndex].Cells[1].Value.ToString();
+				txtEmail.Text = dataGridSettings.Rows[e.RowIndex].Cells[2].Value.ToString();
+				txtMobile.Text = dataGridSettings.Rows[e.RowIndex].Cells[3].Value.ToString();
+				txtWeb.Text = dataGridSettings.Rows[e.RowIndex].Cells[4].Value.ToString();
+				txtTaxAuth.Text = dataGridSettings.Rows[e.RowIndex].Cells[5].Value.ToString();
+				txtTaxIdentity.Text = dataGridSettings.Rows[e.RowIndex].Cells[6].Value.ToString();
 
-			txtAddress1.Text = dataGridSettings.Rows[e.RowIndex].Cells[7].Value.ToString();
-			txtAddress2.Text = dataGridSettings.Rows[e.RowIndex].Cells[8].Value.ToString();
-			txtCity.Text = dataGridSettings.Rows[e.RowIndex].Cells[9].Value.ToString();
-			txtState.Text = dataGridSettings.Rows[e.RowIndex].Cells[10].Value.ToString();
-			txtZip.Text = dataGridSettings.Rows[e.RowIndex].Cells[11].Value.ToString();
-			cmbCountry.Text = dataGridSettings.Rows[e.RowIndex].Cells[12].Value.ToString();
+				txtAddress1.Text = dataGridSettings.Rows[e.RowIndex].Cells[7].Value.ToString();
+				txtAddress2.Text = dataGridSettings.Rows[e.RowIndex].Cells[8].Value.ToString();
+				txtCity.Text = dataGridSettings.Rows[e.RowIndex].Cells[9].Value.ToString();
+				txtState.Text = dataGridSettings.Rows[e.RowIndex].Cells[10].Value.ToString();
+				txtZip.Text = dataGridSettings.Rows[e.RowIndex].Cells[11].Value.ToString();
+				cmbCountry.Text = dataGridSettings.Rows[e.RowIndex].Cells[12].Value.ToString();
+			}
+			catch (Exception)
+			{
+				return;
+			}
 		}
 
 		private void btnUpdate_Click(object sender, EventArgs e)
