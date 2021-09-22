@@ -405,5 +405,21 @@ namespace E_document.UI
 				e.Handled = true;
 			}
 		}
+
+		private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if ((!char.IsNumber(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
+			{
+				e.Handled = true;
+			}
+		}
+
+		private void txtFax_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if ((!char.IsNumber(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
+			{
+				e.Handled = true;
+			}
+		}
 	}
 }

@@ -37,7 +37,7 @@ namespace E_document.UI
 		private void DateTimePickerSetting()
 		{
 			dtpOrder.Format = DateTimePickerFormat.Custom;
-			dtpOrder.CustomFormat = " ";			
+			dtpOrder.CustomFormat = " ";
 			//dtpOrder.MaxDate = DateTime.Now;
 
 			dtpWayBillDate.Format = DateTimePickerFormat.Custom;
@@ -235,12 +235,16 @@ namespace E_document.UI
 			dgvAddedProducts.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
 		}
 
+		public decimal subTotal;
+		public decimal calculatedVAT;
+		public decimal totalTax;
+		public decimal grandTotal;
 		private void CalculatedDetails()
 		{
-			decimal subTotal = decimal.Parse(txtSubTotal.Text);
+			subTotal = decimal.Parse(txtSubTotal.Text);
 			subTotal = 0;
 
-			decimal calculatedVAT = decimal.Parse(txtCalculatedVAT.Text);
+			calculatedVAT = decimal.Parse(txtCalculatedVAT.Text);
 			calculatedVAT = 0;
 
 			for (int i = 0; i < dgvAddedProducts.Rows.Count; i++)
@@ -249,10 +253,10 @@ namespace E_document.UI
 				calculatedVAT += Convert.ToDecimal(dgvAddedProducts.Rows[i].Cells[7].Value);
 			}
 
-			decimal totalTax = decimal.Parse(txtIncludingTaxes.Text);
+			totalTax = decimal.Parse(txtIncludingTaxes.Text);
 			totalTax = subTotal + calculatedVAT;
 
-			decimal grandTotal = decimal.Parse(txtGrandTotal.Text);
+			grandTotal = decimal.Parse(txtGrandTotal.Text);
 			grandTotal = subTotal + calculatedVAT;
 
 			txtSubTotal.Text = subTotal.ToString();
@@ -266,8 +270,8 @@ namespace E_document.UI
 
 			if (String.IsNullOrEmpty(txtItemNo.Text) || String.IsNullOrEmpty(txtItemName.Text) || String.IsNullOrEmpty(txtUnitPrice.Text) || String.IsNullOrEmpty(txtQuantity.Text) || String.IsNullOrEmpty(cmbUnit.Text))
 			{
-				//MessageBox.Show("Please fill in the required fields!");
-				MessageBox.Show(lblReq.Text);
+				MessageBox.Show("Please fill in the required fields!");
+
 			}
 			else
 			{
@@ -347,7 +351,7 @@ namespace E_document.UI
 			bill.OrderNo = txtOrder.Text;
 			if (!String.IsNullOrEmpty(txtOrder.Text))
 			{
-				bill.OrderDate = Convert.ToDateTime(dtpOrder.Text);		
+				bill.OrderDate = Convert.ToDateTime(dtpOrder.Text);
 			}
 
 			bill.WayBillNo = txtWayBillNo.Text;
@@ -385,7 +389,7 @@ namespace E_document.UI
 			bill.WebSite = txtWeb.Text;
 			bill.TaxAuthority = txtTaxAuth.Text;
 
-			
+
 			bill.CompanyName = Settings.CompanyName;
 			bill.CompanyEmail = Settings.Email;
 			bill.CompanyMobile = Settings.Mobile;
@@ -434,7 +438,7 @@ namespace E_document.UI
 				addressBook.LastName = " ";
 			}
 		}
-	
+
 		private void btnAddToAddressBook_Click(object sender, EventArgs e)
 		{
 			GetValueToAddressBook();
@@ -505,9 +509,8 @@ namespace E_document.UI
 
 		private void CreateXML()
 		{
-			string xsltString = File.ReadAllText("sablon.xslt");
-			xsltString = Transformer.EncodeTo64(xsltString);
-			byte[] examp = { 1, 2, 3 };
+			byte[] xsltString = File.ReadAllBytes("sablon.xslt");
+			//xsltString = Transformer.EncodeTo64(xsltString);
 
 			//XML OLUŞTUR
 			Invoice invoice = new Invoice();
@@ -527,6 +530,7 @@ namespace E_document.UI
 
 			for (int i = 0; i < dgvAddedProducts.Rows.Count; i++)
 			{
+
 				item.LineNo = Convert.ToInt32(dgvAddedProducts.Rows[i].Cells[0].Value);
 				item.ItemName = dgvAddedProducts.Rows[i].Cells[2].Value.ToString();
 				item.Quantity = Convert.ToInt32(dgvAddedProducts.Rows[i].Cells[3].Value);
@@ -535,18 +539,43 @@ namespace E_document.UI
 
 				line.ID = new ID()
 				{
-					Value = item.ItemId.ToString()
+					Value = item.LineNo.ToString()
 				};
 				line.Item = new InvoiceLineItem()
 				{
-					Name = item.ItemName
+					Name = item.ItemName,
+					StandardItemIdentification = 
+					{
+						ID = 
+						{
+							Value = item.ItemNo
+						}
+					},
+					Description = item.ItemNo,
+					CommodityClassification = item.ItemNo
 				};
 				line.Price = new InvoiceLinePrice()
 				{
 					PriceAmount =
+					{
+						Value = item.UnitPrice.ToString()
+					},
+					AllowanceCharge =
+					{
+						Amount =
 						{
-							Value = item.UnitPrice.ToString()
+							Value = grandTotal.ToString()
+						},
+						BaseAmount =
+						{
+							Value = subTotal.ToString()
 						}
+					},
+					BaseQuantity =
+					{
+						Value = item.Unit,
+						unitCode = item.Unit
+					}
 				};
 				line.InvoicedQuantity = new InvoicedQuantity()
 				{
@@ -556,7 +585,8 @@ namespace E_document.UI
 				line.LineExtensionAmount = new LineExtensionAmount()
 				{
 					currencyID = bill.Currency,
-					Value = item.LineNo.ToString()
+					//Value = item.LineNo.ToString()
+					Value = (item.Quantity * item.UnitPrice).ToString()
 				};
 
 				invoice.InvoiceLine.Add(line);
@@ -570,6 +600,22 @@ namespace E_document.UI
 					}
 			};
 
+			invoice.LegalMonetaryTotal = new LegalMonetaryTotal()
+			{
+				TaxExclusiveAmount = new TaxExclusiveAmount()
+				{
+					Value = item.VatRate.ToString()
+				},
+				TaxInclusiveAmount = new TaxInclusiveAmount()
+				{
+					Value = subTotal.ToString()
+				},
+				PayableAmount = new PayableAmount()
+				{
+					Value = grandTotal.ToString()
+				}
+			};
+
 			invoice.AccountingSupplierParty = new AccountingSupplierParty()
 			{
 				Party =
@@ -577,7 +623,7 @@ namespace E_document.UI
 						PostalAddress =
 						{
 							PostalZone = bill.CompanyZip,
-							CityName=bill.CompanyCity,
+							CityName = bill.CompanyCity,
 							StreetName = bill.FirstAddressLine,
 							Country =
 							{
@@ -629,24 +675,35 @@ namespace E_document.UI
 				TaxAmount =
 					{
 						currencyID = comboBoxCurrency.Text,
-						Value = _item.VatRate.ToString()
+						Value = calculatedVAT.ToString()
+						//Value = _item.VatRate.ToString()
 					},
-				TaxSubtotal = new List<TaxTotalTaxSubtotal>() { }
+				TaxSubtotal = new List<TaxTotalTaxSubtotal>()
+				{
+					new TaxTotalTaxSubtotal()
+					{
+
+					}
+				}
+			};
+
+			invoice.PaymentTerms = new PaymentTerms()
+			{
+				Note = bill.PayeeAccount
 			};
 
 			invoice.AdditionalDocumentReference = new Invoice.DocumentReferenceType
 			{
-				Attachment =
+				Attachment = new Invoice.AttachmentType()
 				{
-					EmbeddedDocumentBinaryObject =
+					EmbeddedDocumentBinaryObject = new Invoice.EmbeddedDocumentBinaryObjectType()
 					{
 						encodingCode = "Base64",
 						mimeCode = "application/xml",
 						characterSetCode = "UTF-8",
-						format = xsltString,
 						filename = "sablon.xslt",
 						uri = "abc",
-						Value = examp
+						Value = xsltString
 					}
 				}
 			};
@@ -657,10 +714,10 @@ namespace E_document.UI
 				{
 					ID =
 					{
-
+						Value = bill.Ettn,
 					},
-					IssueDate = bill.BillDate,
-				},
+					IssueDate = bill.BillDate
+				}
 				//AdditionalDocumentReference =
 				//{
 				//	Attachment =
@@ -681,15 +738,16 @@ namespace E_document.UI
 
 			//invoice.CustomizationID = ??
 			//invoice.DocumentCurrencyCode = ??
-			//invoice.DueDate = ??
+			invoice.DueDate = DateTime.Today;
 
-			//invoice.ProjectReference = new ProjectReference()
-			//{
-			//	ID =
-			//	{
-			//		???
-			//	}
-			//}
+			invoice.ProjectReference = new ProjectReference()
+			{
+				ID =
+				{
+					Value = bill.Ettn
+				}
+			};
+
 			//invoice.TaxPointDate = ??
 
 			bill.XmlString = invoice.Serialize();
@@ -721,7 +779,7 @@ namespace E_document.UI
 				//MessageBox.Show("Please fill for the Order Date");
 				MessageBox.Show(lblOrderVal.Text);
 			}
-			else if(dtpWayBillDate.Enabled == true && dtpWayBillDate.Text == " ")
+			else if (dtpWayBillDate.Enabled == true && dtpWayBillDate.Text == " ")
 			{
 				MessageBox.Show(lblWaybillVal.Text);
 			}
@@ -743,7 +801,6 @@ namespace E_document.UI
 			else if ((chkIndividual.Checked == true) && (String.IsNullOrEmpty(txtTinNin.Text) || String.IsNullOrEmpty(txtFirstName.Text) || String.IsNullOrEmpty(txtLastName.Text) || String.IsNullOrEmpty(txtDistrict.Text) || String.IsNullOrEmpty(txtState.Text) || String.IsNullOrEmpty(cmbCountry.Text) || String.IsNullOrEmpty(txtTaxAuth.Text)))
 			{
 				MessageBox.Show(lblIndividualVal.Text);
-
 			}
 
 			else if (dgvAddedProducts.Rows.Count == 0)
@@ -758,18 +815,18 @@ namespace E_document.UI
 				addressBook.Situation = "-";
 				bool success2 = billDal.AddCustToAddressBook(addressBook);
 
-				
+
 				GetValueToBill();
+				CreateXML();
 				bool success = billDal.Add(bill);
 
 				if (success & success2)
 				{
-					CreateXML();
 					GetItemValueToDB();
 				}
 				else
 				{
-					MessageBox.Show("Failed!");
+					MessageBox.Show(lblFail.Text);
 				}
 			}
 		}
@@ -783,7 +840,7 @@ namespace E_document.UI
 				txtFirstName.Enabled = true;
 				txtLastName.Enabled = true;
 				//ClearText();
-			}	
+			}
 		}
 
 		private void chkCorporate_CheckedChanged(object sender, EventArgs e)
@@ -802,7 +859,7 @@ namespace E_document.UI
 		{
 			string keyword = txtSenderSearch.Text;
 
-			if (keyword.Length >=3)
+			if (keyword.Length >= 3)
 			{
 				Dealer dealer = _settingsDal.SearchSenderForTransaction(keyword);
 				Settings.SettingId = dealer.SettingId;

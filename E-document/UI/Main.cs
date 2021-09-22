@@ -146,7 +146,7 @@ namespace E_document.UI
 
 		private void btnInvoices_Click(object sender, EventArgs e)
 		{
-			if (invoices == null || invoices.Text == "")
+			if (invoices == null || invoices.Text == "")	
 			{
 				invoices = new frmInvoices();
 				invoices.Show();

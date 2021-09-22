@@ -174,6 +174,7 @@ namespace E_document.UI
 			// 
 			resources.ApplyResources(this.txtFloor, "txtFloor");
 			this.txtFloor.Name = "txtFloor";
+			this.txtFloor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFloor_KeyPress);
 			// 
 			// lblFloor
 			// 
@@ -254,11 +255,13 @@ namespace E_document.UI
 			// 
 			resources.ApplyResources(this.txtFax, "txtFax");
 			this.txtFax.Name = "txtFax";
+			this.txtFax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFax_KeyPress);
 			// 
 			// txtPhone
 			// 
 			resources.ApplyResources(this.txtPhone, "txtPhone");
 			this.txtPhone.Name = "txtPhone";
+			this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
 			// 
 			// txtDistrict
 			// 
@@ -429,6 +432,7 @@ namespace E_document.UI
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.LightCyan;
 			this.Controls.Add(this.lblUpdate);
 			this.Controls.Add(this.lblCustomerType);
 			this.Controls.Add(this.panel1);

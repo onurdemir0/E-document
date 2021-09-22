@@ -1461,15 +1461,6 @@
   <data name="&gt;&gt;btnDeleteCustomer.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="dataGridAddressBook.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 8</value>
-  </data>
-  <data name="dataGridAddressBook.Size" type="System.Drawing.Size, System.Drawing">
-    <value>682, 128</value>
-  </data>
-  <data name="dataGridAddressBook.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;dataGridAddressBook.Name" xml:space="preserve">
     <value>dataGridAddressBook</value>
   </data>
@@ -1502,6 +1493,27 @@
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="dataGridAddressBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 8</value>
+  </data>
+  <data name="dataGridAddressBook.Size" type="System.Drawing.Size, System.Drawing">
+    <value>682, 128</value>
+  </data>
+  <data name="dataGridAddressBook.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridAddressBook.Name" xml:space="preserve">
+    <value>dataGridAddressBook</value>
+  </data>
+  <data name="&gt;&gt;dataGridAddressBook.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridAddressBook.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;dataGridAddressBook.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="sqLiteCommandBuilder1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

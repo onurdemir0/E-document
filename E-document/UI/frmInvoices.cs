@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace E_document.UI
 {
 	public partial class frmInvoices : Form
@@ -59,7 +60,7 @@ namespace E_document.UI
 			string xmlString = bill.XmlString;
 			string xsltString = File.ReadAllText("sablon.xslt");
 
-			xsltString = Transformer.EncodeTo64(xsltString);
+			//xsltString = Transformer.EncodeTo64(xsltString);
 
 			if (bill.XmlString == null)
 			{
@@ -67,14 +68,33 @@ namespace E_document.UI
 			}
 			else if (bill.XmlString == "")
 			{
-				//MessageBox.Show("Please select a valid invoice");
 				MessageBox.Show(lblNotValid.Text);
 			}
 			else
 			{
 				MessageBox.Show(bill.XmlString);
-				//string htmlString = Transformer.TransformXMLToHTML(xmlString, box, encoded, removePreambles, barcode, showAttachments);
-				//MessageBox.Show(htmlString);
+				//richTextBox1.Text = bill.XmlString;
+
+				//string htmlString = Transformer.TransformXMLToHTML(bill.XmlString, box, encoded, removePreambles, barcode, showAttachments);
+				string html = Transformer.TransformXMLToHTM(bill.XmlString, xsltString);
+
+				//MessageBox.Show(html);
+				richTextBox1.Text = html;
+
+
+				SaveFileDialog save = new SaveFileDialog();
+				save.Filter = "PDF File|*.pdf";
+				save.OverwritePrompt = true;
+				save.CreatePrompt = true;
+
+				if (save.ShowDialog() == DialogResult.OK)
+				{
+					StreamWriter streamWriter = new StreamWriter(save.FileName);
+					streamWriter.WriteLine(xmlString);
+					MessageBox.Show("Successfully Created!");
+
+					streamWriter.Close();
+				}
 			}			
 		}
 	}
